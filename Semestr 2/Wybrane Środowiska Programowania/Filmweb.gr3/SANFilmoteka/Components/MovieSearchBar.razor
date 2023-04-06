@@ -1,0 +1,20 @@
+﻿<div class="movie-search-bar">
+   <div class="row">
+       <div class="col-lg-5 col-md-5 col-sm-12">
+            <RadzenText class="search-title">Wpisz tytuł lub nazwisko aktora</RadzenText>
+            <RadzenTextBox Class="w-100" />
+       </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <RadzenText class="search-title">Wybierz gatunek</RadzenText>
+            <RadzenDropDown AllowClear="true" TValue="string" Class="w-100"
+                         />
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12">
+            <RadzenText class="search-title">&nbsp;</RadzenText>
+            <RadzenButton Text="Szukaj" ButtonStyle="ButtonStyle.Warning" class="w-100"/>
+        </div>
+   </div>
+</div>
+
+@*    Data=@(customers.Select(c => c.CompanyName).Distinct())
+                            Change=@(args => OnChange(args, "DropDown"))*@

@@ -1,0 +1,75 @@
+/*FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
+
+html, body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*HEADER*/
+
+.movie-header {
+    display: flex;
+    padding: 50px 100px 50px 100px;
+    background-color: darkorange;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.movie-header-text {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+
+/*SEARCH BAR*/
+
+.movie-search-bar {
+    padding: 25px 0 25px 0;
+}
+
+
+.search-title {
+    font-weight: 700 !important;
+    color: #FF8C00 !important;
+}
+
+.movie-catalog {
+    padding: 10px 0 35px 0;
+}
+
+.movie-catalog-title {
+    font-weight: 700 !important;
+    color: #FF8C00 !important;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.movie-catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.movie-card {
+    margin: 15px;
+    min-width: 275px;
+    width: 275px;
+}
+
+.movie-footer {
+    background-color: #D17D05;
+    padding: 25px;
+}
+
+.movie-footer-text {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}

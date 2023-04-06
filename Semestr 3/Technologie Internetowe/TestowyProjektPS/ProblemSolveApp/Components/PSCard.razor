@@ -1,0 +1,17 @@
+﻿<div class="card ps-card" style="width: 18rem;">
+    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" class="card-img-top" alt="Avatar">
+    <div class="card-body">
+        <h4 class="card-title">@ProblemSolver.Name @ProblemSolver.Forname</h4>
+        <h6></h6>
+        <p class="card-text">Zmiana: @ProblemSolver.Shift</p>
+        <a><RadzenButton Shade="Shade.Darker" Text="Szczegóły" ButtonStyle="ButtonStyle.Primary" /></a>
+    </div> 
+</div>
+
+
+@code {
+
+    [Parameter]
+    public SimpleProblemSolver ProblemSolver { get; set; }
+
+}

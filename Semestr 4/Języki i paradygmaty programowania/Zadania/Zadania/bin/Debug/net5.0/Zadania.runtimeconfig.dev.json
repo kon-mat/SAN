@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\koniu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\koniu\\.nuget\\packages"
+    ]
+  }
+}

@@ -1,0 +1,530 @@
+[
+  {
+    "Id": "dc89e0d4-f8b2-41af-8e64-62b3d4ef6950",
+    "Title": "Avengers: Koniec Gry",
+    "ReleaseDate": "2019-04-25T00:00:00",
+    "Description": "Brutalne wydarzenia z „Avengers: Wojna bez granic” pozostawiły wszechświat w ruinie. Avengers, z pomocą ocalałych sojuszników, zbierają się ponownie, aby spróbować cofnąć niszczycielskie działania Thanosa i przywrócić porządek we wszechświecie.",
+    "Cast": [
+      "Robert Downey Jr.",
+      "Chris Evans",
+      "Scarlett Johansson",
+      "Chris Hemsworth",
+      "Mark Ruffalo"
+    ],
+    "Genre": "Akcja/SF",
+    "Image": "https://i1.fdbimg.pl/x1/r7khobz1/1383x2048_pod4vs.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=_rLJrpgzVRU"
+  },
+  {
+    "Id": "d33b37ea-94bf-474a-a5f0-8bfb4c085a07",
+    "Title": "Avengers: Wojna bez granic",
+    "ReleaseDate": "2018-04-26T00:00:00",
+    "Description": "Thanos chce zebrać wszystkie sześć Kamieni, które sprawią, że będzie niepokonany. Zamierza wykorzystać tę potęgę do zgładzenia połowy wszechświata. O jego zamiarach alarmuje Iron Mana ",
+    "Cast": [
+      "Robert Downey Jr.",
+      "Josh Brolin",
+      "Tom Holland",
+      "Chris Evans",
+      "Scartell Johansson"
+    ],
+    "Genre": "Akcja/SF",
+    "Image": "https://fwcdn.pl/fpo/37/58/693758/7839647.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=o1rQGitsrRE"
+  },
+  {
+    "Id": "09102f8f-4c4c-4c68-b4b1-fa7272cbc0b5",
+    "Title": "Spider-Man: Daleko od domu",
+    "ReleaseDate": "2019-07-02T00:00:00",
+    "Description": "Peter Parker postanawia spędzić wakacje w Europie w towarzystwie najlepszych przyjaciół: Neda, MJ oraz reszty gangu. Chłopak marzy, aby chociaż na chwilę udało mu się zapomnieć o swojej tożsamości superbohatera. Szybko jednak zdaje sobie sprawę, że nie będzie to możliwe.",
+    "Cast": [
+      "Tom Holland",
+      "Zendaya",
+      "Jake Gyllenhaal",
+      "Samuel L. Jackson",
+      "Marisa Tomei"
+    ],
+    "Genre": "Akcja/SF",
+    "Image": "https://paradoks.net.pl/image_files/text/38546/spideyextend913.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=nsCVv9IDeC8"
+  },
+  {
+    "Id": "f15f3fe7-dda1-460e-90e5-0fb80732e38f",
+    "Title": "Spider-Man: Bez drogi do domu",
+    "ReleaseDate": "2022-09-02T00:00:00",
+    "Description": "Cały świat dowiaduje się, że Peter Parker to Spider-Man. Chłopak w związku z tym musi zmierzyć się z lawiną konsekwencji, które spotykają nie tylko jego, ale i bliskie mu osoby.",
+    "Cast": [
+      "Tom Holland",
+      "Zendaya",
+      "Jake Gyllenhaal",
+      "Samuel L. Jackson",
+      "Marisa Tomei"
+    ],
+    "Genre": "Akcja/SF",
+    "Image": "https://media.multikino.pl/uploads/images/films_and_events/spider-man-bez-drogi-do-domu-plakat-final-online-cut_8d94b2b652.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=rkhkem435pw"
+  },
+  {
+    "Id": "749cc350-0f64-469a-ad71-6509e05f90fc",
+    "Title": "Annabelle wraca do domu",
+    "ReleaseDate": "2019-06-20T00:00:00",
+    "Description": "Demonologowie Ed i Lorraine Warren chcą za wszelką cenę uniemożliwić Annabelle dokonywanie kolejnych okrutnych czynów. Przywożą opętaną lalkę do zamkniętego pokoju z niezwykłymi przedmiotami w swoim domu. Układają ją „bezpiecznie” za poświęconym szkłem i proszą księdza o udzielenie błogosławieństwa.",
+    "Cast": [
+      "Mckenna Grace ",
+      "Patrick Wilson",
+      "Madison Iseman",
+      "Katie Sarife",
+      "Vera Farmiga"
+    ],
+    "Genre": "Horror",
+    "Image": "https://play-lh.googleusercontent.com/Wmd3I8TCQiGmIYQsrkdQ-a3YJZTz2otlNAGYFoNzShPELRzK0LSax9vIP9MVOSDh9do",
+    "Trailer": "https://www.youtube.com/watch?v=GGrjUsxFQ7w"
+  },
+  {
+    "Id": "7fb56cc2-6bd0-4470-b65d-711706735237",
+    "Title": "Skazani na Shawshank",
+    "ReleaseDate": "1994-09-10T00:00:00",
+    "Description": "Adaptacja opowiadania Stephena Kinga. Niesłusznie skazany na dożywocie bankier, stara się przetrwać w brutalnym, więziennym świecie.",
+    "Cast": [
+      "Morgan Freeman",
+      "Tim Robbins",
+      "James Whitmore",
+      "Bob Gunton",
+      "Clancy Brown"
+    ],
+    "Genre": "Dramat",
+    "Image": "https://fwcdn.pl/fpo/10/48/1048/6925401.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=3TGpUNWUREQ"
+  },
+  {
+    "Id": "1b1dc879-1db0-4406-bb92-fa6764c171bd",
+    "Title": "Lista Schindlera",
+    "ReleaseDate": "1993-11-30T00:00:00",
+    "Description": "Historia przedsiębiorcy Oskara Schindlera, który podczas II wojny światowej uratował przed pobytem w obozach koncentracyjnych 1100 Żydów.",
+    "Cast": [
+      "Ralph Fiennes",
+      "Liam Neeson",
+      "Ben Kingsley",
+      "Embeth Davidtz",
+      "Andrzej Seweryn"
+    ],
+    "Genre": "Dramat/Wojenny",
+    "Image": "https://s.lubimyczytac.pl/upload/books/4914000/4914330/788397-352x500.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=QQhvww-c5Ms"
+  },
+  {
+    "Id": "d05d4fcb-ce7f-4674-b11a-0e502217f407",
+    "Title": "Ojciec Chrzestny",
+    "ReleaseDate": "1972-03-15T00:00:00",
+    "Description": "Opowieść o nowojorskiej rodzinie mafijnej. Starzejący się Don Corleone pragnie przekazać władzę swojemu synowi.",
+    "Cast": [
+      "Marlon Brando",
+      "Al Pacino",
+      "Robert Duvall",
+      "James Caan",
+      "Richard S. Castellano"
+    ],
+    "Genre": "Dramat/Gangsterski",
+    "Image": "https://fwcdn.pl/fpo/10/89/1089/7196615.3.jpg ",
+    "Trailer": "https://www.youtube.com/watch?v=PfBUuXtXceA"
+  },
+  {
+    "Id": "72036cf7-57c1-44ff-a77d-5f6c8d0f07c6",
+    "Title": "Top Gun: Maverick",
+    "ReleaseDate": "2022-05-18T00:00:00",
+    "Description": "Po ponad 20 latach służby w lotnictwie marynarki wojennej, Pete \"Maverick\" Mitchell zostaje wezwany do legendarnej szkoły Top Gun. Ma wyszkolić nowe pokolenie pilotów do niezwykle trudnej misji.",
+    "Cast": [
+      "Tom Cruise",
+      "Miles Teller",
+      "Glen Powell",
+      "Jennifer Connelly",
+      "Val Kilmer"
+    ],
+    "Genre": "Akcja",
+    "Image": "https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=Yg1TEuX1xH0"
+  },
+  {
+    "Id": "76290700-1a94-4937-95bc-e441cbce417a",
+    "Title": "Joker",
+    "ReleaseDate": "2019-08-31T00:00:00",
+    "Description": "Strudzony życiem komik popada w obłęd i staje się psychopatycznym mordercą",
+    "Cast": [
+      "Joaquin Phoenix",
+      "Robert De Niro",
+      "Frances Conroy",
+      "Leigh Gill",
+      "Zazie Beetz"
+    ],
+    "Genre": "Dramat/Kryminał/Psychologiczny",
+    "Image": "https://fwcdn.pl/fpo/01/67/810167/7905225.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=awOK70kHV48"
+  },
+  {
+    "Id": "e8f6cbb8-438b-4746-8b1d-b9d56a05ed55",
+    "Title": "Ostatnia rodzina",
+    "ReleaseDate": "2016-09-30T00:00:00",
+    "Description": "Dziennikarz muzyczny, tłumacz i eseista Tomasz Beksiński wprowadza się do mieszkania obok swoich rodziców. Niebawem wychodzi na jaw, że nad rodziną ciąży fatum.",
+    "Cast": [
+      "Andrzej Seweryn ",
+      "Dawid Ogrodnik",
+      "Aleksandra Konieczna",
+      "Andrzej Chyra",
+      "Zofia Perczyńska"
+    ],
+    "Genre": "Biograficzny",
+    "Image": "https://fwcdn.pl/fpo/56/83/735683/7748995.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=FlPPk-KNoAM"
+  },
+  {
+    "Id": "16c03399-045c-44c5-afc2-6c31853283eb",
+    "Title": "Boże Ciało",
+    "ReleaseDate": "2019-10-11T00:00:00",
+    "Description": "Dwudziestoletni Daniel zostaje warunkowo zwolniony z poprawczaka. Wyjeżdża na drugi koniec Polski, żeby pracować w stolarni, ale zamiast tego zaczyna udawać księdza.",
+    "Cast": [
+      "Bartosz Bielenia",
+      "Aleksandra Konieczna",
+      "Eliza Rycembel",
+      "Dawid Ogrodnik",
+      "Barbara Jonak"
+    ],
+    "Genre": "Obyczajowy",
+    "Image": "https://www.granice.pl/sys6/pliki/publikacje/1788af2ab342f85dde72ad40ed8d892c.jpeg",
+    "Trailer": "https://www.youtube.com/watch?v=Y22lmaNA_Aw"
+  },
+  {
+    "Id": "a0e3bac1-dc7e-4b0f-93b6-adef38c11307",
+    "Title": "Podziemny krąg",
+    "ReleaseDate": "2000-02-11T00:00:00",
+    "Description": "Cierpiący na bezsenność mężczyzna poznaje gardzącego konsumpcyjnym stylem życia Tylera Durdena, który jest jego zupełnym przeciwieństwem.",
+    "Cast": [
+      "Edward Norton ",
+      "Brad Pitt",
+      "Helena Bonham",
+      "Carter Meat",
+      "Loaf Jared Leto"
+    ],
+    "Genre": "Thriller/Psychologiczny",
+    "Image": "https://1.bp.blogspot.com/-tTSlOvfdktQ/Valu12Fb-AI/AAAAAAAAHzk/O7hj62Dsa4c/s16000/fight-club.25541.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=AEhUHP8HNHk"
+  },
+  {
+    "Id": "c4f4a06e-a50b-4138-9530-37d3ef7c7be2",
+    "Title": "Lara Croft: Tomb Raider",
+    "ReleaseDate": "2001-08-10T00:00:00",
+    "Description": "Lara Croft szuka tajemniczego artefaktu, aby uchronić świat przed organizacją Illuminati, która chce wykorzystać moc przedmiotu.",
+    "Cast": [
+      "Angelina Jolie ",
+      "Jon Voight",
+      "Noah Taylor",
+      "Iain Glen",
+      "Daniel Craig"
+    ],
+    "Genre": "Przygodowy",
+    "Image": "https://m.media-amazon.com/images/M/MV5BNzMzODVjMWUtYmIxZS00NDlkLTlmNTktNjI5NTdhZjUzYzY1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=8ndhidEmUbI"
+  },
+  {
+    "Id": "f1e90982-4f79-4b90-a49f-ce164262a787",
+    "Title": "Incepcja",
+    "ReleaseDate": "2010-07-30T00:00:00",
+    "Description": "Czasy, gdy technologia pozwala na wchodzenie w świat snów. Złodziej Cobb ma za zadanie wszczepić myśl do śpiącego umysłu",
+    "Cast": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page",
+      "Tom Hardy",
+      "Ken Watanabe"
+    ],
+    "Genre": "Surrealistyczny / Thriller / Sci-Fi",
+    "Image": "https://fwcdn.pl/fpo/08/91/500891/7354571.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=DhpuumpKyHA"
+  },
+  {
+    "Id": "a57ad58d-41ec-4bc2-950f-e020c2469746",
+    "Title": "Bękarty wojny",
+    "ReleaseDate": "2009-09-11T00:00:00",
+    "Description": "W okupowanej przez nazistów Francji oddział złożony z Amerykanów żydowskiego pochodzenia planuje zamach na Hitlera.",
+    "Cast": [
+      "Brad Pitt ",
+      "Mélanie Laurent",
+      "Christoph Waltz",
+      "Michael Fassbender",
+      "Diane Kruger"
+    ],
+    "Genre": "Wojenny / Akcja",
+    "Image": "https://a.allegroimg.com/original/11bd69/509d1d1149fe9e9fc17ee2ec01b0/bekarty-wojny-60x90-plakat-wielki-obraz-61x91-5",
+    "Trailer": "https://www.youtube.com/watch?v=zs2uV1xapTA"
+  },
+  {
+    "Id": "eb515e3a-cb8d-4267-84b7-97ceee84c453",
+    "Title": "Big Short",
+    "ReleaseDate": "2016-01-01T00:00:00",
+    "Description": "W 2008 roku światowe rynki finansowe i bankowe dopadł kryzys gospodarczy, na którym wzbogaciła się jedynie garstka ludzi, przewidująca nadchodzącą katastrofę.",
+    "Cast": [
+      "Christian Bale ",
+      "Steve Carell",
+      "Ryan Gosling",
+      "Brad Pitt",
+      "Melissa Leo"
+    ],
+    "Genre": "Komediowy / Dramat",
+    "Image": "https://fwcdn.pl/fpo/25/48/732548/7715921.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=usukt0YMWrw"
+  },
+  {
+    "Id": "372cf3db-1e92-4be5-a4d3-d3c2c636166c",
+    "Title": "Assassin's Creed",
+    "ReleaseDate": "2016-12-21T00:00:00",
+    "Description": "Dzięki przełomowej technologii Callum Lynch doświadcza przygód swojego przodka, asasyna Aguilara, żyjącego w XV-wiecznej Hiszpanii. Wkrótce podejmuje walkę z potężnymi templariuszami.",
+    "Cast": [
+      "Michael Fassbender ",
+      "Marion Cotillard",
+      "Jeremy Irons",
+      "Brendan Gleeson",
+      "Charlotte Rampling"
+    ],
+    "Genre": "Akcja / Sci-Fi",
+    "Image": "https://fwcdn.pl/fpo/98/03/659803/7772176.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=6ET98EveSeQ"
+  },
+  {
+    "Id": "ff09ad12-9cc4-474e-9282-75180f529055",
+    "Title": "Whiplash",
+    "ReleaseDate": "2014-01-16T00:00:00",
+    "Description": "Młody i ambitny perkusista za wszelką cenę pragnie dołączyć do czołówki najwybitniejszych artystów muzyki jazzowej.",
+    "Cast": [
+      "Miles Teller ",
+      "J.K. Simmons",
+      "Paul Reiser",
+      "Melissa Benoist",
+      "Austin Stowell"
+    ],
+    "Genre": "Dramat muzyczny",
+    "Image": "https://fwcdn.pl/fpo/88/47/698847/7655940.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=OdvPtaYe18E"
+  },
+  {
+    "Id": "d4dfebaf-49b0-4982-aac5-cfe8b5caf6a8",
+    "Title": "Pachnidło: Historia mordercy",
+    "ReleaseDate": "2007-01-12T00:00:00",
+    "Description": "Ekranizacja powieści Patricka Süskinda. Obdarzony genialnym węchem Jean-Baptiste Grenouille pragnie stworzyć najpiękniejsze pachnidło na świecie.",
+    "Cast": [
+      "Ben Whishaw ",
+      "Alan Rickman",
+      "Rachel Hurd-Wood",
+      "Dustin Hoffman",
+      "Alvaro Roque"
+    ],
+    "Genre": "Dreszczowiec  / Dramat",
+    "Image": "https://ulotki-filmowe.pl/wp-content/uploads/2014/08/pachnidlo-p-400x570.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=f1l_sxGJu3M"
+  },
+  {
+    "Id": "5eda165b-9861-44f0-9861-3467c999c42f",
+    "Title": "Harry Potter i Komnata Tajemnic",
+    "ReleaseDate": "2002-11-03T00:00:00",
+    "Description": "Harry Potter (Daniel Radcliffe) powraca do Hogwartu, aby ponownie zmierzyć się z niebezpieczeństwem, tym razem zagrażającym również jego najlepszej przyjaciółce. Podczas drugiego roku pobytu w Szkole Magii i Czarodziejstwa młody Potter spotyka starych wrogów, poznaje nowego nauczyciela, odkrywa w sobie kolejne zdolności, unika śmierci z rąk domowego skrzata chcącego za wszelką cenę uratować mu życie i wraz z dwójką swoich przyjaciół, Ronem (Rupert Grint) i Hermioną (Emma Watson) znów udaje mu się rozwiązać trudną zagadkę.",
+    "Cast": [
+      "Daniel Radcliffe ",
+      "Rupert Grint",
+      "Emma Watson",
+      "Watson Miriam Margolyes",
+      "Mark Williams"
+    ],
+    "Genre": "Fantastyczny",
+    "Image": "https://fwcdn.pl/fpo/23/02/32302/7565450.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=cpKr7uGo52A"
+  },
+  {
+    "Id": "f051905e-556d-452c-a609-67971470ce7f",
+    "Title": "Harry Potter i Czara Ognia",
+    "ReleaseDate": "2005-11-06T00:00:00",
+    "Description": "Harry Potter musi wziąć udział w Turnieju Trójmagicznym, kiedy jego nazwisko zostaje wybrane przez tajemniczą Czarę Ognia.",
+    "Cast": [
+      "Daniel Radcliffe ",
+      "Rupert Grint",
+      "Emma Watson",
+      "Watson Miriam Margolyes",
+      "Mark Williams"
+    ],
+    "Genre": "Fantastyczny",
+    "Image": "https://fwcdn.pl/fpo/57/46/95746/7537945.3.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=YEJw2AvIro8"
+  },
+  {
+    "Id": "14fe1e22-218a-40b8-8749-43667b7443d4",
+    "Title": "Avatar",
+    "ReleaseDate": "2009-12-10T00:00:00",
+    "Description": "Jake, sparaliżowany były komandos, zostaje wysłany na planetę Pandora, gdzie zaprzyjaźnia się z lokalną społecznością i postanawia jej pomóc.",
+    "Cast": [
+      "Sam Worthington",
+      "Zoe Saldana",
+      "Sigourney Weaver",
+      "Stephen Lang",
+      "Michelle Rodriguez"
+    ],
+    "Genre": "Fantastyczny",
+    "Image": "https://media.multikino.pl/thumbnails/50/rc/MEVCMjY4/eyJ0aHVtYm5haWwiOnsic2l6ZSI6WyIxMTA0IiwiMTAwMDAiXSwibW9kZSI6Imluc2V0In19/uploads/images/films_and_events/avatar-tlo_0bc574def4.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=_LXWCknsDt0"
+  },
+  {
+    "Id": "c550a77c-b6f4-428b-98b9-5d52fe9c9a13",
+    "Title": "Charlie i fabryka czekolady",
+    "ReleaseDate": "2005-07-10T00:00:00",
+    "Description": "Ubogi Charlie Bucket znajduje jeden z pięciu złotych biletów, który umożliwia mu zwiedzenie ogromnej fabryki czekolady.",
+    "Cast": [
+      "Johny Depp ",
+      "Freddie Higmore",
+      "David Kelly",
+      "Helena Bonham",
+      "Carter Noah Tylor"
+    ],
+    "Genre": "Familijny",
+    "Image": "https://d-tm.ppstatic.pl/kadry/ff/22/3b7e5dacd8c9ad6128f5c20e4e08.1000.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=9PixlWU4lOU"
+  },
+  {
+    "Id": "8d395af2-1628-4faa-a31a-96816166de0d",
+    "Title": "Matrix",
+    "ReleaseDate": "1999-03-24T00:00:00",
+    "Description": "Haker komputerowy Neo dowiaduje się od tajemniczych rebeliantów, że świat, w którym żyje, jest tylko obrazem przesyłanym do jego mózgu przez roboty.",
+    "Cast": [
+      "Keanu Reeves ",
+      "Carrie-Anne Moss",
+      "Laurence Fishburne",
+      "Hugo Weaving",
+      "Gloria Foster"
+    ],
+    "Genre": "Fantastyczny",
+    "Image": "https://fwcdn.pl/fpo/06/28/628/7685907.6.jpg",
+    "Trailer": "https://www.youtube.com/watch?v=7SsSvx7Wt1s"
+  },
+  {
+    "Id": "d6eb61d5-c2f2-40ff-8054-9b7fa1ec8058",
+    "Title": "RRRrrrr",
+    "ReleaseDate": "2004-01-28T00:00:00",
+    "Description": "francuski film komediowy z 2004 roku.",
+    "Cast": [
+      "Gilles Conseil",
+      "Gaëlle Cohen",
+      "Jean Rochefort",
+      "Gérard Depardieu",
+      "Joseph Beddelem"
+    ],
+    "Genre": "Komedia",
+    "Image": "https://www.filmweb.pl/film/RRRrrrr-2004-118644/photos/387460",
+    "Trailer": "https://www.youtube.com/watch?v=iULwl4IWlJk"
+  },
+  {
+    "Id": "828f3274-1a3f-431f-96f4-b1ac188b65a5",
+    "Title": "Dzień Świra",
+    "ReleaseDate": "2002-06-07T00:00:00",
+    "Description": "Adaś Miauczyński, 49-letni rozwiedziony polonista, żyje w kręgu swoich natręctw, nie potrafiąc wyrwać się z nudy i rutyny dnia codziennego.",
+    "Cast": [
+      "Marek Kondrat",
+      "Janina Traczykówna",
+      "Andrzej Grabowski",
+      "Michał Koterski",
+      "Joanna Sienkiewicz"
+    ],
+    "Genre": "Dramat / Komedia / Psychologiczny",
+    "Image": "https://www.filmweb.pl/film/Dzie%C5%84+%C5%9Bwira-2002-31413/photos/510153",
+    "Trailer": "https://www.youtube.com/watch?v=mAgCcQNNAms"
+  },
+  {
+    "Id": "53618c73-7ace-42ed-9a11-acad77c08045",
+    "Title": "Szybcy i Wściekli",
+    "ReleaseDate": "2001-06-18T00:00:00",
+    "Description": "Policjant przenika do grupy organizującej nielegalne wyścigi samochodowe. Sytuacja komplikuje się, gdy poznaje bliżej siostrę lidera przestępców.",
+    "Cast": [
+      "Vin Diesel ",
+      "Paul Walker",
+      "Jordana Brewster",
+      "Michelle Rodriguez",
+      "R.J. de Vera"
+    ],
+    "Genre": "Akcja",
+    "Image": "https://www.filmweb.pl/film/Szybcy+i+w%C5%9Bciekli-2001-30588/photos/330571",
+    "Trailer": "https://www.youtube.com/watch?v=qZLO0MjZP4o"
+  },
+  {
+    "Id": "1d3bf90e-7328-46f1-9f4a-fa72db80e8c7",
+    "Title": "UNCHARTED",
+    "ReleaseDate": "2022-01-10T00:00:00",
+    "Description": "Utalentowany złodziej Nathan Drake zostaje zwerbowany przez doświadczonego poszukiwacza skarbów Victora Sullivana. Razem chcą odnaleźć zaginione złoto Ferdynanda Magellana.",
+    "Cast": [
+      "Tom Holland",
+      "Mark Wahlberg",
+      "Antonio Banderas",
+      "Santiago Moncada",
+      "Sophia Ali"
+    ],
+    "Genre": "Przygodowy",
+    "Image": "https://www.filmweb.pl/film/Uncharted-2022-545895/photos/1062177",
+    "Trailer": "https://www.youtube.com/watch?v=1xy8o-7UsW8"
+  },
+  {
+    "Id": "aaff4722-ff49-4f17-bdc7-0f1bff56d93d",
+    "Title": "CHAMPION 3: ODKUPIENIE",
+    "ReleaseDate": "2010-06-17T00:00:00",
+    "Description": "Pomimo kontuzji kolana Boyka decyduje się na udział w eliminacjach do mistrzostw świata, gdzie walczą najlepiej wytrenowani więźniowie.",
+    "Cast": [
+      "Scott Adkins",
+      "Mykel Shannon Jenkins",
+      "Mark Ivanir",
+      "Hristo Shopov",
+      "Marko Zaror"
+    ],
+    "Genre": "Kryminał /Dramat",
+    "Image": "https://www.filmweb.pl/film/Champion+3%3A+Odkupienie-2010-469780/photos/418354",
+    "Trailer": ""
+  },
+  {
+    "Id": "7f1c9ff5-fed9-4dfb-8e88-26c3adaf2e12",
+    "Title": "HELLRAISER V: WROTA PIEKIEŁ",
+    "ReleaseDate": "2000-10-03T00:00:00",
+    "Description": "Detektyw Joseph Thorne zostaje wezwany na miejsce drastycznej zbrodni. Ku własnemu zaskoczeniu, odkrywa w ofierze swojego znajomego ze szkoły średniej. W apartamencie zmarłego odnajduje tajemniczy sześcian, który postanawia wziąć ze sobą. Tego czynu już wkrótce będzie żałować. Zostaje bowiem wciągnięty w perwersyjną, irracjonalną grę, której stawką jest życie jego i jego bliskich.",
+    "Cast": [
+      "Doug Bradley",
+      "Craig Sheffer",
+      "Mike J. Regan",
+      "Ray Miceli",
+      "Patricia Kara"
+    ],
+    "Genre": "Horror",
+    "Image": "https://www.filmweb.pl/film/Hellraiser%3A+Wrota+piekie%C5%82-2000-31332/photos/305917",
+    "Trailer": "https://www.youtube.com/watch?v=YVGoDKD3Cg0"
+  },
+  {
+    "Id": "1b2d696e-7c46-4247-a399-bef872aae3ab",
+    "Title": "KRZYŻACY",
+    "ReleaseDate": "1960-07-15T00:00:00",
+    "Description": "Historia Juranda ze Spychowa, który broni swych ziem przed atakami grup krzyżackich. Podczas zdradzieckiego napadu Krzyżaków ze Szczytna pod dowództwem komtura Zygfryda de Löwe na Spychów traci on żonę. Aby uchronić córkę Danuśkę przed podobnym losem, wysyła ją na dwór księcia mazowieckiego.",
+    "Cast": [
+      "Aleksander Fogiel",
+      "Urszula Modrzyńska",
+      "Grażyna Staniszewska",
+      "Andrzej Szalawski",
+      "Henryk Borowski"
+    ],
+    "Genre": "Dramat historyczny",
+    "Image": "https://fdb.pl/film/4374-krzyzacy/pictures",
+    "Trailer": "https://www.youtube.com/watch?v=g5dy9Oan71M"
+  },
+  {
+    "Id": "431afc32-ebb9-45b1-b9dd-33fa828a19a3",
+    "Title": "SLUMDOG. MILIONER Z ULICY",
+    "ReleaseDate": "2008-08-30T00:00:00",
+    "Description": "Opowieść o młodym chłopaku, który bierze udział w hinduskiej edycji \"Milionerów\".",
+    "Cast": [
+      "Dev Patel",
+      "Freida Pinto",
+      "Madhur Mittal",
+      "Anil Kapoor",
+      "Saurabh Shukla"
+    ],
+    "Genre": "Dramat",
+    "Image": "https://www.filmweb.pl/film/Slumdog.+Milioner+z+ulicy-2008-468296/photos/123730",
+    "Trailer": "https://www.youtube.com/watch?v=a0gb7VuTHdE"
+  }
+]

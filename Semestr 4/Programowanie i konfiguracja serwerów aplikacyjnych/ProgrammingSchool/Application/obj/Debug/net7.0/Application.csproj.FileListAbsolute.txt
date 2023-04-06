@@ -1,0 +1,15 @@
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\bin\Debug\net7.0\Application.deps.json
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\bin\Debug\net7.0\Application.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\bin\Debug\net7.0\Application.pdb
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\bin\Debug\net7.0\Domain.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\bin\Debug\net7.0\Domain.pdb
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\Application.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\refint\Application.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\Application.pdb
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Application\obj\Debug\net7.0\ref\Application.dll

@@ -1,0 +1,23 @@
+﻿@page "/"
+@inject IPSService Service
+
+<PSHeader Title="Aplikacja Problem Solve"/>
+
+
+<div class="container">
+    <NavigationBar></NavigationBar>
+    <PSDepartmentContainer MyDepartment="PACK" ProblemSolvers="@PSPack"></PSDepartmentContainer>
+    <PSDepartmentContainer MyDepartment="PICK" ProblemSolvers="@PSPick"></PSDepartmentContainer>
+</div>
+
+
+@code {
+    public List<SimpleProblemSolver> PSPack { get; set; }
+    public List<SimpleProblemSolver> PSPick { get; set; }
+
+    protected override void OnInitialized()
+    {
+        PSPack = Service.GetPSByDepartment("PACK").ToList();
+        PSPick = Service.GetPSByDepartment("PICK").ToList();
+    }
+}

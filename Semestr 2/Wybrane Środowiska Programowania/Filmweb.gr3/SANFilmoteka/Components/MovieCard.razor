@@ -1,0 +1,17 @@
+﻿<div class="card movie-card" style="width: 18rem;">
+    <img src="@Movie.Image" class="card-img-top" alt="@Movie.Title">
+  <div class="card-body">
+        <h4 class="card-title">@Movie.Title</h4>
+        <h6>@Movie.Genre</h6>
+        <p class="card-text">@Movie.Descr</p>
+    <a href="#" class="btn btn-primary">Szczegóły</a>
+  </div>
+</div>
+
+
+@code {
+
+    [Parameter]
+    public SimpleMovie Movie { get; set; }
+
+}

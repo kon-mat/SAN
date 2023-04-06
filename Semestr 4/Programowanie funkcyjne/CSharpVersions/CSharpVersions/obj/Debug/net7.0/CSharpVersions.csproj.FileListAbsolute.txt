@@ -1,0 +1,15 @@
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\bin\Debug\net7.0\CSharpVersions.exe
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\bin\Debug\net7.0\CSharpVersions.deps.json
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\bin\Debug\net7.0\CSharpVersions.runtimeconfig.json
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\bin\Debug\net7.0\CSharpVersions.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\bin\Debug\net7.0\CSharpVersions.pdb
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\CSharpVersions.csproj.AssemblyReference.cache
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\CSharpVersions.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\CSharpVersions.AssemblyInfoInputs.cache
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\CSharpVersions.AssemblyInfo.cs
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\CSharpVersions.csproj.CoreCompileInputs.cache
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\CSharpVersions.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\refint\CSharpVersions.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\CSharpVersions.pdb
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\CSharpVersions.genruntimeconfig.cache
+D:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\CSharpVersions\CSharpVersions\obj\Debug\net7.0\ref\CSharpVersions.dll

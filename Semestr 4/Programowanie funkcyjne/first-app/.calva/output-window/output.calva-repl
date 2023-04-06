@@ -1,0 +1,116 @@
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
+; Happy coding! ♥️
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless
+; Using host:port 127.0.0.1:55931 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
+clj꞉first-app.core꞉>  ; Use `alt+enter` to evaluate
+; Jack-in done.
+clj꞉first-app.core꞉> 
+nil
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/newton
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (ClassCastException) at jdk.internal.reflect.DirectMethodHandleAccessor/null (DirectMethodHandleAccessor.java:104).
+; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (ClassCastException) at jdk.internal.reflect.DirectMethodHandleAccessor/null (DirectMethodHandleAccessor.java:104).
+; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (ClassCastException) at jdk.internal.reflect.DirectMethodHandleAccessor/null (DirectMethodHandleAccessor.java:104).
+; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉first-app.Zadanie2꞉> 
+nil
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/newton
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (ClassCastException) at jdk.internal.reflect.DirectMethodHandleAccessor/null (DirectMethodHandleAccessor.java:104).
+; class java.lang.Boolean cannot be cast to class java.lang.Number (java.lang.Boolean and java.lang.Number are in module java.base of loader 'bootstrap')
+clj꞉first-app.Zadanie2꞉> 
+nil
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/newton
+clj꞉first-app.Zadanie2꞉> 
+10.000052895642693
+clj꞉first-app.Zadanie2꞉> 
+nil
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/newton
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (StackOverflowError) at first-app.Zadanie2/newton (form-init17814832726267270804.clj:4).
+; null
+clj꞉first-app.Zadanie2꞉> 
+nil
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3
+clj꞉first-app.Zadanie2꞉> 
+1
+clj꞉first-app.Zadanie2꞉> 
+1
+clj꞉first-app.Zadanie2꞉> 
+nil
+clj꞉first-app.Zadanie2꞉> 
+; Syntax error compiling at (d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app\src\first_app\Zadanie2.clj:10:5).
+; Can't take value of a macro: #'clojure.core/let
+clj꞉first-app.Zadanie2꞉> 
+; Syntax error compiling at (d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app\src\first_app\Zadanie2.clj:18:41).
+; Unable to resolve symbol: x0 in this context
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (ArityException) at first-app.Zadanie2/eval7937 (form-init17814832726267270804.clj:20).
+; Wrong number of args (2) passed to: first-app.Zadanie2/sqr3
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3int
+clj꞉first-app.Zadanie2꞉> 
+; Syntax error compiling at (d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app\src\first_app\Zadanie2.clj:18:41).
+; Unable to resolve symbol: x0 in this context
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (ClassCastException) at first-app.Zadanie2/sqr3int (form-init17814832726267270804.clj:12).
+; class clojure.core$num cannot be cast to class java.lang.Number (clojure.core$num is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3int
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (StackOverflowError) at java.math.MutableBigInteger/binaryGCD (MutableBigInteger.java:1994).
+; null
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (StackOverflowError) at java.math.BigDecimal/precision (BigDecimal.java:2693).
+; null
+clj꞉first-app.Zadanie2꞉> 
+nil
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3int
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3
+clj꞉first-app.Zadanie2꞉> 
+; Execution error (StackOverflowError) at first-app.Zadanie2/sqr3int (form-init17814832726267270804.clj:9).
+; null
+clj꞉first-app.Zadanie2꞉> 
+nil
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3int
+clj꞉first-app.Zadanie2꞉> 
+#'first-app.Zadanie2/sqr3
+clj꞉first-app.Zadanie2꞉> 
+352433/81675
+clj꞉first-app.Zadanie2꞉> 
+2899893997417304312535510749551881243980916440331473/954789780998542735543572838521157125241932426891675
+clj꞉first-app.Zadanie2꞉> 

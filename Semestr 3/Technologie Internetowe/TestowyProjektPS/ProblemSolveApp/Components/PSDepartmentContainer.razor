@@ -1,0 +1,25 @@
+﻿<div class="ps-department-container">
+    <div class="ps-department-title">Problem Solverzy działu @MyDepartment</div>
+    <div class="ps-card-container">
+        @if (ProblemSolvers.Any())
+        {
+            @foreach (var ps in ProblemSolvers)
+            {
+                <PSCard ProblemSolver="@ps"/>
+            }
+        }
+        else
+        {
+            <p>Brak Problem Solverów na dziale @MyDepartment.</p>
+        }
+    </div>
+</div>
+
+
+@code {
+    [Parameter]
+    public string MyDepartment { get; set; }
+
+    [Parameter]
+    public List<SimpleProblemSolver> ProblemSolvers { get; set; } = new List<SimpleProblemSolver>();
+}

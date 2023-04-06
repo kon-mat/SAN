@@ -1,0 +1,48 @@
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.exe
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.deps.json
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.runtimeconfig.json
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.runtimeconfig.dev.json
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.dll
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.pdb
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.csproj.AssemblyReference.cache
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.GeneratedMSBuildEditorConfig.editorconfig
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.AssemblyInfoInputs.cache
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.AssemblyInfo.cs
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.csproj.CoreCompileInputs.cache
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.dll
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\refint\Zadania.dll
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.pdb
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.genruntimeconfig.cache
+D:\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\ref\Zadania.dll
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.exe
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.deps.json
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.runtimeconfig.json
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.runtimeconfig.dev.json
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.dll
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.pdb
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.csproj.AssemblyReference.cache
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.GeneratedMSBuildEditorConfig.editorconfig
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.AssemblyInfoInputs.cache
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.AssemblyInfo.cs
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.csproj.CoreCompileInputs.cache
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.dll
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\refint\Zadania.dll
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.pdb
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.genruntimeconfig.cache
+D:\Edukacja\SAN Studia\Semestr IV\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\ref\Zadania.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.exe
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.deps.json
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.runtimeconfig.json
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.runtimeconfig.dev.json
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\bin\Debug\net5.0\Zadania.pdb
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.csproj.AssemblyReference.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.AssemblyInfoInputs.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.AssemblyInfo.cs
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.csproj.CoreCompileInputs.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\refint\Zadania.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.pdb
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\Zadania.genruntimeconfig.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\Zadania\Zadania\obj\Debug\net5.0\ref\Zadania.dll

@@ -1,0 +1,25 @@
+﻿<div class="movie-catalog">
+    <div class="movie-catalog-title">Dzisiaj polecamy</div>
+    <div class="movie-catalog-container">
+        @if (Movies.Any())
+        {
+            @foreach (var m in Movies)
+            {
+                            <MovieCard Movie="@m"/>
+            }
+        }
+        else
+        {
+                <p>Brak filmów spełniących kryteria ...</p>
+        }
+
+    </div>
+</div>
+
+
+@code {
+
+    [Parameter]
+    public List<SimpleMovie> Movies { get; set; } = new List<SimpleMovie>();
+
+}

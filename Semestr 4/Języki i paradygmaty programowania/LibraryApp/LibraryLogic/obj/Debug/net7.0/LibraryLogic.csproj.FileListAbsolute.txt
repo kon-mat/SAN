@@ -1,0 +1,12 @@
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\bin\Debug\net7.0\LibraryLogic.deps.json
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\bin\Debug\net7.0\LibraryLogic.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\bin\Debug\net7.0\LibraryLogic.pdb
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\LibraryLogic.csproj.AssemblyReference.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\LibraryLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\LibraryLogic.AssemblyInfoInputs.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\LibraryLogic.AssemblyInfo.cs
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\LibraryLogic.csproj.CoreCompileInputs.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\LibraryLogic.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\refint\LibraryLogic.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\LibraryLogic.pdb
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\LibraryApp\LibraryLogic\obj\Debug\net7.0\ref\LibraryLogic.dll

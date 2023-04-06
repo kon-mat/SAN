@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "6rxREkZk65jBDzps3hK0imXBuE4TAFZEpwrGdfZMlNTHoh5vIRVijr822/yVIixI1UjHW2+3QrILrm/8T2lTrA==",
+  "success": true,
+  "projectFilePath": "D:\\Programowanie\\SAN\\Semestr 4\\Programowanie i konfiguracja serwerów aplikacyjnych\\ProgrammingSchool\\Application\\Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\koniu\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\koniu\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

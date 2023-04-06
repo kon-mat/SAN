@@ -1,0 +1,23 @@
+﻿@page "/"
+@inject IMovieService Service
+
+<MovieHeader Title="Katalog filmowy"/>
+<div class="container">
+    <MovieSearchBar />
+    @if (MyMovies != null)
+    {
+        <MovieCatalog Movies="@MyMovies" />
+    }
+
+</div>
+<MovieFooter />
+
+
+@code {
+    public List<SimpleMovie> MyMovies { get; set; }
+
+    protected override void OnInitialized()
+    {
+        MyMovies = Service.GetRandomMovies().ToList();
+    }
+}

@@ -1,0 +1,1302 @@
+[
+  {
+    "Kategoria": 500,
+    "Tresc": "Podaj dokładną datę Bitwy pod Grunwaldem",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "15.07.1410 r.",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "15.08.1410 r.",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "25.07.1410 r.",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "10.07.1410 r.",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "Jaka drużyna została mistrzem Polski w piłce nożnej w sezonie 2019/2020?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Legia Warszawa",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Piast Gliwice",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Lech Poznań",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Śląsk Wrocław",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "Jak wygląda logo firmy Apple?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Nadgryzione jabłko",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Uschnięte jabłko",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Całe jabłko z ogonkiem",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Nadgryziona gruszka",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "W którym roku zakończyła się I wojna światowa?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "1918",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "1920",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "1916",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "1914",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "Jak miał na imię Einstein - genialny fizyk, laureat nagrody Nobla?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Albert",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Aaron",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Andrew",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Anthony",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "Która z tych rzek nie wpada do Bałtyku?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Strwiąż",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Wisła",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Łeba",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Potynia",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "Największy ocean na Ziemi to ?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Ocean Spokojny",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Ocean Arktyczny",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Ocean Indyjski",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Ocean Atlantycki",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "Długość granic Polski to w przybliżeniu:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "3500 km",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "4200 km",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "4600 km",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "3000 km",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "Czym charakteryzuje się rok przestępny?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Jest dłuższy o 1 dzień",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Występuje co 3 lata",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Jest krótszy o 1 dzień",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Występuje co 5 lat",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 500,
+    "Tresc": "Sony - znany producent elektroniki to firma ?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "japońska",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "koreańska",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "chińska",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "z Tajlandii",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Jeden hektar pola to?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Kwadrat o bokach 100m x 100m",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Koło o średnicy 1000 m",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Kwadrat o bokach 1000m x 1000m",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Prostokąt o bokach 1000m x 100m",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Co oznacza skrót WHO?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Światowa Organizacja Zdrowia",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Światowa Organizacja Handlu",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Organizacja Narodów Zjednoczonych",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Międzynarodowy Komitet Olimpijski",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Które ze świąt dzieli najmniejsza liczba dni od Andrzejek?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Boże Narodzenie",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Wielkanoc",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Zaduszki",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Święto Trzech Króli",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Co łączy ze sobą rowerowa szprycha?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "piastę z obręczą",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "obręcz z dętką",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "dętkę z piastą",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "obręcz z widelcem",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Trzy z tych czterech nazw odnoszą się do tego samego oceanu. Która go nie dotyczy?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Atlantyk",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Ocean Wielki",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Pacyfik",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Ocean Spokojny",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Na akord można?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "pracować",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "spać",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "śpiewać",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "podróżować",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Tradycyjne gruzińskie chinkali wypełnione są:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "mięsem",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "kozim serem",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "pieczarkami",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "owczym serem",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Kto został królem Anglii po bitwie pod Hastings?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Wilhelm Zdobywca",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Edward Nożycoręki",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Karol II",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Henryk VII",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "Bronisław Cieślak wcielił się w rolę:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Komunistycznego milicjanta o kryptonimie 07",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Agenta o kryptonimie 007",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Janosika",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Dozorcę z serialu Alternatywy 4",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 1000,
+    "Tresc": "12 groszy to tytuł utworu?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Kazika",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Lady Pank",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Skiby",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Dżemu",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Kto jest autorem słynnego cytatu 'Dobrze widzi się tylko sercem. Najważniejsze jest niewidoczne dla oczu'?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Antoine de Saint-Exupéry",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Michaił Bułhakow",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Wisława Szymborska",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Paulo Coelho",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Suspens to chwyt stosowany?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "w filmach",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "w zapasach",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "w grze na gitarze",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "we wspinaczce skałkowej",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Ile rodzonych córek miała macocha Kopciuszka w znanej baśni braci Grimm?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "dwie",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "trzy",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "cztery",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "pięć",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Lew zabity przez Ramona Mercadera to?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Trocki",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Simba",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Mufasa",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Tołstoj",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Którzy sportowcy na igrzyskach olimpijakich w Pjongczangu nie mogli wystepować po własną flagą?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Rosjanie",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Szwedzi",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Syryjczycy",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Kanadyjczycy",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Miernik poziomu dźwięku, to?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "sonometr",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "higrometr",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "barometr",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "dozymetr",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Polska noblistka - Olga Tokarczuk nie napisała:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Lodu",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Biegunów",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Ksiąg Jakubowych",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Zagubionej duszy",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Panczeniści do uprawiania swojego sportu potrzebują:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "łyżew",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "karabinku",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "nart",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "deski surfingowej",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Jaki naprawdę nazywał się Bolesław Prus - autor 'Lalki'?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Aleksander Głowacki",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Mirosław Czapski",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Bolesław Kowalski",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Wincenty Witos",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 2000,
+    "Tresc": "Pierwszą stolicą Stanów Zjednoczonych było miasto?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Filadelfia",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Nowy York",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Indianapolis",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Atlanta",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Z iloma państwami graniczy Polska?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "7",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "6",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "8",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "5",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Prosta w geometrii ...",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "nie ma początku oraz nie ma końca",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "przechodzi tylko i wyłącznie przez jeden punkt",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "ma początek, ale nie ma końca",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "ma koniec, ale nie ma początku",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Data terrorystycznego ataku na WTC to:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "11.09.2001 r.",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "01.09.2001 r.",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "11.09.2011 r.",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "11.11.2011 r.",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Pumba z filmu animowanego 'Król Lew' był:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "guźcem",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "surykatką",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "lwem",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "żyrafą",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Z kim graliśmy słynny 'mecz na wodzie' w półfinale MŚ w Piłce Nożnej w 1974 r. ?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "z RFN",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "z Brazylią",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "z Włochami",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "z NRD",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Ile złotych medali olimpijskich zdobył Adam Małysz?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "0",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "1",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "2",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "3",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Którego z tych filmów nie reżyserował Roman Polański?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Omen",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Gorzkie Gody",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Autor Widmo",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Pianista",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Michael Jordan zdobył tytuły mistrza NBA z drużyną:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Chicago Bulls",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Orlando Magic",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Houston Rockets",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Boston Celtics",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "Ciało dorosłej osoby składa się z 206 kości. Z iloma kośćmi się rodzimy?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "ponad 300",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Całe życie mamy tyle samo",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "około 180",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "około 280",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 5000,
+    "Tresc": "We Francji obowiązuje prawo, które zakazuje nadawania trzodzie chlewnej imienia pewnego wielkiego Francuza. Czy wiesz o kogo chodzi?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "O Napoleona",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "O Charlesa de Gaulle'a",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "O Victora Hugo",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "O Moliera",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Najdłuższą rzeką w Polsce jest Wisła. Ile kilometrów mierzy?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "1047",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "1134",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "986",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "1006",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Ilu sąsiadów Polski ma dostęp do morza?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "czterech",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "dwóch",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "trzech",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "jeden",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Temudżyn to znany później:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Czyngis-chan",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Kara Mustafa",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Sulejman Wspaniały",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Marco Polo",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Religią dominującą w Japonii jest buddyzm oraz...",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "szinto",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "chrześcijaństwo",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "islam",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "hinduizm",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Jak nazywał się największy statek Krzysztofa Kolumba, na którym dotarł do Ameryki?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Santa Maria",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Pinta",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Nina",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Santa Clara",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Na tablicy Mendelejewa symbolem P oznaczony jest ...",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "fosfor",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "azot",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "potas",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "argon",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Kto napisał słynną operę 'Carmen'?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Georges Bizet",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Giuseppe Verdi",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Giacomo Puccini",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Gioacchino Rossini",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Film 'Dyktator' z wybitną rolą Charliego Chaplina parodiował postać:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Hitlera",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Franco",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Stalina",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Mussoliniego",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "W którym kraju jednym z urzędowych języków jest język migowy ?",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "W Nowej Zelandii",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "W Stanach Zjednoczonych",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "We Francji",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "W Japonii",
+        "CzyPrawidlowa": false
+      }
+    ]
+  },
+  {
+    "Kategoria": 10000,
+    "Tresc": "Pierszym krajem, w którym zaczęto wydawać gazetę codzienną to:",
+    "Odpowiedzi": [
+      {
+        "Id": 1,
+        "Tresc": "Niemcy",
+        "CzyPrawidlowa": true
+      },
+      {
+        "Id": 2,
+        "Tresc": "Wielka Brytania",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 3,
+        "Tresc": "Francja",
+        "CzyPrawidlowa": false
+      },
+      {
+        "Id": 4,
+        "Tresc": "Szwajcaria",
+        "CzyPrawidlowa": false
+      }
+    ]
+  }
+]
