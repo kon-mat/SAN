@@ -30,63 +30,63 @@ Funkcyjne f = new Funkcyjne();
 //}
 
 
-//// Zad3ab
-//static void Zad3TimeTestA(Funkcyjne f)
-//{
-//    long step = 0;
-//    Stopwatch stopWatch = new Stopwatch();
+// Zad3ab
+static void Zad3TimeTestA(Funkcyjne f)
+{
+    long step = 0;
+    Stopwatch stopWatch = new Stopwatch();
 
-//    Console.Write("Liczba do ciągu: ");
-//    string sNumber = Console.ReadLine();
+    Console.Write("Liczba do ciągu: ");
+    string sNumber = Console.ReadLine();
 
-//    stopWatch.Restart();    // start czasu
-//    Console.WriteLine($"Dla liczby {sNumber}");
-//    Console.WriteLine($"Wynik końcowy funkcji A wynosi: {f.Zad3a(int.Parse(sNumber), ref step)}");
-//    stopWatch.Stop();
-//    Console.WriteLine($"Ilość kroków {step}");
+    stopWatch.Restart();    // start czasu
+    Console.WriteLine($"Dla liczby {sNumber}");
+    Console.WriteLine($"Wynik końcowy funkcji A wynosi: {f.Zad3a(int.Parse(sNumber), ref step)}");
+    stopWatch.Stop();
+    Console.WriteLine($"Ilość kroków {step}");
 
-//    TimeSpan ts = stopWatch.Elapsed;
+    TimeSpan ts = stopWatch.Elapsed;
 
-//    // Format and display the TimeSpan value.
-//    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-//        ts.Hours, ts.Minutes, ts.Seconds,
-//        ts.Milliseconds / 10);
-//    Console.WriteLine("RunTime funkcji A: " + elapsedTime);
+    // Format and display the TimeSpan value.
+    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+        ts.Hours, ts.Minutes, ts.Seconds,
+        ts.Milliseconds / 10);
+    Console.WriteLine("RunTime funkcji A: " + elapsedTime);
 
-//}
+}
 
-//static void Zad3TimeTestB(Funkcyjne f)
-//{
-//    long step = 0;
-//    Stopwatch stopWatch = new Stopwatch();
+static void Zad3TimeTestB(Funkcyjne f)
+{
+    long step = 0;
+    Stopwatch stopWatch = new Stopwatch();
 
-//    Console.Write("Liczba do ciągu: ");
-//    string sNumber = Console.ReadLine();
+    Console.Write("Liczba do ciągu: ");
+    string sNumber = Console.ReadLine();
 
-//    stopWatch.Restart();    // start czasu
-//    Console.WriteLine($"Dla liczby {sNumber}");
-//    Console.WriteLine($"Wynik końcowy funkcji B wynosi: {f.Zad3b(int.Parse(sNumber), ref step)}"); ;
-//    stopWatch.Stop();
-//    Console.WriteLine($"Ilość kroków {step}");
+    stopWatch.Restart();    // start czasu
+    Console.WriteLine($"Dla liczby {sNumber}");
+    Console.WriteLine($"Wynik końcowy funkcji B wynosi: {f.Zad3b(int.Parse(sNumber), ref step)}"); ;
+    stopWatch.Stop();
+    Console.WriteLine($"Ilość kroków {step}");
 
-//    TimeSpan ts = stopWatch.Elapsed;
+    TimeSpan ts = stopWatch.Elapsed;
 
-//    // Format and display the TimeSpan value.
-//    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-//        ts.Hours, ts.Minutes, ts.Seconds,
-//        ts.Milliseconds / 10);
-//    Console.WriteLine("RunTime funkcji B: " + elapsedTime);
-//}
+    // Format and display the TimeSpan value.
+    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
+        ts.Hours, ts.Minutes, ts.Seconds,
+        ts.Milliseconds / 10);
+    Console.WriteLine("RunTime funkcji B: " + elapsedTime);
+}
 
-//for (int i = 0; i < 10; i++)
-//{
-//    Console.WriteLine($"Funkcja A test {i}");
-//    Zad3TimeTestA(f);
-//    Console.WriteLine();
-//    Console.WriteLine($"Funkcja B test {i}");
-//    Zad3TimeTestB(f);
-//    Console.WriteLine();
-//}
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine($"Funkcja A test {i}");
+    Zad3TimeTestA(f);
+    Console.WriteLine();
+    Console.WriteLine($"Funkcja B test {i}");
+    Zad3TimeTestB(f);
+    Console.WriteLine();
+}
 
 
 

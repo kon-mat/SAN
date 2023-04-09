@@ -1,20 +1,10 @@
 (ns first-app.Zadanie1)
 
-(defn square [x]
-  (* x x))
+(defn Zad1
+  [x]
+  (- 
+   (Math/pow (apply + (for [i (range x)] (inc i))) 2)
+  (apply + (for [i (range x)] (Math/pow (inc i) 2)))))
 
-(defn squareSum [y]
-  (apply + (for [i (range y)] (square (inc i)))))
-
-(defn sequenceSum [z]
-  (apply + (for [i (range z)] (inc i))))
-
-(defn sumSquareDiffrence [n]
-  (- (square (sequenceSum n)) (squareSum n)))
-
-(sumSquareDiffrence 100)
-
-
-
-
+(Zad1 10)
 
