@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace CSharpVersions
             double x1 = (2 * x0 + number / (x0 * x0)) / 3; // pierwsza iteracja
             while (Math.Abs(x1 - x0) > epsilon)
             {
-                Console.Write($"{ i++}, ");
+                Console.Write($"{i++}, ");
                 x0 = x1;
                 x1 = (2 * x0 + number / (x0 * x0)) / 3;
             }
@@ -34,10 +35,10 @@ namespace CSharpVersions
 
         public double Zad2c(double number, int N)
         {
-            
+
             double x0 = number / 3;
             double x1 = (2 * x0 + number / (x0 * x0)) / 3; // pierwsza iteracja
-            for (int i = 1; i < N; i++) 
+            for (int i = 1; i < N; i++)
             {
                 x0 = x1;
                 x1 = (2 * x0 + number / (x0 * x0)) / 3;
@@ -86,31 +87,81 @@ namespace CSharpVersions
             return FibResults[number];
         }
 
+        public List<List<int>> Zad4(List<int> collection)
+        {
+            collection.Sort();
+            Console.Write("Zbiór potęgowy dla zbioru: ");
+            DisplayList(collection);
+            Console.WriteLine();
+            List<List<int>> powerset = new List<List<int>>() { new List<int>() };
+            List<int> powersetElement = new List<int>();
+            List<int> powersetElementBug = new List<int>();
+
+            if (collection.Count() < 1)
+                return powerset;
+
+            // Zbiory jednoelementowe
+            for (int i = 0; i < collection.Count(); i++)
+                powerset.Add(new List<int>() { collection[i] });
+
+            if (collection.Count() < 2)
+                return powerset;
+
+            for (int i = 1; i < collection.Count(); i++)
+            {
+                powerset = powerset.OrderBy(p => p.Count).ToList();
+                int currentPowersetCount = powerset.Count();
+                int indexOfFirstLargestCount = powerset.IndexOf(powerset.First(p => p.Count == i));
+                if (indexOfFirstLargestCount == 0)
+                    indexOfFirstLargestCount = 1;
+
+                for (int j = indexOfFirstLargestCount; j < currentPowersetCount; j++)
+                {
+                    int indOfLAst = collection.IndexOf(powerset[j].Last());
+                    if (indOfLAst != collection.Count() - 1)
+                    {
+                        for (int k = indOfLAst + 1; k <= collection.Count() - 1; k++)
+                        {
+                            powerset.Add(new List<int>());
+                            foreach (var vals in powerset[j])
+                                powerset.Last().Add(vals);
+
+                            powerset.Last().Add(collection[k]);
+                        }
+
+                    }
+
+                }
+
+            }
+
+            return powerset;
+        }
+
+        public void DisplayPowerset(List<List<int>> powerset)
+        {
+            for (int i = 0; i < powerset.Count; i++)
+            {
+                DisplayList(powerset[i]);
+                Console.WriteLine();
+            }
+            
+        }
+
+        public void DisplayList(List<int> list)
+        {
+            Console.Write("{ ");
+            foreach (int number in list)
+                Console.Write(number + " ");
+            Console.Write("}");
+
+        }
 
 
 
 
 
 
-
-
-
-
-        //       fib(n-1) + fib(n-2)
-
-
-
-        //Zadanie 3. Dany jest ciąg Fibonacciego
-        //    (defn fib [n] (if (< n 2) n(+ (fib (- n 1)) (fib (- n 2)))))
-        //    a.Wyznaczyć dokładny wzór opisujący ilość kroków niezbędnych do obliczenia(fib n)
-        //    b.Zaproponować procedurę rekurencyjną fib, która generuje proces iteracyjny    
-        //    c.Zastosować formę (recur …) i policzyć Fib(10000)
-
-
-
-        //Proces iteracyjny to metoda budowania, określania i udoskonalania projektu, produktu czy inicjatywy.Zespoły, które korzystają z iteracyjnego procesu rozwoju zyskują możliwość tworzenia, testowania i wprowadzania poprawek, aż będą zadowolone z końcowego rezultatu.
-
-        //Świat ekspertów podzielił się dwie grupy: Alistair Cockburn, Jeff Patton oraz Mike Cohn utrzymują, że podejście iteracyjne oznacza stopniowe udoskonalanie, zmienianie oraz przerabianie elementów produktu, często wielu na raz, tak aby pracować i skupiać się na całościowym obrazie tworzonego systemu. Natomiast podejście przyrostowe oznacza dodawanie do produktu skończonych, gotowych kawałków, często będących tylko częścią większej całości.
 
 
 
