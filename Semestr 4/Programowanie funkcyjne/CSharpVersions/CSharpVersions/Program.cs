@@ -1,120 +1,49 @@
 ﻿using CSharpVersions;
 using System.Diagnostics;
 
-Funkcyjne f = new Funkcyjne();
-
-/*
-
-// Zad2ab
-//for (int i = 0; i < 3; i++)
-//{
-//    Console.Write("Liczba do pierwiastkowania: ");
-//    string sNum = Console.ReadLine();
-//    Console.Write("Epsilon: ");
-//    string sEps = Console.ReadLine();
-//    Console.WriteLine($"Pierwiastek szescienny z liczby {sNum} w przyblizeniu do {sEps} wynosi " +
-//        $"{f.Zad2ab(double.Parse(sNum), double.Parse(sEps))}");
-//    Console.WriteLine();
-//}
-
-
-//// Zad2c
-//for (int i = 0; i < 3; i++)
-//{
-//    Console.Write("Liczba do pierwiastkowania: ");
-//    string sNum = Console.ReadLine();
-//    Console.Write("Liczba kroków: ");
-//    string sN = Console.ReadLine();
-//    Console.WriteLine($"Pierwiastek szescienny z liczby {sNum} w {sN} krokach procedury Herona wynosi " +
-//        $"{f.Zad2c(double.Parse(sNum), int.Parse(sN))}");
-//    Console.WriteLine();
-//}
-
-
-//// Zad3ab
-//static void Zad3TimeTestA(Funkcyjne f)
-//{
-//    long step = 0;
-//    Stopwatch stopWatch = new Stopwatch();
-
-//    Console.Write("Liczba do ciągu: ");
-//    string sNumber = Console.ReadLine();
-
-//    stopWatch.Restart();    // start czasu
-//    Console.WriteLine($"Dla liczby {sNumber}");
-//    Console.WriteLine($"Wynik końcowy funkcji A wynosi: {f.Zad3a(int.Parse(sNumber), ref step)}");
-//    stopWatch.Stop();
-//    Console.WriteLine($"Ilość kroków {step}");
-
-//    TimeSpan ts = stopWatch.Elapsed;
-
-//    // Format and display the TimeSpan value.
-//    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-//        ts.Hours, ts.Minutes, ts.Seconds,
-//        ts.Milliseconds / 10);
-//    Console.WriteLine("RunTime funkcji A: " + elapsedTime);
-
-//}
-
-//static void Zad3TimeTestB(Funkcyjne f)
-//{
-//    long step = 0;
-//    Stopwatch stopWatch = new Stopwatch();
-
-//    Console.Write("Liczba do ciągu: ");
-//    string sNumber = Console.ReadLine();
-
-//    stopWatch.Restart();    // start czasu
-//    Console.WriteLine($"Dla liczby {sNumber}");
-//    Console.WriteLine($"Wynik końcowy funkcji B wynosi: {f.Zad3b(int.Parse(sNumber), ref step)}"); ;
-//    stopWatch.Stop();
-//    Console.WriteLine($"Ilość kroków {step}");
-
-//    TimeSpan ts = stopWatch.Elapsed;
-
-//    // Format and display the TimeSpan value.
-//    string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}",
-//        ts.Hours, ts.Minutes, ts.Seconds,
-//        ts.Milliseconds / 10);
-//    Console.WriteLine("RunTime funkcji B: " + elapsedTime);
-//}
-
-//for (int i = 0; i < 10; i++)
-//{
-//    Console.WriteLine($"Funkcja A test {i}");
-//    Zad3TimeTestA(f);
-//    Console.WriteLine();
-//    Console.WriteLine($"Funkcja B test {i}");
-//    Zad3TimeTestB(f);
-//    Console.WriteLine();
-//}
-
-*/
-
-
-List<int> collection = new List<int>() { 1, 2, 3, 4, 5 };
-
-List<int> collection2 = new List<int>() { };
-
-List<int> collection3 = new List<int>() { 1, 3, 5, 8, 4  };
-
-List<int> collection4 = new List<int>() { 9, 6 };
-
-List<List<int>> ints = new List<List<int>>();
-
-
-
-f.DisplayPowerset(f.Zad4(collection3));
+Funkcyjne2 f2 = new Funkcyjne2();
 
 
 
 
 
-//for (int i = 0; i < 10; i++)
-//{
+// Zadanie 2 - różnica kwadratu sumy i sumy kwadratów
+//long naturalNumbers = 100;
+//Console.WriteLine(f2.SquareSumDiffrence(naturalNumbers));
 
 
-//}
+
+
+// Zadanie 2 - pierwiastek
+//double number = 27;
+//double epsilon = 0.1;
+//Console.WriteLine($"Pierwiastek z {number} przy epsilon równym {epsilon}:\n   {f2.HeronEpsilon(number, epsilon)}");
+
+//number = 126;
+//int steps = 10;
+//Console.WriteLine($"Pierwiastek z {number} przy ilości kroków równej {steps}:\n   {f2.HeronSteps(number, steps)}");
+
+
+
+
+// Zadanie 3 - Fibbonaci
+//long number = 3;
+//Console.WriteLine($"Ilość kroków potrzebnych do obliczenia {number}:\n   {f2.FibSteps(number)}");
+
+//number = 5;
+//Console.WriteLine($"{number} wyraz ciągu Fibbonaciego wynosi (metoda iteracyjna):\n   {f2.FibIterative(number)}");
+//Console.WriteLine($"{number} wyraz ciągu Fibbonaciego wynosi (metoda recur):\n   {f2.FibIterative(number)}");
+
+
+
+
+// Zadanie 4 - Powerset
+//List<int> collection = new List<int>() { 1, 3, 6, 7 };
+//Console.Write("Zbiór potęgowy dla zbioru: ");
+//f2.DisplayList(collection);
+//Console.WriteLine();
+//f2.DisplayPowerset(f2.CreatePowerset(collection));
+
 
 
 
@@ -123,64 +52,6 @@ f.DisplayPowerset(f.Zad4(collection3));
 
 
 Console.ReadKey();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

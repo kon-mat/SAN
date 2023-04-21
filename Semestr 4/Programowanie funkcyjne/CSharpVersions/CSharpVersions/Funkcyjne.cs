@@ -49,7 +49,7 @@ namespace CSharpVersions
         public long Zad3a(long number, ref long step)
         {
             step++; // Każde wywołanie funkcji jest liczone jako jeden krok
-
+            Console.WriteLine(step);
             if (number < 2)
                 return number;
             else
@@ -68,11 +68,30 @@ namespace CSharpVersions
             55   8   - 67    = 41 + 25 + 1   = g(7) + g(6) + 1      fib + 12
             89   9   - 109   = 67 + 41 + 1   = g(8) + g(7) + 1      fib + 20
             144  10  - 177   = 109 + 67 + 1  = g(9) + g(8) + 1      fib + 32
-            
+
              */
         }
 
-        public long Zad3b(long number, ref long step)
+
+
+
+        public long FibSteps(int number)
+        {
+            // FibSteps(n) = n                          dla n < 2
+            // FibSteps(n) = fib(n-1) + fib(n-2) + 1    dla n >= 2
+
+            if (number < 2)
+                return number;
+            else
+                return FibSteps(number - 1) + FibSteps(number - 2) + 1;
+        }
+
+
+
+
+
+
+            public long Zad3b(long number, ref long step)
         {
             step++; // Każde wywołanie funkcji jest liczone jako jeden krok
 
