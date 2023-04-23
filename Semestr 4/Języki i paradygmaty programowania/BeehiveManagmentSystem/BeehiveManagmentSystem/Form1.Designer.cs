@@ -30,10 +30,10 @@
         {
             workerBeeJob = new ComboBox();
             jobsAssignment = new GroupBox();
-            workerTaskLabel = new Label();
-            shifts = new NumericUpDown();
-            assignJobButton = new Button();
             shiftsLabel = new Label();
+            assignJobButton = new Button();
+            shifts = new NumericUpDown();
+            workerTaskLabel = new Label();
             report = new TextBox();
             nextShift = new Button();
             jobsAssignment.SuspendLayout();
@@ -44,6 +44,7 @@
             // 
             workerBeeJob.DropDownStyle = ComboBoxStyle.DropDownList;
             workerBeeJob.FormattingEnabled = true;
+            workerBeeJob.Items.AddRange(new object[] { "Zbieranie nektaru", "Wytwarzanie miodu", "Pielęgnacja jaj", "Nauczanie pszczółek", "Utrzymywanie ula", "Patrol z żądłami" });
             workerBeeJob.Location = new Point(6, 37);
             workerBeeJob.Name = "workerBeeJob";
             workerBeeJob.Size = new Size(178, 23);
@@ -63,21 +64,14 @@
             jobsAssignment.TabStop = false;
             jobsAssignment.Text = "Przydział prac robotnicom";
             // 
-            // workerTaskLabel
+            // shiftsLabel
             // 
-            workerTaskLabel.AutoSize = true;
-            workerTaskLabel.Location = new Point(6, 19);
-            workerTaskLabel.Name = "workerTaskLabel";
-            workerTaskLabel.Size = new Size(103, 15);
-            workerTaskLabel.TabIndex = 0;
-            workerTaskLabel.Text = "Zadanie robotnicy";
-            // 
-            // shifts
-            // 
-            shifts.Location = new Point(203, 37);
-            shifts.Name = "shifts";
-            shifts.Size = new Size(65, 23);
-            shifts.TabIndex = 1;
+            shiftsLabel.AutoSize = true;
+            shiftsLabel.Location = new Point(203, 19);
+            shiftsLabel.Name = "shiftsLabel";
+            shiftsLabel.Size = new Size(47, 15);
+            shiftsLabel.TabIndex = 3;
+            shiftsLabel.Text = "Zmiany";
             // 
             // assignJobButton
             // 
@@ -87,15 +81,23 @@
             assignJobButton.TabIndex = 2;
             assignJobButton.Text = "Przypisz tę pracę pszczole";
             assignJobButton.UseVisualStyleBackColor = true;
+            assignJobButton.Click += assignJobButton_Click;
             // 
-            // shiftsLabel
+            // shifts
             // 
-            shiftsLabel.AutoSize = true;
-            shiftsLabel.Location = new Point(203, 19);
-            shiftsLabel.Name = "shiftsLabel";
-            shiftsLabel.Size = new Size(47, 15);
-            shiftsLabel.TabIndex = 3;
-            shiftsLabel.Text = "Zmiany";
+            shifts.Location = new Point(203, 37);
+            shifts.Name = "shifts";
+            shifts.Size = new Size(65, 23);
+            shifts.TabIndex = 1;
+            // 
+            // workerTaskLabel
+            // 
+            workerTaskLabel.AutoSize = true;
+            workerTaskLabel.Location = new Point(6, 19);
+            workerTaskLabel.Name = "workerTaskLabel";
+            workerTaskLabel.Size = new Size(103, 15);
+            workerTaskLabel.TabIndex = 0;
+            workerTaskLabel.Text = "Zadanie robotnicy";
             // 
             // report
             // 
@@ -113,6 +115,7 @@
             nextShift.TabIndex = 3;
             nextShift.Text = "Przepracuj następną zmianę";
             nextShift.UseVisualStyleBackColor = true;
+            nextShift.Click += nextShift_Click;
             // 
             // workAssignmentGroup
             // 

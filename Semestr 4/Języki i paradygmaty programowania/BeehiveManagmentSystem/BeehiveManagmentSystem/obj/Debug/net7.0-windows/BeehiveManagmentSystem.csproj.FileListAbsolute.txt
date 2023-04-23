@@ -1,0 +1,17 @@
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\bin\Debug\net7.0-windows\BeehiveManagmentSystem.exe
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\bin\Debug\net7.0-windows\BeehiveManagmentSystem.deps.json
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\bin\Debug\net7.0-windows\BeehiveManagmentSystem.runtimeconfig.json
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\bin\Debug\net7.0-windows\BeehiveManagmentSystem.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\bin\Debug\net7.0-windows\BeehiveManagmentSystem.pdb
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.csproj.AssemblyReference.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.workAssignmentGroup.resources
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.csproj.GenerateResource.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.AssemblyInfoInputs.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.AssemblyInfo.cs
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.csproj.CoreCompileInputs.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\refint\BeehiveManagmentSystem.dll
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.pdb
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\BeehiveManagmentSystem.genruntimeconfig.cache
+D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\BeehiveManagmentSystem\BeehiveManagmentSystem\obj\Debug\net7.0-windows\ref\BeehiveManagmentSystem.dll
