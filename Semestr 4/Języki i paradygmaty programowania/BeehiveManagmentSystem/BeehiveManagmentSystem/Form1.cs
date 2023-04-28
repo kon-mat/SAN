@@ -1,20 +1,26 @@
-using BeehiveManagmentSystem.Object;
+using BeehiveManagmentSystem.Objects;
 
 namespace BeehiveManagmentSystem
 {
     public partial class workAssignmentGroup : Form
     {
         Queen queen;
+        Hive hive;
 
         public workAssignmentGroup()
         {
             InitializeComponent();
-            Worker[] workers = new Worker[4];
-            workers[0] = new Worker(175, new string[] { "Zbieranie nektaru", "Wytwarzanie miodu" });
-            workers[1] = new Worker(114, new string[] { "Pielêgnacja jaj", "Nauczanie pszczó³ek" });
-            workers[2] = new Worker(149, new string[] { "Utrzymywanie ula", "Patrol z ¿¹d³ami" });
-            workers[3] = new Worker(155, new string[] { "Zbieranie nektaru", "Wytwarzanie miodu", "Pielêgnacja jaj", "Nauczanie pszczó³ek", "Utrzymywanie ula", "Patrol z ¿¹d³ami" });
-            queen = new Queen(workers);
+            hive = new Hive();
+            List<Worker> workers = new List<Worker>()
+            {
+                new NectarCollector(175, new List<Job> { Job.Zbieranie_nektaru, Job.Wytwarzanie_miodu }, hive),
+                new NectarCollector(114, new List<Job> { Job.Zbieranie_nektaru, Job.Pielêgnacja_jaj, Job.Nauczanie_Pszczó³ek, Job.Wytwarzanie_miodu }, hive),
+                new StingPatrol(149, new List<Job> { Job.Utrzymywanie_ula, Job.Patrol_z_¿¹d³ami }, hive),
+                //new NectarStinger(155, new List<Job> { Job.Zbieranie_nektaru, Job.Wytwarzanie_miodu, Job.Pielêgnacja_jaj, Job.Nauczanie_Pszczó³ek, Job.Utrzymywanie_ula, Job.Patrol_z_¿¹d³ami }, hive),
+        };
+
+
+            queen = new Queen(workers, hive);
         }
 
 

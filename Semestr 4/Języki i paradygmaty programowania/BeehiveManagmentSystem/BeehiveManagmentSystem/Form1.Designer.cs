@@ -44,7 +44,7 @@
             // 
             workerBeeJob.DropDownStyle = ComboBoxStyle.DropDownList;
             workerBeeJob.FormattingEnabled = true;
-            workerBeeJob.Items.AddRange(new object[] { "Zbieranie nektaru", "Wytwarzanie miodu", "Pielęgnacja jaj", "Nauczanie pszczółek", "Utrzymywanie ula", "Patrol z żądłami" });
+            workerBeeJob.Items.AddRange(new object[] { "Zbieranie_nektaru", "Wytwarzanie_miodu", "Pielęgnacja_jaj", "Nauczanie_pszczółek", "Utrzymywanie_ula", "Patrol_z_żądłami" });
             workerBeeJob.Location = new Point(6, 37);
             workerBeeJob.Name = "workerBeeJob";
             workerBeeJob.Size = new Size(178, 23);
@@ -104,7 +104,7 @@
             report.Location = new Point(12, 132);
             report.Multiline = true;
             report.Name = "report";
-            report.Size = new Size(370, 182);
+            report.Size = new Size(370, 493);
             report.TabIndex = 2;
             // 
             // nextShift
@@ -121,7 +121,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(393, 333);
+            ClientSize = new Size(393, 637);
             Controls.Add(nextShift);
             Controls.Add(report);
             Controls.Add(jobsAssignment);

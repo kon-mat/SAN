@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BeehiveManagmentSystem.Object
+namespace BeehiveManagmentSystem.Objects
 {
-    internal class Bee
+    abstract class Bee
     {
         private int _weight;
 
@@ -14,19 +14,19 @@ namespace BeehiveManagmentSystem.Object
         {
             _weight = weight;
         }
+        
+        public int Weight { get { return _weight; } }
 
-        // Spożycie miodu zależy od liczby zmian pozostałych do zakończenia zadania
         public virtual int ShiftsLeft { get { return 0; } }
 
-        // Każda pszczoła konsumuje miód, więc ta metoda została umieszczona w klasie bazowej
         public virtual double GetHoneyConsumption()
         {
             double consumption;
-            if (ShiftsLeft == 0)    // pszczoła aktualnie nie pracuje
+            if (ShiftsLeft == 0)
                 consumption = 7.5;
-            else                    // pszczoła aktualnie pracuje
+            else
                 consumption = ShiftsLeft + 9;
-            if (_weight > 150)      // jeżeli pszczoła waży powyżej 150mg, to spożywa więcej miodu
+            if (_weight > 150)
                 consumption *= 1.35;
             return consumption;
         }
