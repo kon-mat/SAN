@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
@@ -13,7 +14,6 @@ namespace CSharpVersions
 {
     public class Funkcyjne2
     {
-        List<double> x1List;
         Dictionary<long, long> FibResults;
 
         public Funkcyjne2()
@@ -28,44 +28,20 @@ namespace CSharpVersions
         // ==================[ Zadanie 1 ]==================
         // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
-        public long[] CreateArray(long n)
+        public void SquareDiff_1(int n)
         {
-            long[] arr = new long[n];
-            for (long i = 0; i < n; i++) 
-            {
-                arr[i] = i + 1;
-            }
-            return arr;
+            int sumOfSquares = Enumerable.Range(1, n).Select(x => x * x).Sum();
+            int squareOfSum = (int)Math.Pow(Enumerable.Range(1, n).Sum(), 2);
+            int difference = squareOfSum - sumOfSquares;
+            Console.WriteLine($"Rozwiązanie zadania dla liczby {n} wynosi {difference}");
         }
 
-        public long SumArrayElements(long[] n)
-        {
-            long[] arr = new long[n.Length];
-            arr[0] = 1;
-            for (long i = 1; i < n.Length; i++)
-            {
-                arr[i] = arr[i - 1] + n[i];
-            }
-            return arr[n.Length - 1];
-        }
 
-        public long[] SquareArray(long[] n)
-        {
-            long[] sqrArr = new long[n.Length];
-            for (long i = 0; i < n.Length; i++)
-            {
-                sqrArr[i] = n[i] * n[i];
-            }
-            return sqrArr;
-        }
 
-        public long SquareSumDiffrence(long n)
-        {
-            if (n == 0 || n == 1)
-                return n;
-             return SumArrayElements(CreateArray(n)) * SumArrayElements(CreateArray(n)) - SumArrayElements(SquareArray(CreateArray(n)));
 
-        }
+
+
+
 
 
 
@@ -79,28 +55,101 @@ namespace CSharpVersions
             c.Przebieg procedury Herona uzależnić od N (ilości kroków)
         */
 
-        public double CalcX1(double x0, double number)
+        // A
+
+        public double CubeRoot_2A(double x)
         {
-            return (2 * x0 + number / (x0 * x0)) / 3;
+            return Iterate_2A(1, x, x);
         }
 
-        public double HeronEpsilon(double number, double epsilon)
+        // funkcja iteracyjna
+        private double Iterate_2A(double guess, double x, double prevGuess)
         {
-            x1List = new List<double> { number / 3 };               // x0 początkowe
-            x1List.Add(CalcX1(x1List[x1List.Count() - 1], number)); // x1
-            while (Math.Abs(x1List[x1List.Count() - 1] - x1List[x1List.Count() - 2]) > epsilon)
-                x1List.Add(CalcX1(x1List[x1List.Count() - 1], number));
-            return x1List[x1List.Count() - 1];
+            if (LowerThanEpsilon_2A(guess, prevGuess))
+            {   // nasz wynik spełnia wymagania
+                return guess;
+            }
+            else
+            {
+                // wynik nie spełnia wymagań, więc podajemy w parametrze kolejne przybliżenie i wykonujemy metodę rekruencyjnie
+                double nextGuess = ((2 * guess) + (x / (guess * guess))) / 3;
+                return Iterate_2A(nextGuess, x, guess);
+            }
         }
 
-        public double HeronSteps(double number, int steps)
+        private bool LowerThanEpsilon_2A(double guess, double prevGuess)
         {
-            x1List = new List<double> { number / 3 };               // x0 początkowe
-            x1List.Add(CalcX1(x1List[x1List.Count() - 1], number)); // x1
-            for (int i = 1; i < steps; i++)
-                x1List.Add(CalcX1(x1List[x1List.Count() - 1], number));
-            return x1List[x1List.Count() - 1];
+            double epsilon = 0.000001;    // epsilon
+            // (Aktualne przybliżenie - poprzednie przybliżenie) < epsilon, to zwraca true - wynik jest wystarczający
+            return Math.Abs(guess - prevGuess) < epsilon;
         }
+
+
+
+
+        // B
+
+        public double CubeRoot_2B(double x, double epsilon)
+        {
+            return Iterate_2B(1, x, x, epsilon);
+        }
+
+        private double Iterate_2B(double guess, double x, double prevGuess, double epsilon)
+        {
+            if (LowerThanEpsilon_2B(guess, prevGuess, epsilon))
+            {  
+                return guess;
+            }
+            else
+            {
+                double nextGuess = ((2 * guess) + (x / (guess * guess))) / 3;
+                return Iterate_2B(nextGuess, x, guess, epsilon);
+            }
+        }
+
+        private bool LowerThanEpsilon_2B(double guess, double prevGuess, double epsilon)
+        {
+            return Math.Abs(guess - prevGuess) < epsilon;
+        }
+
+
+
+
+        // C
+
+        public double CubeRoot_2C(double x, int steps)
+        {
+            return Iterate_2C(1, x, steps);
+        }
+
+        private double Iterate_2C(double guess, double x, int steps)
+        {
+            if (steps == 1)
+            {
+                return guess;
+            }
+            else
+            {
+                // rekurencyjne wywołanie metody z parametrem steps - 1
+                double nextGuess = ((2 * guess) + (x / (guess * guess))) / 3;
+                return Iterate_2C(nextGuess, x, steps - 1);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -134,35 +183,61 @@ namespace CSharpVersions
             
         */
 
-        public long FibSteps(long number)
+
+        // A
+
+        public long FibSteps_3A(long number)
         {
             // FibSteps(n) = 1                          dla n < 2
             // FibSteps(n) = fib(n-1) + fib(n-2) + 1    dla n => 2
             if (number < 2)
                 return 1;
             else
-                return FibSteps(number - 1) + FibSteps(number - 2) + 1;
+                return FibSteps_3A(number - 1) + FibSteps_3A(number - 2) + 1;
         }
 
-        public long FibIterative(long number)
+
+
+
+        // B
+
+        // Wykorzystujemy słownik, aby wcześniej obliczone wartości zwracać z niego
+        public long FibIterative_3B(long number)
         {
             if (!FibResults.ContainsKey(number))
             {
                 if (number < 2)
                     FibResults.Add(number, number);
                 else
-                    FibResults.Add(number, FibIterative(number - 1) + FibIterative(number - 2));
+                    FibResults.Add(number, FibIterative_3B(number - 1) + FibIterative_3B(number - 2));
             }
             return FibResults[number];
         }
 
-        public long FibRecur(long number)
+
+
+
+        // C
+
+        public ulong FibRecur_3C(ulong number)
         {
-            long[] vec = new long[2] { 0, 1 };
-            for (int i = 0; i < number; i++)
-                (vec[0], vec[1]) = (vec[1], vec[0] + vec[1]);
-            return vec[1];
+            if (number == 0)
+                return number;
+            if (number <= 2)
+                return 1;
+            return FibAdd(1, 1, number);
         }
+
+        public ulong FibAdd(ulong lower, ulong higher, ulong number)
+        {
+            if (number == 3)
+                return lower + higher;
+            else
+                return FibAdd(higher, lower + higher, number - 1);
+        }
+
+
+
 
 
 
@@ -178,86 +253,37 @@ namespace CSharpVersions
             (powerset [1 2 3]) => ([] [1] [2] [3] [1 2] [1 3] [2 3] [1 2 3])
         */
 
-        public List<List<int>> CreatePowerset(List<int> collection)
+
+        public  List<List<int>> CreatePowerSet_4(List<int> collection)
         {
-            // Wejściowa kolekcja zostaje posortowana rosnąco
-            collection.Sort();
-
-            List<List<int>> powerset = new List<List<int>>() { new List<int>() };   // Powerset ze zbiorem pustym
-            List<int> powersetElement = new List<int>();
-
-            // Zbiór pusty
-            if (collection.Count() < 1)
-                return powerset;
-
-            // Dodanie zbiorów jednoelementowych
-            for (int i = 0; i < collection.Count(); i++)
-                powerset.Add(new List<int>() { collection[i] });
-
-            // Jeżeli kolekcja wejściowa składa się z jednego elementu, to aktualny powerset zostaje zwrócony
-            if (collection.Count() < 2)
-                return powerset;
-
-            // Pętla dla kolejnych elementów kolekcji wejściowej (i = 1, czyli drugi element kolekcji)
-            // Każda iteracja tworzy podzbiory następnej długości
-            for (int i = 1; i < collection.Count(); i++)
+            if (collection.Count == 0)
             {
-                // Powerset zostaje posortowany rosnąco według długości podzbiorów
-                powerset = powerset.OrderBy(p => p.Count).ToList();
-
-                // Aktualna wielkość powersetu'u
-                int currentPowersetCount = powerset.Count();
-
-                // Indeks pierwszego podzbioru o długości równej i
-                int indexOfFirstLargestCount = powerset.IndexOf(powerset.First(p => p.Count == i));
-
-                //if (indexOfFirstLargestCount == 0)
-                //    indexOfFirstLargestCount = 1;
-
-                // Pętla przechodząca przez podzbiory o aktualnie największej długości, żeby zamieścić na ich końcu kolejne elementy kolekcji wejściowej
-                for (int j = indexOfFirstLargestCount; j < currentPowersetCount; j++)
-                {
-                    // Zdefiniowanie indeksu ostatniego elementu w aktualnie procesowanym podzbiorze
-                    // Do podzbioru dodajemy najmniejszy element z kolekcji, który się jeszcze w nim nie znajduje, dlatego następna pętla zaczyna się od 'indOfLast'
-                    int indOfLast = collection.IndexOf(powerset[j].Last());
-
-                    // Jeżeli indeks ostatniego elementu z kolekcji jest ostatnim elementem podzbioru, oznacza to, że wszystkie wartości dla tej długości podzbiorów zostały dodane
-                    if (indOfLast != collection.Count() - 1)
-                    {
-                        // Pętla przechodzi przez wszystkie niedodane jeszcze elementy
-                        for (int k = indOfLast + 1; k <= collection.Count() - 1; k++)
-                        {
-                            // Na koniec powerset'u zostaje dodany pusty podzbiór
-                            powerset.Add(new List<int>());
-
-                            // Pętla dodaje wszystkie elementy procesowanego aktualnie podzbioru (jeden z najdłuższych podzbiorów)
-                            foreach (var vals in powerset[j])
-                                powerset.Last().Add(vals);
-
-                            // Dodanie na koniec powerset'u kolejnego elementu, który jeszcze nie znajduje się w podzbiorze
-                            powerset.Last().Add(collection[k]);
-                        }
-                    }
-                }
+                // jeżeli parametr == zbiór pusty
+                // zwracany jest zbiór zawierający wyłącznie zbiór pusty
+                return new List<List<int>> { new List<int>() };
             }
-            return powerset;
-        }
-
-        public void DisplayPowerset(List<List<int>> powerset)
-        {
-            for (int i = 0; i < powerset.Count; i++)
+            else
             {
-                DisplayList(powerset[i]);
-                Console.WriteLine();
+                // rozdzielamy kolekcję na jej pierwszy element oraz pozostałe elementy (wykorzystujemy funkcję Skip)
+                int firstElement = collection[0];
+                List<int> restOfElements = collection.Skip(1).ToList();
+
+                // wywołujemy funkcję rekurencyjnie, aby z pozostałych elementów stworzyć zbiór potęgowy
+                List<List<int>> powerSetOfRest = CreatePowerSet_4(restOfElements);
+
+                // dodajemy pierwszy element do każdego podzbioru w zbiorze potęgowym pozostałych elementów
+                // (w każdym kolejnym wywołaniu funkcji elementem pierwszym jest kolejna liczba z kolekcji podanej w parametrze)
+                List<List<int>> powerSetWithFirst = powerSetOfRest.Select(subset => new List<int>(subset) { firstElement }).ToList();
+
+                // zbiór potęgowy pozostałych elementów zostaje połączony ze zbiorem potęgowym zawierającym pierwszy element
+                return powerSetOfRest.Concat(powerSetWithFirst).ToList();
             }
         }
 
-        public void DisplayList(List<int> list)
+        public void DisplayPowerset(List<List<int>> powerSet)
         {
-            Console.Write("{ ");
-            foreach (int number in list)
-                Console.Write(number + " ");
-            Console.Write("}");
+            foreach (List<int> subset in powerSet)
+                Console.WriteLine("{ " + string.Join(", ", subset) + " }");
         }
 
 
@@ -270,25 +296,31 @@ namespace CSharpVersions
 
 
 
+        // ==================[ Zadanie 4.. ]==================
 
-
-
-
-
-        /* Zadania
-
-
-
-
-
-        Zadanie 5.
+        /*
             a. Zrealizuj pierwiastek sześcienny z wykorzystaniem average-damp oraz FIXED-POINT
             b. Zrealizuj pierwiastek sześcienny z wykorzystaniem Newtons-method
             c. Niech f i g będą dwoma funkcjami jednoargumentowymi. Złożenie f z g jest określone jako funkcja x -> f(g(x)). Zdefiniuj procedurę złóż implementującą złożenie funkcji. Przykładowo: ((złóż kwadrat inc) 6) => 49
             d. Jeśli f jest funkcją jednoargumentową określoną na liczbach oraz n jest dowolną liczbą naturalną, to n-krotnym złożeniem funkcji f nazywamy funkcję, której wartością jest wynik n-krotnego zastosowania funkcji f: x -> f(f( … (f(x)) …)) Napisz procedurę realizującą n-krotne złożenie funkcji f wykorzystując rozwiązanie z punktu c.
-
-
          */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }

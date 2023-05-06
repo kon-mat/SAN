@@ -32,17 +32,17 @@
  
 
 
-;; Zad3c
-(defn Zad3c
-  [x y]
-  (def ve (vector 0 1))
-  (loop [i x]
-    (when (< i y)
-      (def ve (vector (get ve 1) (apply +' ve))
-      (recur (inc i))))
-  (get ve 1)) 
+;; ;; Zad3c
+;; (defn Zad3c
+;;   [x y]
+;;   (def ve (vector 0 1))
+;;   (loop [i x]
+;;     (when (< i y)
+;;       (def ve (vector (get ve 1) (apply +' ve))
+;;       (recur (inc i))))
+;;   (get ve 1)) 
 
-;; (Zad3c 1 10000)
+;; ;; (Zad3c 1 10000)
 
   
 

@@ -12,6 +12,29 @@
 
 
 
+;; Funkcja tworzy wektor od 1 do n
+(defn create-array 
+  [n]
+  (vec (range 1 (inc n))))
+
+(def v1 (create-array 10))
+
+(println v1)
+
+
+
+
+
+
+
+
+(sum 
+ (doseq [e v1] (* e e)))
+
+
+
+
+
 
 
 

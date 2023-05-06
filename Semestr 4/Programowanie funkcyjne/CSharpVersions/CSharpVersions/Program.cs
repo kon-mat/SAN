@@ -1,5 +1,4 @@
 ﻿using CSharpVersions;
-using System.Diagnostics;
 
 Funkcyjne2 f2 = new Funkcyjne2();
 
@@ -7,42 +6,52 @@ Funkcyjne2 f2 = new Funkcyjne2();
 
 
 
-// Zadanie 2 - różnica kwadratu sumy i sumy kwadratów
-//long naturalNumbers = 100;
-//Console.WriteLine(f2.SquareSumDiffrence(naturalNumbers));
+
+//// Zadanie 1 - różnica kwadratu sumy i sumy kwadratów
+//int naturalNumbers = 100;
+//f2.SquareDiff_1(naturalNumbers);
+
+
+//// Zadanie 2 - pierwiastek sześcienny
+//Console.WriteLine(f2.CubeRoot_2A(28));
+//Console.WriteLine(f2.CubeRoot_2B(28, 0.0003));
+//Console.WriteLine(f2.CubeRoot_2C(28, 14));
+
+
+//// Zadanie 3 - Fibbonaci
+//Console.WriteLine("kroki dla 10 = " + f2.FibSteps_3A(10));
+//Console.WriteLine("n = 10   xn = " + f2.FibIterative_3B(10));
+//Console.WriteLine("n = 10000   xn = " + f2.FibRecur_3C(10000));
+
+
+//// Zadanie 4 - Powerset
+//List<int> collection = new List<int> { 1, 2, 3, 4 };
+//List<List<int>> powerSet = f2.CreatePowerSet_4(collection);
+//Console.WriteLine("Powerset dla kolekcji { 1, 2, 3, 4 } :");
+//f2.DisplayPowerset(powerSet);
 
 
 
 
-// Zadanie 2 - pierwiastek
-//double number = 27;
-//double epsilon = 0.1;
-//Console.WriteLine($"Pierwiastek z {number} przy epsilon równym {epsilon}:\n   {f2.HeronEpsilon(number, epsilon)}");
-
-//number = 126;
-//int steps = 10;
-//Console.WriteLine($"Pierwiastek z {number} przy ilości kroków równej {steps}:\n   {f2.HeronSteps(number, steps)}");
 
 
 
 
-// Zadanie 3 - Fibbonaci
-//long number = 3;
-//Console.WriteLine($"Ilość kroków potrzebnych do obliczenia {number}:\n   {f2.FibSteps(number)}");
+static List<double> AverageDamp(List<double> values, double alpha)
+{
+    List<double> smoothedValues = new List<double>();
+    double previousValue = values[0];
 
-//number = 5;
-//Console.WriteLine($"{number} wyraz ciągu Fibbonaciego wynosi (metoda iteracyjna):\n   {f2.FibIterative(number)}");
-//Console.WriteLine($"{number} wyraz ciągu Fibbonaciego wynosi (metoda recur):\n   {f2.FibIterative(number)}");
+    for (int i = 0; i < values.Count; i++)
+    {
+        double currentValue = values[i];
+        double smoothedValue = (1 - alpha) * currentValue + alpha * previousValue;
+        smoothedValues.Add(smoothedValue);
+        previousValue = smoothedValue;
+    }
 
-
-
-
-// Zadanie 4 - Powerset
-//List<int> collection = new List<int>() { 1, 3, 6, 7 };
-//Console.Write("Zbiór potęgowy dla zbioru: ");
-//f2.DisplayList(collection);
-//Console.WriteLine();
-//f2.DisplayPowerset(f2.CreatePowerset(collection));
+    return smoothedValues;
+}
 
 
 

@@ -10,7 +10,13 @@
 ;   - See https://calva.io/connect-sequences/
 ; 
 ; Starting Jack-in Terminal: pushd d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless & popd
-; Using host:port 127.0.0.1:55682 ...
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+; Starting Jack-in Terminal: pushd d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app & cmd.exe /d /c lein update-in :dependencies conj [nrepl,"1.0.0"] -- update-in :plugins conj [cider/cider-nrepl,"0.28.5"] -- update-in [:repl-options,:nrepl-middleware] conj '["cider.nrepl/cider-middleware"]' -- with-profile +uberjar repl :headless & popd
+; Using host:port 127.0.0.1:58734 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; TIPS:
@@ -23,64 +29,123 @@
 clj꞉first-app.core꞉>  ; Use `alt+enter` to evaluate
 ; Jack-in done.
 clj꞉first-app.core꞉> 
-nil
+8
+clj꞉first-app.core꞉> 
+(0 1 2 3 4 5 6 7 8 9)
 clj꞉first-app.Zadanie1꞉> 
-#'first-app.Zadanie1/Zad1
+; Execution error (ClassCastException) at first-app.Zadanie1/eval7872 (form-init16351294293564733611.clj:14).
+; class clojure.lang.LongRange cannot be cast to class java.lang.Number (clojure.lang.LongRange is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
 clj꞉first-app.Zadanie1꞉> 
-2640.0
-clj꞉first-app.Zadanie1꞉> 
-10
+; Execution error (ClassCastException) at first-app.Zadanie1/eval7874 (form-init16351294293564733611.clj:14).
+; class clojure.lang.LongRange cannot be cast to class java.lang.Number (clojure.lang.LongRange is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
 clj꞉first-app.Zadanie1꞉> 
 (0 1 2 3 4 5 6 7 8 9)
 clj꞉first-app.Zadanie1꞉> 
-; Execution error (ClassCastException) at first-app.Zadanie1/eval7911 (form-init5020473039553527764.clj:14).
-; class clojure.lang.LongRange cannot be cast to class java.lang.Number (clojure.lang.LongRange is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+(0 1 2 3 4 5 6 7 8 9)
 clj꞉first-app.Zadanie1꞉> 
-:10
+[1 2 3 4 5 6 7 8 9]
 clj꞉first-app.Zadanie1꞉> 
-1
-clj꞉first-app.Zadanie1꞉> 
-(1 2 3 4 5 6 7 8 9)
-clj꞉first-app.Zadanie1꞉> 
-(1 2 3 4 5 6 7 8 9)
-clj꞉first-app.Zadanie1꞉> 
-; Syntax error compiling at (d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app\src\first_app\Zadanie1.clj:1:7966).
-; Unable to resolve symbol: v1 in this context
-clj꞉first-app.Zadanie1꞉> 
-; Syntax error compiling at (d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app\src\first_app\Zadanie1.clj:15:1).
-; Unable to resolve symbol: v1 in this context
+#'first-app.Zadanie1/create-array
 clj꞉first-app.Zadanie1꞉> 
 #'first-app.Zadanie1/v1
 clj꞉first-app.Zadanie1꞉> 
-; Execution error (ArityException) at first-app.Zadanie1/eval7918 (form-init5020473039553527764.clj:15).
+; Execution error (ArityException) at first-app.Zadanie1/eval7883 (form-init16351294293564733611.clj:20).
 ; Wrong number of args (0) passed to: clojure.lang.PersistentVector
 clj꞉first-app.Zadanie1꞉> 
-(1 2 3 4 5 6 7 8 9)
+[1 2 3 4 5 6 7 8 9 10]
 clj꞉first-app.Zadanie1꞉> 
-#function[clojure.core/+]
+; Syntax error compiling at (d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app\src\first_app\Zadanie1.clj:22:1).
+; Unable to resolve symbol: dosef in this context
 clj꞉first-app.Zadanie1꞉> 
-; Execution error (ClassCastException) at first-app.Zadanie1/eval7922 (form-init5020473039553527764.clj:13).
-; class clojure.core$vec cannot be cast to class java.lang.Number (clojure.core$vec is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+nil
 clj꞉first-app.Zadanie1꞉> 
-; Execution error (ClassCastException) at first-app.Zadanie1/eval7924 (form-init5020473039553527764.clj:13).
-; class clojure.core$vec cannot be cast to class java.lang.Number (clojure.core$vec is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+[1 2 3 4 5 6 7 8 9 10]
+nil
 clj꞉first-app.Zadanie1꞉> 
-((1 2 3 4 5 6 7 8 9))
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+nil
 clj꞉first-app.Zadanie1꞉> 
-#'first-app.Zadanie1/l1
+; Execution error (IllegalArgumentException) at first-app.Zadanie1/eval7908 (form-init16351294293564733611.clj:31).
+; Don't know how to create ISeq from: java.lang.Long
 clj꞉first-app.Zadanie1꞉> 
-((1 2 3 4 5 6 7 8 9))
+; Syntax error compiling at (d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app\src\first_app\Zadanie1.clj:1:7967).
+; Unable to resolve symbol: e in this context
 clj꞉first-app.Zadanie1꞉> 
-; Execution error (ClassCastException) at java.lang.Class/cast (Class.java:3946).
-; Cannot cast clojure.lang.LongRange to java.lang.Number
+; Execution error (ClassCastException) at first-app.Zadanie1/eval7916 (form-init16351294293564733611.clj:31).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
 clj꞉first-app.Zadanie1꞉> 
-#'first-app.Zadanie1/l1
+; Execution error (ClassCastException) at first-app.Zadanie1/eval7924 (form-init16351294293564733611.clj:31).
+; class java.lang.Long cannot be cast to class clojure.lang.IFn (java.lang.Long is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
 clj꞉first-app.Zadanie1꞉> 
-; Execution error (ClassCastException) at java.lang.Class/cast (Class.java:3946).
-; Cannot cast clojure.lang.LongRange to java.lang.Number
+; Syntax error compiling at (d:\Programowanie\SAN\Semestr 4\Programowanie funkcyjne\first-app\src\first_app\Zadanie1.clj:1:7967).
+; Unable to resolve symbol: e in this context
 clj꞉first-app.Zadanie1꞉> 
-#function[clojure.core/+]
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+nil
 clj꞉first-app.Zadanie1꞉> 
-; Execution error (ClassCastException) at java.lang.Class/cast (Class.java:3946).
-; Cannot cast clojure.lang.LongRange to java.lang.Number
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+nil
+clj꞉first-app.Zadanie1꞉> 
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+nil
+clj꞉first-app.Zadanie1꞉> 
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+nil
+clj꞉first-app.Zadanie1꞉> 
+nil
 clj꞉first-app.Zadanie1꞉> 

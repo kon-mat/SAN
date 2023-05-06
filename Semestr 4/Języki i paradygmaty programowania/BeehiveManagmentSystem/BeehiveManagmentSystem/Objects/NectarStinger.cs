@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BeehiveManagmentSystem.Objects
 {
-    internal class NectarStinger : Worker, INectarCollector//, IStingPatrol
+    internal class NectarStinger : Worker, INectarCollector, IStingPatrol
     {
         private double _nectar = 0;
         private Random _random = new Random();
