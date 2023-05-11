@@ -12,7 +12,7 @@ namespace Application.Dto
         public int Id { get; set; }
         public Technology Technology { get; set; }
         public Level Level { get; set; }
-        public Lecturer Lecturer { get; set; }
-        public List<Student> Students { get; set; }
+        public string Lecturer { get; set; }
+        public List<string> Students { get; set; }
     }
 }

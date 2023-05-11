@@ -35,9 +35,9 @@ namespace Infrastructure.Repositories
             return course;
         }
 
-        public void Update(Lecturer lecturer)
+        public void Update(Course course)
         {
-            lecturer.LastModified = DateTime.UtcNow;
+            course.LastModified = DateTime.UtcNow;
         }
 
         public void Delete(Course course)
@@ -45,19 +45,13 @@ namespace Infrastructure.Repositories
             throw new NotImplementedException();
         }
 
-        public void SetLecturer(int id, Lecturer lecturer)
-        {
-            GetById(id).LastModified = DateTime.UtcNow;
-            GetById(id).Lecturer = lecturer;
-        }
-
-        public void AddStudent(int id, Student student)
+        public void AddStudent(int id, string student)
         {
             GetById(id).LastModified = DateTime.UtcNow;
             GetById(id).Students.Add(student);
         }
 
-        public void DeleteStudent(int id, Student student)
+        public void DeleteStudent(int id, string student)
         {
             GetById(id).LastModified = DateTime.UtcNow;
             GetById(id).Students.Remove(student);

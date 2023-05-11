@@ -12,8 +12,8 @@ namespace Domain.Entities
         private int _id;
         private readonly Technology _technology;
         private Level _level;
-        private Lecturer _lecturer;
-        private List<Student> _students;
+        private string _lecturer;
+        private List<string> _students;
 
         public int Id
         {
@@ -29,13 +29,13 @@ namespace Domain.Entities
             set { _level = value; }
         }
 
-        public Lecturer Lecturer
+        public string Lecturer
         {
             get { return _lecturer; }
             set { _lecturer = value; }
         }
 
-        public List<Student> Students
+        public List<string> Students
         {
             get { return _students; }
             set { _students = value; }
@@ -46,7 +46,7 @@ namespace Domain.Entities
         public Course(int id, Technology technology, Level level)
         {
             (_id, _technology, _level) = (id, technology, level);
-            _students = new List<Student>();
+            _students = new List<string>();
         }
     }
 }

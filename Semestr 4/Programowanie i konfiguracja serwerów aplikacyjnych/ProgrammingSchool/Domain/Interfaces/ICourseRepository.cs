@@ -12,10 +12,10 @@ namespace Domain.Interfaces
         IEnumerable<Course> GetAll();
         Course GetById(int id);
         Course Add(Course course);
-        void Update(Lecturer lecturer);
+        void Update(Course course);
         void Delete(Course course);
-        void SetLecturer(int id, Lecturer lecturer);
-        void AddStudent(int id, Student student);
-        void DeleteStudent(int id, Student student);
+
+        void AddStudent(int id, string student);
+        void DeleteStudent(int id, string student);
     }
 }

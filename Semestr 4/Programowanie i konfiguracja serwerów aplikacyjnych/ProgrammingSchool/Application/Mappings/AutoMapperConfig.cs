@@ -14,8 +14,6 @@ namespace Application.Mappings
         public static IMapper Initialize()
             => new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Lecturer, LecturerDto>();
-                cfg.CreateMap<Student, StudentDto>();
                 cfg.CreateMap<Course, CourseDto>();
             })
             .CreateMapper();

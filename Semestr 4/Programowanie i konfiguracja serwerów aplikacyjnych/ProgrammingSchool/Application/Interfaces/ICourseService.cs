@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Application.Interfaces
 {
-    internal interface ICourseService
+    public interface ICourseService
     {
         IEnumerable<CourseDto> GetAllCourses();
         CourseDto GetCourseById(int id);

@@ -38,3 +38,4 @@ D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjn
 D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\WebAPI\obj\Debug\net7.0\WebAPI.genruntimeconfig.cache
 D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\WebAPI\obj\Debug\net7.0\ref\WebAPI.dll
 D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\WebAPI\bin\Debug\net7.0\AutoMapper.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\WebAPI\bin\Debug\net7.0\Swashbuckle.AspNetCore.Annotations.dll

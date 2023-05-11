@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -313,7 +315,34 @@ namespace CSharpVersions
 
 
 
+        /*
+        In this implementation, we define a function CubicRoot that takes a single argument x, which is the number we want to find the cubic root of. The function then defines two helper functions: averageDamp and fixedPoint.
 
+The averageDamp function takes a damping factor alpha and returns another function that takes a value y and applies the average-damp formula to it using x and alpha.
+
+The fixedPoint function takes a function f and an initial guess firstGuess and applies the fixed-point algorithm to f using the initial guess to find the value that f converges to.
+
+Finally, we call fixedPoint with averageDamp(0.5) (which gives us a function that applies the average-damp formula with a damping factor of 0.5) and an initial guess of 1 to find the cubic root of x.
+
+Note that this implementation uses lambdas and recursion to achieve a functional programming style without variables.The tryGuess function is a recursive lambda function that uses tail recursion to avoid creating new stack frames.
+        */
+
+        public double CubicRoot(double x)
+        {
+            Func<double, double> averageDamp = alpha => y => (2 * y + x / (y * y)) / 3;
+            Func<Func<double, double>, double, double> fixedPoint = (f, firstGuess) =>
+            {
+                Func<double, double> tryGuess = null;
+                tryGuess = lastGuess =>
+                {
+                    var nextGuess = f(lastGuess);
+                    return Math.Abs(nextGuess - lastGuess) < 0.0001 ? nextGuess : tryGuess(nextGuess);
+                };
+                return tryGuess(firstGuess);
+            };
+
+            return fixedPoint(averageDamp(0.5), 1);
+        }
 
 
 
