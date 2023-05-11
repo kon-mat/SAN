@@ -15,3 +15,5 @@ D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjn
 D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Infrastructure\obj\Debug\net7.0\refint\Infrastructure.dll
 D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Infrastructure\obj\Debug\net7.0\Infrastructure.pdb
 D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Infrastructure\obj\Debug\net7.0\ref\Infrastructure.dll
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Infrastructure\bin\Debug\net7.0\Infrastructure.runtimeconfig.json
+D:\Programowanie\SAN\Semestr 4\Programowanie i konfiguracja serwerów aplikacyjnych\ProgrammingSchool\Infrastructure\obj\Debug\net7.0\Infrastructure.genruntimeconfig.cache

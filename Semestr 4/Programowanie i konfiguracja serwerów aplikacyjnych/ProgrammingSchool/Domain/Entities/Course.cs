@@ -1,18 +1,35 @@
 ﻿using Domain.Common;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
+    
+    [Table("Courses")]  // Atrybut Table służy do konfigurowania nazwy tabeli w bazie danych
     public class Course : AuditableEntity
     {
+        [Key]  // Atrybut Key służy do wskazania klucza głównego w tabeli
         private int _id;
+
+        [Required]  // Atrybutem Required definiujemy wymagalność danych
+        [MaxLength(100)]    // Atrybut MaxLength definiuje maksymalną długość tekstu
         private readonly Technology _technology;
+
+        [Required]
+        [MaxLength(100)]
         private Level _level;
+
+        [Required]
+        [MaxLength(100)]
         private string _lecturer;
+
+        [AllowNull] // Atrybut AllowNull zezwala na pozostawienie zmiennej jako pustej
         private List<string> _students;
 
         public int Id

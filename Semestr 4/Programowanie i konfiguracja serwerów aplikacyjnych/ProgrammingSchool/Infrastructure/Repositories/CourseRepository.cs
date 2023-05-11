@@ -1,5 +1,6 @@
 ﻿using Domain.Entities;
 using Domain.Interfaces;
+using Infrastructure.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,39 +11,43 @@ namespace Infrastructure.Repositories
 {
     public class CourseRepository : ICourseRepository
     {
-        private static ISet<Course> _courses = new HashSet<Course>()
+        private readonly SchoolContext _context;
+
+        public CourseRepository(SchoolContext context)
         {
-            new Course(1, Technology.JavaScript, Level.Beginner, "Andrzej Pompka"),
-            new Course(2, Technology.CSharp, Level.Beginner, "Mariusz Kowalski"),
-            new Course(3, Technology.SQL, Level.Beginner, "Helena Ambroziak"),
-        };
+            _context = context;
+        }
 
         public IEnumerable<Course> GetAll()
         {
-            return _courses;
+            return _context.Courses;
         }
 
         public Course GetById(int id)
         {
-            return _courses.SingleOrDefault(x => x.Id == id);
+            return _context.Courses.SingleOrDefault(x => x.Id == id);
         }
 
         public Course Add(Course course)
         {
-            course.Id = _courses.Count() + 1;
+
             course.Created = DateTime.UtcNow;
-            _courses.Add(course);
+            _context.Courses.Add(course);
+            _context.SaveChanges();
             return course;
         }
 
         public void Update(Course course)
         {
             course.LastModified = DateTime.UtcNow;
+            _context.Courses.Update(course);
+            _context.SaveChanges();
         }
 
         public void Delete(Course course)
         {
-            throw new NotImplementedException();
+            _context.Courses.Remove(course);
+            _context.SaveChanges();
         }
     }
 }
