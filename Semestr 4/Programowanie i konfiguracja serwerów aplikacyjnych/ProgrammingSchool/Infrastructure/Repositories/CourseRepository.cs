@@ -12,9 +12,9 @@ namespace Infrastructure.Repositories
     {
         private static ISet<Course> _courses = new HashSet<Course>()
         {
-            new Course(1, Technology.JavaScript, Level.Beginner),
-            new Course(2, Technology.CSharp, Level.Beginner),
-            new Course(3, Technology.SQL, Level.Beginner),
+            new Course(1, Technology.JavaScript, Level.Beginner, "Andrzej Pompka"),
+            new Course(2, Technology.CSharp, Level.Beginner, "Mariusz Kowalski"),
+            new Course(3, Technology.SQL, Level.Beginner, "Helena Ambroziak"),
         };
 
         public IEnumerable<Course> GetAll()
@@ -43,18 +43,6 @@ namespace Infrastructure.Repositories
         public void Delete(Course course)
         {
             throw new NotImplementedException();
-        }
-
-        public void AddStudent(int id, string student)
-        {
-            GetById(id).LastModified = DateTime.UtcNow;
-            GetById(id).Students.Add(student);
-        }
-
-        public void DeleteStudent(int id, string student)
-        {
-            GetById(id).LastModified = DateTime.UtcNow;
-            GetById(id).Students.Remove(student);
         }
     }
 }

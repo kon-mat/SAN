@@ -35,18 +35,11 @@ namespace Domain.Entities
             set { _lecturer = value; }
         }
 
-        public List<string> Students
-        {
-            get { return _students; }
-            set { _students = value; }
-        }
-
         public Course() { }
 
-        public Course(int id, Technology technology, Level level)
+        public Course(int id, Technology technology, Level level, string lecturer)
         {
-            (_id, _technology, _level) = (id, technology, level);
-            _students = new List<string>();
+            (_id, _technology, _level, _lecturer) = (id, technology, level, lecturer);
         }
     }
 }

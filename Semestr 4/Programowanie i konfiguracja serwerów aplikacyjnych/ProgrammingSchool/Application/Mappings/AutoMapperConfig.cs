@@ -15,6 +15,8 @@ namespace Application.Mappings
             => new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Course, CourseDto>();
+                cfg.CreateMap<CreateCourseDto, Course>();
+                cfg.CreateMap<UpdateCourseDto, Course>();
             })
             .CreateMapper();
     }

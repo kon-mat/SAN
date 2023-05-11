@@ -15,7 +15,5 @@ namespace Domain.Interfaces
         void Update(Course course);
         void Delete(Course course);
 
-        void AddStudent(int id, string student);
-        void DeleteStudent(int id, string student);
     }
 }

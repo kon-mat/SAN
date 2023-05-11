@@ -12,5 +12,8 @@ namespace Application.Interfaces
     {
         IEnumerable<CourseDto> GetAllCourses();
         CourseDto GetCourseById(int id);
+        CourseDto AddNewCourse(CreateCourseDto course);
+        void UpdateCourse(UpdateCourseDto updateCourse);
+        void DeleteCourse(int id);
     }
 }

@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Dto;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
@@ -29,12 +30,36 @@ namespace WebAPI.Controllers
         public IActionResult Get(int id)
         {
             var course = _courseService.GetCourseById(id);
-            if (course == null) 
+            if (course == null)
             {
                 return NotFound();
             }
 
             return Ok(course);
+        }
+
+        [SwaggerOperation(Summary = "Create a new course")]
+        [HttpPost]
+        public IActionResult Create(CreateCourseDto newCourse)
+        {
+            var course = _courseService.AddNewCourse(newCourse);
+            return Created($"api/courses/{course.Id}", course);
+        }
+
+        [SwaggerOperation(Summary = "Update an existing course")]
+        [HttpPut]
+        public IActionResult Update(UpdateCourseDto updateCourse)
+        {
+            _courseService.UpdateCourse(updateCourse);
+            return NoContent();
+        }
+
+        [SwaggerOperation(Summary = "Delete a specific course")]
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            _courseService.DeleteCourse(id);
+            return NoContent();
         }
 
     }
