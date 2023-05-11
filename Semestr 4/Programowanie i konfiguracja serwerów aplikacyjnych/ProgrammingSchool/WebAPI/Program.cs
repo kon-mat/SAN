@@ -4,22 +4,12 @@ using Application.Services;
 using Domain.Interfaces;
 using Infrastructure.Repositories;
 using Microsoft.Extensions.DependencyInjection;
+using WebAPI.Installers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddScoped<ICourseRepository, CourseRepository>();
-builder.Services.AddScoped<ICourseService, CourseService>();
+InstallerExtensions.InstallServicesInAssembly(builder.Services, builder.Configuration);
 
-builder.Services.AddSingleton(AutoMapperConfig.Initialize());
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => 
-{
-    c.EnableAnnotations();
-});
 
 var app = builder.Build();
 
