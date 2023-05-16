@@ -1,0 +1,15 @@
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\bin\Debug\net7.0\Sprawozdanie4.exe
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\bin\Debug\net7.0\Sprawozdanie4.deps.json
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\bin\Debug\net7.0\Sprawozdanie4.runtimeconfig.json
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\bin\Debug\net7.0\Sprawozdanie4.dll
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\bin\Debug\net7.0\Sprawozdanie4.pdb
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\Sprawozdanie4.csproj.AssemblyReference.cache
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\Sprawozdanie4.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\Sprawozdanie4.AssemblyInfoInputs.cache
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\Sprawozdanie4.AssemblyInfo.cs
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\Sprawozdanie4.csproj.CoreCompileInputs.cache
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\Sprawozdanie4.dll
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\refint\Sprawozdanie4.dll
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\Sprawozdanie4.pdb
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\Sprawozdanie4.genruntimeconfig.cache
+D:\Programowanie\SAN\Semestr 4\Wprowadzenie do metod numerycznych\Sprawozdanie4\Sprawozdanie4\obj\Debug\net7.0\ref\Sprawozdanie4.dll

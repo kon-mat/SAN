@@ -280,6 +280,7 @@ namespace CSharpVersions
                 // zbiór potęgowy pozostałych elementów zostaje połączony ze zbiorem potęgowym zawierającym pierwszy element
                 return powerSetOfRest.Concat(powerSetWithFirst).ToList();
             }
+
         }
 
         public void DisplayPowerset(List<List<int>> powerSet)
@@ -327,22 +328,22 @@ Finally, we call fixedPoint with averageDamp(0.5) (which gives us a function tha
 Note that this implementation uses lambdas and recursion to achieve a functional programming style without variables.The tryGuess function is a recursive lambda function that uses tail recursion to avoid creating new stack frames.
         */
 
-        public double CubicRoot(double x)
-        {
-            Func<double, double> averageDamp = alpha => y => (2 * y + x / (y * y)) / 3;
-            Func<Func<double, double>, double, double> fixedPoint = (f, firstGuess) =>
-            {
-                Func<double, double> tryGuess = null;
-                tryGuess = lastGuess =>
-                {
-                    var nextGuess = f(lastGuess);
-                    return Math.Abs(nextGuess - lastGuess) < 0.0001 ? nextGuess : tryGuess(nextGuess);
-                };
-                return tryGuess(firstGuess);
-            };
+        //public double CubicRoot(double x)
+        //{
+        //    Func<double, double> averageDamp = alpha => y => (2 * y + x / (y * y)) / 3;
+        //    Func<Func<double, double>, double, double> fixedPoint = (f, firstGuess) =>
+        //    {
+        //        Func<double, double> tryGuess = null;
+        //        tryGuess = lastGuess =>
+        //        {
+        //            var nextGuess = f(lastGuess);
+        //            return Math.Abs(nextGuess - lastGuess) < 0.0001 ? nextGuess : tryGuess(nextGuess);
+        //        };
+        //        return tryGuess(firstGuess);
+        //    };
 
-            return fixedPoint(averageDamp(0.5), 1);
-        }
+        //    return fixedPoint(averageDamp(0.5), 1);
+        //}
 
 
 
