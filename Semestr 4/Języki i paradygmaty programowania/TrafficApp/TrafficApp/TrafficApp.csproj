@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TrafficApp</RootNamespace>
     <AssemblyName>TrafficApp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +33,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,9 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crossroads.cs" />
+    <Compile Include="District.cs" />
     <Compile Include="Entities\Line.cs" />
     <Compile Include="Entities\Point.cs" />
     <Compile Include="GraphicsExtension.cs" />
+    <Compile Include="Street.cs" />
+    <Compile Include="TrafficService.cs" />
     <Compile Include="Vector3.cs" />
     <Compile Include="TrafficForm.cs">
       <SubType>Form</SubType>
@@ -58,6 +67,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehicle.cs" />
     <EmbeddedResource Include="TrafficForm.resx">
       <DependentUpon>TrafficForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -69,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -82,12 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TrafficCommon\TrafficCommon.csproj">
-      <Project>{7ae4eda5-2031-42bd-a764-5e64c2b2f8e1}</Project>
-      <Name>TrafficCommon</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
