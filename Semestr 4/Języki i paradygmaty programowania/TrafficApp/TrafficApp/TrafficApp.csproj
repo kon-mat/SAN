@@ -83,5 +83,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TrafficCommon\TrafficCommon.csproj">
+      <Project>{7ae4eda5-2031-42bd-a764-5e64c2b2f8e1}</Project>
+      <Name>TrafficCommon</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

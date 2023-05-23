@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficApp", "TrafficApp\TrafficApp.csproj", "{68CDE176-A9A8-45B2-B3DD-2F189BD9FE0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrafficCommon", "TrafficCommon\TrafficCommon.csproj", "{7AE4EDA5-2031-42BD-A764-5E64C2B2F8E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{68CDE176-A9A8-45B2-B3DD-2F189BD9FE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68CDE176-A9A8-45B2-B3DD-2F189BD9FE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68CDE176-A9A8-45B2-B3DD-2F189BD9FE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE4EDA5-2031-42BD-A764-5E64C2B2F8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE4EDA5-2031-42BD-A764-5E64C2B2F8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE4EDA5-2031-42BD-A764-5E64C2B2F8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE4EDA5-2031-42BD-A764-5E64C2B2F8E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
