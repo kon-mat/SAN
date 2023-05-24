@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -17,6 +18,7 @@ namespace TrafficApp
         {
             InitializeComponent();
         }
+        private TrafficService trafficService = new TrafficService();
         private List<Entities.Point> _points = new List<Entities.Point>();
         private List<Entities.Line> _lines = new List<Entities.Line>();
         private Vector3 _currentPosition;
@@ -138,6 +140,26 @@ namespace TrafficApp
             _activeDrawing = true;
             drawing.Cursor = Cursors.Cross;
         }
+
+        private void streetBtn_Click(object sender, EventArgs e)
+        {
+            
+            foreach (Street street in trafficService.Streets)
+            {
+                if (street.MainCords.Count >= 2)
+                    for (int i = 0; i < street.MainCords.Count() - 1; i++)
+                    {
+                        Vector3 firstPoint = new Vector3(street.MainCords[i].Item1, street.MainCords[i].Item2);
+                        Vector3 secondPoint = new Vector3(street.MainCords[i + 1].Item1, street.MainCords[i + 1].Item2);
+
+                        _lines.Add(new Entities.Line(firstPoint, secondPoint));
+                    }   
+            }
+        }
+
+
+
+
 
     }
 }

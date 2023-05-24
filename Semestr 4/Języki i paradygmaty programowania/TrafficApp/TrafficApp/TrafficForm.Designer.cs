@@ -35,6 +35,7 @@
             this.cartesianLabel = new System.Windows.Forms.Label();
             this.pointBtn = new System.Windows.Forms.Button();
             this.lineBtn = new System.Windows.Forms.Button();
+            this.streetBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.drawing)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,11 +111,23 @@
             this.lineBtn.UseVisualStyleBackColor = true;
             this.lineBtn.Click += new System.EventHandler(this.lineBtn_Click);
             // 
+            // streetBtn
+            // 
+            this.streetBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.streetBtn.Location = new System.Drawing.Point(737, 88);
+            this.streetBtn.Name = "streetBtn";
+            this.streetBtn.Size = new System.Drawing.Size(115, 32);
+            this.streetBtn.TabIndex = 7;
+            this.streetBtn.Text = "Streets";
+            this.streetBtn.UseVisualStyleBackColor = true;
+            this.streetBtn.Click += new System.EventHandler(this.streetBtn_Click);
+            // 
             // TrafficApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 852);
+            this.Controls.Add(this.streetBtn);
             this.Controls.Add(this.lineBtn);
             this.Controls.Add(this.pointBtn);
             this.Controls.Add(this.cartesianLabel);
@@ -141,6 +154,7 @@
         private System.Windows.Forms.Label cartesianLabel;
         private System.Windows.Forms.Button pointBtn;
         private System.Windows.Forms.Button lineBtn;
+        private System.Windows.Forms.Button streetBtn;
     }
 }
 

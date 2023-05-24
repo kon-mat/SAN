@@ -11,6 +11,7 @@ namespace TrafficApp
         public TrafficService()
         {
             CreateDistricts();
+            CreateStreets();
         }
 
         public List<District> Districts { get; set; } = new List<District>();
@@ -28,52 +29,52 @@ namespace TrafficApp
         public List<Street> Streets { get; set; } = new List<Street>();
         public void CreateStreets()
         {
-            Streets.Add(new Street(1, "Pabianicka", GetDistrictByName("Śródmieście"), new List<int[]>() {
-                    new int[] { 88, 196 },
-                    new int[] { 94, 165 }, }));
-            Streets.Add(new Street(2, "Kościuszki", GetDistrictByName("Śródmieście"), new List<int[]>() {
-                    new int[] { 94, 165 },
-                    new int[] { 97, 139 }, }));
-            Streets.Add(new Street(3, "Okrzei", GetDistrictByName("Osiedle Okrzei"), new List<int[]>() {
-                    new int[] { 97, 139 },
-                    new int[] { 106, 139 },
-                    new int[] { 107, 134 },
-                    new int[] { 176, 72 },
-                    new int[] { 180, 72 }, }));
-            Streets.Add(new Street(4, "Stanisława Staszica", GetDistrictByName("Osiedle Słoneczne"), new List<int[]>() {
-                    new int[] { 180, 72 },
-                    new int[] { 179, 38 }, }));
-            Streets.Add(new Street(5, "Armii Krajowej", GetDistrictByName("Edwardów"), new List<int[]>() {
-                    new int[] { 179, 38 },
-                    new int[] { 111, 6 }, }));
-            Streets.Add(new Street(6, "Aleja Kardynała Wyszyńskiego", GetDistrictByName("Osiedle Dolnośląskie"), new List<int[]>() {
-                    new int[] { 111, 6 },
-                    new int[] { 22, 5 },
-                    new int[] { 13, 36 },
-                    new int[] { 13, 95 }, }));
-            Streets.Add(new Street(7, "Aleja Włókniarzy", GetDistrictByName("Czapliniec"), new List<int[]>() {
-                    new int[] { 13, 95 },
-                    new int[] { 12, 132 },
-                    new int[] { 10, 140 },
-                    new int[] { 17, 177 }, }));
-            Streets.Add(new Street(8, "Sienkiewicza", GetDistrictByName("Śródmieście"), new List<int[]>() {
-                    new int[] { 17, 177 },
-                    new int[] { 37, 193 },
-                    new int[] { 88, 196 }, }));
-            Streets.Add(new Street(9, "Czapliniecka", GetDistrictByName("Czapliniec"), new List<int[]>() {
-                    new int[] { 17, 177 },
-                    new int[] { 68, 119 }, }));
-            Streets.Add(new Street(10, "Rotmistrza Witolda Pileckiego", GetDistrictByName("Osiedle Kopernika"), new List<int[]>() {
-                    new int[] { 68, 119 },
-                    new int[] { 97, 134 },
-                    new int[] { 97, 139 }, }));
-            Streets.Add(new Street(11, "Lipowa", GetDistrictByName("Osiedle Dolnośląskie"), new List<int[]>() {
-                    new int[] { 68, 119 },
-                    new int[] { 13, 95 }, }));
-            Streets.Add(new Street(12, "Wojska Polskiego", GetDistrictByName("Osiedle Dolnośląskie"), new List<int[]>() {
-                    new int[] { 68, 119 },
-                    new int[] { 91, 89 },
-                    new int[] { 111, 6 }, }));
+            Streets.Add(new Street(1, "Pabianicka", GetDistrictByName("Śródmieście"), new List<(int, int)>() {
+                    ( 88, 196 ),
+                    ( 94, 165 ), }));
+            Streets.Add(new Street(2, "Kościuszki", GetDistrictByName("Śródmieście"), new List<(int, int)>() {
+                    ( 94, 165 ),
+                    ( 97, 139 ), }));
+            Streets.Add(new Street(3, "Okrzei", GetDistrictByName("Osiedle Okrzei"), new List<(int, int)>() {
+                    ( 97, 139 ),
+                    ( 106, 139 ),
+                    ( 107, 134 ),
+                    ( 176, 72 ),
+                    ( 180, 72 ), }));
+            Streets.Add(new Street(4, "Stanisława Staszica", GetDistrictByName("Osiedle Słoneczne"), new List<(int, int)>() {
+                    ( 180, 72 ),
+                    ( 179, 38 ), }));
+            Streets.Add(new Street(5, "Armii Krajowej", GetDistrictByName("Edwardów"), new List<(int, int)>() {
+                    ( 179, 38 ),
+                    ( 111, 6 ), }));
+            Streets.Add(new Street(6, "Aleja Kardynała Wyszyńskiego", GetDistrictByName("Osiedle Dolnośląskie"), new List<(int, int)>() {
+                    ( 111, 6 ),
+                    ( 22, 5 ),
+                    ( 13, 36 ),
+                    ( 13, 95 ), }));
+            Streets.Add(new Street(7, "Aleja Włókniarzy", GetDistrictByName("Czapliniec"), new List<(int, int)>() {
+                    ( 13, 95 ),
+                    ( 12, 132 ),
+                    ( 10, 140 ),
+                    ( 17, 177 ), }));
+            Streets.Add(new Street(8, "Sienkiewicza", GetDistrictByName("Śródmieście"), new List<(int, int)>() {
+                    ( 17, 177 ),
+                    ( 37, 193 ),
+                    ( 88, 196 ), }));
+            Streets.Add(new Street(9, "Czapliniecka", GetDistrictByName("Czapliniec"), new List<(int, int)>() {
+                    ( 17, 177 ),
+                    ( 68, 119 ), }));
+            Streets.Add(new Street(10, "Rotmistrza Witolda Pileckiego", GetDistrictByName("Osiedle Kopernika"), new List<(int, int)>() {
+                    ( 68, 119 ),
+                    ( 97, 134 ),
+                    ( 97, 139 ), }));
+            Streets.Add(new Street(11, "Lipowa", GetDistrictByName("Osiedle Dolnośląskie"), new List<(int, int)>() {
+                    ( 68, 119 ),
+                    ( 13, 95 ), }));
+            Streets.Add(new Street(12, "Wojska Polskiego", GetDistrictByName("Osiedle Dolnośląskie"), new List<(int, int)>() {
+                    ( 68, 119 ),
+                    ( 91, 89 ),
+                    ( 111, 6 ), }));
         }
 
         public List<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
@@ -120,6 +121,12 @@ namespace TrafficApp
         {
             return Vehicles[0]; // #
         }
+
+
+
+
+
+
 
     }
 }
