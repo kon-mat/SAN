@@ -9,3 +9,14 @@ D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\Tr
 D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.csproj.CoreCompileInputs.cache
 D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.exe
 D:\Programowanie\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.pdb
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\bin\Debug\TrafficApp.exe.config
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\bin\Debug\TrafficApp.exe
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\bin\Debug\TrafficApp.pdb
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.csproj.AssemblyReference.cache
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.csproj.SuggestedBindingRedirects.cache
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.TrafficApp.resources
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.Properties.Resources.resources
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.csproj.GenerateResource.cache
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.csproj.CoreCompileInputs.cache
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.exe
+D:\Programowanie\Programiki\SAN\Semestr 4\Języki i paradygmaty programowania\TrafficApp\TrafficApp\obj\Debug\TrafficApp.pdb
