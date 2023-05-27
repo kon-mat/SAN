@@ -36,6 +36,7 @@
             this.pointBtn = new System.Windows.Forms.Button();
             this.lineBtn = new System.Windows.Forms.Button();
             this.streetBtn = new System.Windows.Forms.Button();
+            this.vehicleBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.drawing)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,11 +123,23 @@
             this.streetBtn.UseVisualStyleBackColor = true;
             this.streetBtn.Click += new System.EventHandler(this.streetBtn_Click);
             // 
+            // vehicleBtn
+            // 
+            this.vehicleBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.vehicleBtn.Location = new System.Drawing.Point(737, 126);
+            this.vehicleBtn.Name = "vehicleBtn";
+            this.vehicleBtn.Size = new System.Drawing.Size(115, 32);
+            this.vehicleBtn.TabIndex = 8;
+            this.vehicleBtn.Text = "Vehicles";
+            this.vehicleBtn.UseVisualStyleBackColor = true;
+            this.vehicleBtn.Click += new System.EventHandler(this.vehicleBtn_Click);
+            // 
             // TrafficApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 852);
+            this.Controls.Add(this.vehicleBtn);
             this.Controls.Add(this.streetBtn);
             this.Controls.Add(this.lineBtn);
             this.Controls.Add(this.pointBtn);
@@ -155,6 +168,7 @@
         private System.Windows.Forms.Button pointBtn;
         private System.Windows.Forms.Button lineBtn;
         private System.Windows.Forms.Button streetBtn;
+        private System.Windows.Forms.Button vehicleBtn;
     }
 }
 

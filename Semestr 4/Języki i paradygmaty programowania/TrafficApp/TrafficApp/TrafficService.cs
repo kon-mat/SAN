@@ -12,6 +12,7 @@ namespace TrafficApp
         {
             CreateDistricts();
             CreateStreets();
+            CreateVehicles();
         }
 
         public List<District> Districts { get; set; } = new List<District>();
@@ -80,7 +81,23 @@ namespace TrafficApp
         public List<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
         public void CreateVehicles()
         {
-            ;
+            Random random = new Random();
+            for ( int i = 1; i < 6; i++ )
+            {
+                Vector3 randomPosition;
+                bool uniqueLocation = true;
+                do
+                {
+                    Street randomStreet = GetStreetById(random.Next(1, Streets.Count + 1));
+                    (int, int) randomStreetLocation = randomStreet.Coordinates[random.Next(randomStreet.Coordinates.Count())];
+                    randomPosition = new Vector3(randomStreetLocation.Item1, randomStreetLocation.Item2);
+                    foreach (Vehicle vehicle in Vehicles)
+                        if (uniqueLocation)
+                            uniqueLocation = vehicle.Position == randomPosition ? false : true;
+                } while (!uniqueLocation);
+
+                Vehicles.Add(new Vehicle(i, $"EBE{random.Next(1000, 9999)}", 1, randomPosition));
+            }
         }
 
         public District GetDistrictById(int id)

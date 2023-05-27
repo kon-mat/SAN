@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -21,6 +22,7 @@ namespace TrafficApp
         private TrafficService trafficService = new TrafficService();
         private List<Entities.Point> _points = new List<Entities.Point>();
         private List<Entities.Line> _lines = new List<Entities.Line>();
+        private List<Entities.Line> _carLines = new List<Entities.Line>();
         private Vector3 _currentPosition;
         private Vector3 _firstPoint;
         private int _drawIndex = -1;
@@ -105,7 +107,7 @@ namespace TrafficApp
                 }
             }
 
-            // Draw all lines
+            // Draw all street lines
             if (_lines.Count > 0)
             {
                 foreach (Entities.Line l in _lines)
@@ -113,6 +115,16 @@ namespace TrafficApp
                     e.Graphics.DrawLine(pen, l);
                 }
             }
+
+            // Draw all car lines
+            if (_carLines.Count > 0)
+            {
+                foreach (Entities.Line l in _carLines)
+                {
+                    e.Graphics.DrawLine(extpen, l);
+                }
+            }
+
             // Draw line extended
             switch (_drawIndex)
             {
@@ -157,6 +169,14 @@ namespace TrafficApp
             }
         }
 
+        private void vehicleBtn_Click(object sender, EventArgs e)
+        {
+
+            if (trafficService.Vehicles != null)
+                foreach (Vehicle vehicle in trafficService.Vehicles)
+                    for (int i = 0; i < vehicle.BodyPoints.Count() - 1; i++)
+                        _carLines.Add(new Entities.Line(vehicle.BodyPoints[i], vehicle.BodyPoints[i + 1]));
+        }
 
 
 
