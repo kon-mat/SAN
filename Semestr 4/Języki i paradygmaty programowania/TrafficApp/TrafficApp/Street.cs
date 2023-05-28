@@ -40,17 +40,13 @@ namespace TrafficApp
             if (_mainCoords.Count() >= 2)
             {
                 for (int i = 0; i < _mainCoords.Count() - 1; i++)
-                {
                     coordinates = coordinates.Concat(BresenhamLine(_mainCoords[i].Item1, _mainCoords[i].Item2, _mainCoords[i + 1].Item1, _mainCoords[i + 1].Item2)).ToList();
 
-                }
-                    //coordinates.Concat(BresenhamLine(_mainCoords[i].Item1, _mainCoords[i].Item2, _mainCoords[i + 1].Item1, _mainCoords[i + 1].Item2));
                 coordinates.Add(_mainCoords.Last());
             }
 
             return coordinates;
         }
-
 
         public List<(int, int)> BresenhamLine(int x0, int y0, int x1, int y1)
         {

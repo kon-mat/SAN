@@ -115,7 +115,7 @@ namespace TrafficApp
         public void CreateVehicles()
         {
             Random random = new Random();
-            for ( int i = 1; i < 6; i++ )
+            for ( int i = 1; i < 25; i++ )
             {
                 Vector3 randomPosition;
                 bool uniqueLocation = true;
@@ -128,8 +128,8 @@ namespace TrafficApp
                         if (uniqueLocation)
                             uniqueLocation = vehicle.Position == randomPosition ? false : true;
                 } while (!uniqueLocation);
-
-                Vehicles.Add(new Vehicle(i, $"EBE{random.Next(1000, 9999)}", 1, randomPosition));
+                int randomDirection = random.Next(2) == 0 ? -1 : 1;
+                Vehicles.Add(new Vehicle(i, $"EBE{random.Next(1000, 9999)}", 1, randomDirection, randomPosition));
             }
         }
 

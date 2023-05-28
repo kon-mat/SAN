@@ -14,13 +14,18 @@ namespace TrafficApp
         private int _direction;
         private Vector3 _position;
 
-        public Vehicle(int id, string registration, int speed, Vector3 position)
+        public Vehicle(int id, string registration, int speed, int direction, Vector3 position)
         {
             _id = id;
             _registration = registration;
             _speed = speed;
+            Direction = direction;
             _position = position;
         }
+
+        public int Id { get { return _id; } }
+        public string Registration { get { return _registration; } }
+        public int Speed { get { return _speed; } }
 
         public int Direction
         {
@@ -41,7 +46,7 @@ namespace TrafficApp
         {
             get
             {
-                return (new Vector3(_position.X - 1, _position.Y - 1), new Vector3(_position.X + 2, _position.Y - 1));
+                return (new Vector3(_position.X - 1, _position.Y), new Vector3(_position.X + 2, _position.Y));
             }
         }
 
@@ -64,16 +69,23 @@ namespace TrafficApp
             }
         }
 
-
-        private Vector3 SetPosition(int X, int Y)
+        public Vector3 NewPosition(int X, int Y)
         {
-
             return (new Vector3(X, Y) != _position) ? new Vector3(X, Y) : null;
         }
 
 
         public void Move()
         {
+            /*
+             * jesli samochod porusza sie po drodze w okreslonym kierunku
+             *      nastepnym punktem jest punkt petli po koordynatach drogi
+             *      sprawdz czy na nastepnym punkcie nie znajduje sie inny samochod poruszajacy sie w tym samym kierunku
+             *      
+             */
+
+
+
 
         }
     }
