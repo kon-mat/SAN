@@ -174,8 +174,13 @@ namespace TrafficApp
 
             if (trafficService.Vehicles != null)
                 foreach (Vehicle vehicle in trafficService.Vehicles)
+                {
                     for (int i = 0; i < vehicle.BodyPoints.Count() - 1; i++)
                         _carLines.Add(new Entities.Line(vehicle.BodyPoints[i], vehicle.BodyPoints[i + 1]));
+                    _points.Add(new Entities.Point(vehicle.Wheels.Item1));
+                    _points.Add(new Entities.Point(vehicle.Wheels.Item2));
+                }
+
         }
 
 
