@@ -115,7 +115,7 @@ namespace TrafficApp
         public void CreateVehicles()
         {
             Random random = new Random();
-            for ( int i = 1; i < 25; i++ )
+            for ( int i = 1; i < 6; i++ )
             {
                 Vector3 randomPosition;
                 bool uniqueLocation = true;
@@ -128,8 +128,13 @@ namespace TrafficApp
                         if (uniqueLocation)
                             uniqueLocation = vehicle.Position == randomPosition ? false : true;
                 } while (!uniqueLocation);
+
                 int randomDirection = random.Next(2) == 0 ? -1 : 1;
-                Vehicles.Add(new Vehicle(i, $"EBE{random.Next(1000, 9999)}", 1, randomDirection, randomPosition));
+                Vector3 randomDestination = randomDirection == 1 ? 
+                        new Vector3(GetStreetByCoordinate(randomPosition).EndCoord.Item1, GetStreetByCoordinate(randomPosition).EndCoord.Item2)
+                    :   new Vector3(GetStreetByCoordinate(randomPosition).StartCoord.Item1, GetStreetByCoordinate(randomPosition).StartCoord.Item2);
+
+                Vehicles.Add(new Vehicle(i, $"EBE{random.Next(1000, 9999)}", 1, randomDirection, randomPosition, randomDestination, this));
             }
         }
 
@@ -158,6 +163,14 @@ namespace TrafficApp
         {
             return Streets.FirstOrDefault(s => s.Name == name);
         }
+        public Street GetStreetByCoordinate(Vector3 position)
+        {
+            return Streets.FirstOrDefault(s => s.Coordinates.Contains(((int)position.X, (int)position.Y)));
+        }
+        public int GetCoordIndexByCoordinate(Vector3 position)
+        {
+            return Streets.IndexOf(Streets.FirstOrDefault(s => s.Coordinates.Contains(((int)position.X, (int)position.Y))));
+        }
         public IEnumerable<Street> GetTheMostCrowdedStreets()
         {
             return Streets; // #
@@ -169,7 +182,12 @@ namespace TrafficApp
 
         public Crossroad GetCrossroadById(int id)
         {
-            return Crossroads.FirstOrDefault(s => s.Id == id);
+            return Crossroads.FirstOrDefault(cr => cr.Id == id);
+        }
+
+        public Crossroad GetCrossroadByPosition(Vector3 position)
+        {
+            return Crossroads.FirstOrDefault(cr => cr.Position.X == position.X && cr.Position.Y == position.Y);
         }
 
         public Vehicle GetVehicleByRegistration(string registration)
@@ -177,7 +195,16 @@ namespace TrafficApp
             return Vehicles[0]; // #
         }
 
+        public string MoveVehicles()
+        {
+            string report = "";
+            foreach (Vehicle vehicle in Vehicles)
+            {
+                report += $"{vehicle.Move()}\n";
+            }
 
+            return report;
+        }
 
 
 

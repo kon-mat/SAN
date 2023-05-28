@@ -41,6 +41,7 @@
             this.drawingLabel = new System.Windows.Forms.Label();
             this.actionLabel = new System.Windows.Forms.Label();
             this.moveBtn = new System.Windows.Forms.Button();
+            this.beforeMove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.drawing)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,6 +150,8 @@
             this.reportText.Location = new System.Drawing.Point(868, 2);
             this.reportText.Multiline = true;
             this.reportText.Name = "reportText";
+            this.reportText.ReadOnly = true;
+            this.reportText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.reportText.Size = new System.Drawing.Size(327, 800);
             this.reportText.TabIndex = 9;
             // 
@@ -186,12 +189,26 @@
             this.moveBtn.TabIndex = 12;
             this.moveBtn.Text = "Move";
             this.moveBtn.UseVisualStyleBackColor = true;
+            this.moveBtn.Click += new System.EventHandler(this.moveBtn_Click);
+            // 
+            // beforeMove
+            // 
+            this.beforeMove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.beforeMove.Location = new System.Drawing.Point(737, 351);
+            this.beforeMove.Name = "beforeMove";
+            this.beforeMove.Size = new System.Drawing.Size(115, 32);
+            this.beforeMove.TabIndex = 13;
+            this.beforeMove.Text = "BefforeMove";
+            this.beforeMove.UseVisualStyleBackColor = true;
+            this.beforeMove.Click += new System.EventHandler(this.beforeMove_Click);
             // 
             // TrafficApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1196, 852);
+            this.Controls.Add(this.beforeMove);
             this.Controls.Add(this.moveBtn);
             this.Controls.Add(this.actionLabel);
             this.Controls.Add(this.drawingLabel);
@@ -230,6 +247,7 @@
         private System.Windows.Forms.Label drawingLabel;
         private System.Windows.Forms.Label actionLabel;
         private System.Windows.Forms.Button moveBtn;
+        private System.Windows.Forms.Button beforeMove;
     }
 }
 

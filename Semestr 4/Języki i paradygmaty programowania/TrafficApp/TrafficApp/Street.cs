@@ -55,7 +55,7 @@ namespace TrafficApp
             bool steep = Math.Abs(y1 - y0) > Math.Abs(x1 - x0);
             if (steep)
             {
-                // Jeśli linia jest stroma, zamieniamy osie x i y
+                // If the line is steep, swap the x and y axes
                 (x0, y0) = (y0, x0);
                 (x1, y1) = (y1, x1);
             }
@@ -63,7 +63,7 @@ namespace TrafficApp
             bool swapped = false;
             if (x0 > x1)
             {
-                // Jeśli punkt początkowy jest na prawo od punktu końcowego, zamieniamy je miejscami
+                // If the starting point is to the right of the end point, swap them places
                 (x0, x1) = (x1, x0);
                 (y0, y1) = (y1, y0);
                 swapped = true;
@@ -77,7 +77,7 @@ namespace TrafficApp
 
             for (int x = x0; x <= x1; x++)
             {
-                // Dodajemy punkt do linii w zależności od tego, czy linia jest stroma czy nie
+                // We add a point to the line depending on whether the line is steep or not
                 linePoints.Add(steep ? (y, x) : (x, y));
 
                 error -= dy;
@@ -90,7 +90,7 @@ namespace TrafficApp
 
             if (swapped)
             {
-                linePoints.Reverse(); // Odwracamy punkty, jeśli zamieniliśmy punkty początkowy i końcowy
+                linePoints.Reverse(); // We invert the points if we swapped the start and end points
             }
 
             linePoints.RemoveAt(linePoints.Count - 1);
