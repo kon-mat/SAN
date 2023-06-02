@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Text;
-using System.IO;
 using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TrafficApp
@@ -44,22 +35,16 @@ namespace TrafficApp
             return report;
         }
 
-
-
-
-
-
         private void moveBtn_Click(object sender, EventArgs e)
         {
             string report = "";
             foreach (Vehicle vehicle in trafficService.Vehicles)
                 report += vehicle.Move();
-            
+
             reportText.Text = report;
+
+            trafficJamsText.Text = trafficService.GenerateCrowdReport();
         }
 
-
-
-        
     }
 }

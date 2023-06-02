@@ -58,16 +58,16 @@
             this.reportText.Name = "reportText";
             this.reportText.ReadOnly = true;
             this.reportText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.reportText.Size = new System.Drawing.Size(672, 596);
+            this.reportText.Size = new System.Drawing.Size(774, 596);
             this.reportText.TabIndex = 9;
             // 
             // moveBtn
             // 
             this.moveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.moveBtn.Location = new System.Drawing.Point(680, 1);
+            this.moveBtn.Location = new System.Drawing.Point(782, 1);
             this.moveBtn.Name = "moveBtn";
-            this.moveBtn.Size = new System.Drawing.Size(302, 43);
+            this.moveBtn.Size = new System.Drawing.Size(380, 43);
             this.moveBtn.TabIndex = 12;
             this.moveBtn.Text = "Move";
             this.moveBtn.UseVisualStyleBackColor = true;
@@ -75,21 +75,22 @@
             // 
             // trafficJamsText
             // 
-            this.trafficJamsText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.trafficJamsText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trafficJamsText.Location = new System.Drawing.Point(680, 50);
+            this.trafficJamsText.Location = new System.Drawing.Point(782, 50);
             this.trafficJamsText.Multiline = true;
             this.trafficJamsText.Name = "trafficJamsText";
             this.trafficJamsText.ReadOnly = true;
             this.trafficJamsText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.trafficJamsText.Size = new System.Drawing.Size(302, 547);
+            this.trafficJamsText.Size = new System.Drawing.Size(380, 547);
             this.trafficJamsText.TabIndex = 16;
             // 
             // TrafficApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(988, 598);
+            this.ClientSize = new System.Drawing.Size(1168, 598);
             this.Controls.Add(this.trafficJamsText);
             this.Controls.Add(this.moveBtn);
             this.Controls.Add(this.reportText);

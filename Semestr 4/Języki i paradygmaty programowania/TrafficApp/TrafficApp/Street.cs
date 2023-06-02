@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TrafficApp
 {
@@ -25,7 +22,7 @@ namespace TrafficApp
             _mainCoords = mainCoords;
             _coordinates = CreateStreetCoordinates(_mainCoords);
             _crossroads = new List<Crossroad>();
-    }
+        }
 
         public int Id { get { return _id; } }
         public string Name { get { return _name; } }
@@ -112,9 +109,6 @@ namespace TrafficApp
             linePoints.RemoveAt(linePoints.Count - 1);
             return linePoints;
         }
-
-
-
 
     }
 }

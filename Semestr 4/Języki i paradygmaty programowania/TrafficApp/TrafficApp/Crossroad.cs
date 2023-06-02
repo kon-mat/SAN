@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TrafficApp
 {
@@ -21,7 +18,7 @@ namespace TrafficApp
 
         public int Id { get { return _id; } }
         public Vector3 Position { get { return _position; } }
-        public List<Street> Streets  { get { return _streets; } }
+        public List<Street> Streets { get { return _streets; } }
 
         public void AddStreet(Street street)
         {
@@ -30,13 +27,13 @@ namespace TrafficApp
 
         }
 
-        public string Name 
-        { 
+        public string Name
+        {
             get
             {
                 string name = "Skrzyżowanie: ";
                 foreach (Street street in Streets)
-                    name += street == Streets.Last() ? street.Name : $"{ street.Name}, ";
+                    name += street == Streets.Last() ? street.Name : $"{street.Name}, ";
                 return name;
             }
         }

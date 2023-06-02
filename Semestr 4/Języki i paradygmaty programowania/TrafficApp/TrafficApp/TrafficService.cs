@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace TrafficApp
 {
@@ -15,7 +11,7 @@ namespace TrafficApp
             CreateDistricts();
             CreateStreets();
             CreateCorssroads();
-            CreateVehicles(10);
+            CreateVehicles(30);
         }
 
         public List<District> Districts { get; set; } = new List<District>();
@@ -61,7 +57,7 @@ namespace TrafficApp
                     ( 179, 38 ),
                     ( 111, 6 ) })));
 
-            Streets.Add(new Street(6, "Aleja Kardynała Wyszyńskiego", GetDistrictByName("Osiedle Dolnośląskie"), 
+            Streets.Add(new Street(6, "Aleja Kardynała Wyszyńskiego", GetDistrictByName("Osiedle Dolnośląskie"),
                 CreateMainCoords(new List<(double, double)>() {
                     ( 111, 6 ),
                     ( 22, 5 ),
@@ -154,7 +150,32 @@ namespace TrafficApp
             }
         }
 
-        // \/\/\/
+        public string GenerateCrowdReport()
+        {
+            Dictionary<District, int> districtsCrowd = GetDistrictsCrowd().OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+            Dictionary<Street, int> streetsCrowd = GetStreetsCrowd().OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+
+            string report = "\n\r3 najbardziej zatłoczone dzielnice:\n\r";
+            foreach (var district in districtsCrowd.Skip(districtsCrowd.Count() - 3))
+                report += $"\n\r   • {district.Value} : {district.Key.Name}\n\r";
+
+            report += "\n\r\n\r3 najmniej zatłoczone dzielnice:\n\r";
+            foreach (var district in districtsCrowd.Take(3))
+                report += $"\n\r   • {district.Value} : {district.Key.Name}\n\r";
+
+            report += "\n\r";
+
+            report += "\n\r3 najbardziej zatłoczone ulice:\n\r";
+            foreach (var street in streetsCrowd.Skip(streetsCrowd.Count() - 3))
+                report += $"\n\r   • {street.Value} : {street.Key.Name}\n\r";
+
+            report += "\n\r\n\r3 najmniej zatłoczone ulice:\n\r";
+            foreach (var street in streetsCrowd.Take(3))
+                report += $"\n\r   • {street.Value} : {street.Key.Name}\n\r";
+
+            return report;
+        }
+
 
         public District GetDistrictByName(string name)
         {
@@ -166,46 +187,15 @@ namespace TrafficApp
             return GetDistrictByName(GetStreetByPosition(position).District);
         }
 
-        public District GetDistrictByStreet(Street street)
-        {
-            return Districts.FirstOrDefault(d => d.Name == street.District);
-        }
-
-        //public Dictionary<District, int> GetTheMostCrowdedDistricts()
-        //{
-        //    Dictionary<District, int> districtCrowd = new Dictionary<District, int>();
-
-        //    foreach (District district in Districts)
-        //        districtCrowd.Add(district, 0);
-
-        //    foreach (Vehicle vehicle in Vehicles)
-        //        districtCrowd[GetDistrictByPosition(vehicle.Position)]++;
-
-        //    return districtCrowd;
-        //}
-
-        //public Dictionary<District, int> GetTheLeastCrowdedDistricts()
-        //{
-        //    Dictionary<District, int> districtCrowd = new Dictionary<District, int>();
-
-        //    foreach (District district in Districts)
-        //        districtCrowd.Add(district, 0);
-
-        //    foreach (Vehicle vehicle in Vehicles)
-        //        districtCrowd[GetDistrictByPosition(vehicle.Position)]++;
-
-        //    return districtCrowd;
-        //}
-
         public Street GetStreetById(int id)
         {
             return Streets.FirstOrDefault(s => s.Id == id);
         }
 
-        public Street GetStreetByPosition(Vector3 position) // !!!!!! tutaj
+        public Street GetStreetByPosition(Vector3 position)
         {
             foreach (Street street in Streets)
-                if (street.Coordinates.Where(c => CoordsEqual(c, position)).ToList().Contains(position))
+                if (street.Coordinates.Where(c => CoordsEqual(c, position)).Any())
                     return street;
             return null;
         }
@@ -213,20 +203,6 @@ namespace TrafficApp
         public List<Street> GetStreetsByPosition(Vector3 position)
         {
             return Streets.Where(s => CoordsEqual(s.StartCoord, position) || CoordsEqual(s.EndCoord, position)).ToList();
-        }
-
-        public IEnumerable<Street> GetTheMostCrowdedStreets()
-        {
-            return Streets; // #
-        }
-        public IEnumerable<Street> GetTheLeastCrowdedStreets()
-        {
-            return Streets; // #
-        }
-
-        public Crossroad GetCrossroadById(int id)
-        {
-            return Crossroads.FirstOrDefault(cr => cr.Id == id);
         }
 
         public Crossroad GetCrossroadByPosition(Vector3 position)
@@ -240,30 +216,27 @@ namespace TrafficApp
 
         }
 
-
-
-
-
-
-        public Vehicle GetVehicleByRegistration(string registration)
+        public Dictionary<District, int> GetDistrictsCrowd()
         {
-            return Vehicles[0]; // #
+            Dictionary<District, int> districtCrowd = new Dictionary<District, int>();
+            foreach (District district in Districts)
+                districtCrowd.Add(district, 0);
+            foreach (Vehicle vehicle in Vehicles)
+                districtCrowd[GetDistrictByPosition(vehicle.Position)]++;
+
+            return districtCrowd;
         }
 
-        public string MoveVehicles()
+        public Dictionary<Street, int> GetStreetsCrowd()
         {
-            string report = "";
-            //foreach (Vehicle vehicle in Vehicles)
-            //{
-            //    report += $"{vehicle.Move()}\n";
-            //}
+            Dictionary<Street, int> streetCrowd = new Dictionary<Street, int>();
+            foreach (Street street in Streets)
+                streetCrowd.Add(street, 0);
+            foreach (Vehicle vehicle in Vehicles)
+                streetCrowd[GetStreetByPosition(vehicle.Position)]++;
 
-            return report;
+            return streetCrowd;
         }
-
-
-
-
 
     }
 }

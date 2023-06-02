@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace TrafficApp
 {
@@ -15,7 +12,7 @@ namespace TrafficApp
         private int _direction;
         private Vector3 _position;
         private Vector3 _destination;
-        private TrafficService _trafficService;
+        private readonly TrafficService _trafficService;
 
         public Vehicle(int id, string registration, int speed, int direction, Vector3 position, Vector3 destination, TrafficService trafficService)
         {
@@ -49,21 +46,20 @@ namespace TrafficApp
         public Vector3 Destination { get { return _destination; } }
         public List<Vector3> CurrentRoad { get { return _trafficService.GetStreetByPosition(_position).Coordinates; } }
         public int PositionIndexOfRoad { get { return CurrentRoad.FindIndex(c => c == _position); } }
-        public bool DestinationReached 
-        { 
-            get 
+        public bool DestinationReached
+        {
+            get
             {
-                return PositionIndexOfRoad + _direction >= 0
-                    && PositionIndexOfRoad + _direction < CurrentRoad.Count() ? false : true;
-            } 
+                return PositionIndexOfRoad + _direction < 0
+                    || PositionIndexOfRoad + _direction >= CurrentRoad.Count();
+            }
         }
 
         public string GenerateReport()
         {
             string report = $"\r\nSzczegóły pojazdu o rejestracji: {Registration}\r\n";
             report += $"   • Aktualnie znajduje się na: {CurrentLocationName()}   ({_position.X}, {_position.Y})\r\n";
-            report += $"   • Zmierza do:\r\n" +
-                      $"       {_trafficService.GetCrossroadByPosition(_destination).Name}   ({_destination.X}, {_destination.Y})\r\n";
+            report += $"   • Zmierza do: {_trafficService.GetCrossroadByPosition(_destination).Name}   ({_destination.X}, {_destination.Y})\r\n";
             report += $"   • Pozostała ilość ruchów do celu: {MovesLeftToDestination()}";
 
             return report;
@@ -83,21 +79,21 @@ namespace TrafficApp
             if (currentStreet == null)
                 return 0;
             int destinationIndex =
-                _destination == currentStreet.StartCoord ? -1 
-                : _destination == currentStreet.EndCoord ? currentStreet.Coordinates.Count() + 1 
+                _destination == currentStreet.StartCoord ? -1
+                : _destination == currentStreet.EndCoord ? currentStreet.Coordinates.Count() + 1
                 : 0;
             int currentPositionIndex = currentStreet.Coordinates.FindIndex(c => c == _position);
 
             return Math.Abs(destinationIndex - currentPositionIndex);
         }
-        
+
         public string Move()
         {
             string report = GenerateReport() + "\r\n";
             if (DestinationReached)
             {
-                report += $"Cel został osiągnięty!\r\n";
-                report += $"Nowy cel: {SetNewDestination().Name}\r\n";
+                report += $"     > Cel został osiągnięty!\r\n";
+                report += $"     > Nowy cel: {SetNewDestination().Name}\r\n";
             }
             else // Fakt, że DestinationReached = false, oznacza, że następny ruch mieści się w zakresie drogi
             {
@@ -107,12 +103,12 @@ namespace TrafficApp
                     .Any(vh => vh.Direction == _direction);
 
                 if (movePossible)
-                {   
+                {
                     _position = CurrentRoad[PositionIndexOfRoad + _direction];
-                    report += "Wykonano ruch w kierunku celu\r\n";
+                    report += "     > Wykonano ruch w kierunku celu\r\n";
                 }
                 else
-                    report += "Ruch niemożliwy, ponieważ przed samochodem stoi inny pojazd\r\n";
+                    report += "     > Ruch niemożliwy, ponieważ przed samochodem stoi inny pojazd\r\n";
             }
 
             return report;
@@ -124,7 +120,7 @@ namespace TrafficApp
             List<Street> nextStreets = _trafficService.GetCrossroadByPosition(_destination).Streets
                 .Where(s => s != _trafficService.GetStreetByPosition(_position)).ToList();
 
-            Street nextStreet = nextStreets.Count() == 1 ? nextStreets[0] 
+            Street nextStreet = nextStreets.Count() == 1 ? nextStreets[0]
                 : nextStreets[random.Next(nextStreets.Count())];
 
             if (_trafficService.CoordsEqual(nextStreet.StartCoord, _destination))

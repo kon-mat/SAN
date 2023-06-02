@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace TrafficApp
 {
@@ -24,6 +19,5 @@ namespace TrafficApp
         int MovesLeftToDestination();
         string Move();
         Crossroad SetNewDestination();
-    
     }
 }
