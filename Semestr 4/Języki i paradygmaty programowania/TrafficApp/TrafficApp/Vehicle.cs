@@ -54,12 +54,40 @@ namespace TrafficApp
 
         public string GenerateReport()
         {
-            //#
-            string report = "";
-
+            string report = $"\r\nSzczegóły pojazdu o rejestracji: {Registration}\r\n";
+            report += $"   • Aktualnie znajduje się na: {CurrentLocationName()}\r\n";
+            report += $"   • Zmierza do: {_trafficService.GetCrossroadByPosition(_destination).Name}\r\n";
+            report += $"   • Pozostała ilość ruchów do celu: {MovesLeftToDestination()}";
+            //report +=;
 
             return report;
         }
+
+        private string CurrentLocationName()
+        {
+            List<Vector3> crossroadsLocationsList = new List<Vector3>(_trafficService.Crossroads.Select(c => c.Position).ToList());
+            if (crossroadsLocationsList.Contains(_position))
+                return _trafficService.GetCrossroadByPosition(_position).Name;
+            return _trafficService.GetStreetByPosition(_position).Name;
+        }
+
+        private int MovesLeftToDestination()
+        {
+            Street currentStreet = _trafficService.GetStreetByPosition(_position);
+            int destinationIndex =
+                _destination == currentStreet.StartCoord ? -1 
+                : _destination == currentStreet.EndCoord ? currentStreet.Coordinates.Count() + 1 
+                : 0;
+            int currentPositionIndex = currentStreet.Coordinates.FindIndex(c => c == _position);
+
+            return Math.Abs(destinationIndex - currentPositionIndex);
+        }
+
+
+
+
+
+
 
 
         public bool SetPosition(int X, int Y)
@@ -73,9 +101,16 @@ namespace TrafficApp
             return false;
         }
 
+
+
+
+
         /*
         public string Move()
         {
+
+
+
             string report = $"\r\nSamochód {Registration}";
             (int, int) nextCoord = _trafficService.GetStreetByCoordinate(_position).Coordinates[_trafficService.GetCoordIndexByCoordinate(_position) + Direction * Speed];
 
@@ -105,7 +140,7 @@ namespace TrafficApp
         }
 
 
-
+        /*
 
         public Street DrawNextStreet()
         {

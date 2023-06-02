@@ -24,23 +24,33 @@ namespace TrafficApp
             reportText.Text = GenerateEnvironment();
         }
 
-
-
         private string GenerateEnvironment()
         {
-            string report = "Stworzono:\r\n";
-            report += $"   • Osiedla: {trafficService.Districts.Count()}\r\n";
-            report += $"   • Ulice: {trafficService.Streets.Count()}\r\n";
-            report += $"   • Skrzyżowania: {trafficService.Crossroads.Count()}\r\n";
-            report += $"   • Pojazdy: {trafficService.Vehicles.Count()}\r\n";
+            string report = "Utworzono:\r\n";
+            report += $"   • Osiedla:   {trafficService.Districts.Count()}\r\n";
+            report += $"   • Ulice:   {trafficService.Streets.Count()}\r\n";
+            report += $"   • Skrzyżowania:   {trafficService.Crossroads.Count()}\r\n";
+            report += $"   • Pojazdy:   {trafficService.Vehicles.Count()}\r\n";
+            report += "\r\n";
+            report += GenerateVehiclesReport();
+            return report;
+        }
 
+        private string GenerateVehiclesReport()
+        {
+            string report = "";
+            foreach (Vehicle vehicle in trafficService.Vehicles)
+                report += "\n\r" + vehicle.GenerateReport() + "\n\r";
             return report;
         }
 
 
+
+
+
         private void streetBtn_Click(object sender, EventArgs e)
         {
-
+            reportText.Text = GenerateVehiclesReport();
 
             //string report = "";
             //foreach (Street street in trafficService.Streets)

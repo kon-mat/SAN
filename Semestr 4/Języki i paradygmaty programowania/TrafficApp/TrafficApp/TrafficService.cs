@@ -241,8 +241,15 @@ namespace TrafficApp
 
         public Crossroad GetCrossroadByPosition(Vector3 position)
         {
-            return Crossroads.FirstOrDefault(cr => cr.Position.X == position.X && cr.Position.Y == position.Y);
+            return Crossroads.FirstOrDefault(c => c.Position.X == position.X && c.Position.Y == position.Y);
         }
+
+
+
+
+
+
+
 
         public Vehicle GetVehicleByRegistration(string registration)
         {
