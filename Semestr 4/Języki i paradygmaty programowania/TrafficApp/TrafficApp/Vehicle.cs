@@ -52,44 +52,6 @@ namespace TrafficApp
         public Vector3 Destination { get { return _destination; } }
         public Vector3 LastPosition { get { return _lastPosition; } }
 
-        public (Vector3, Vector3) Wheels
-        {
-            get
-            {
-                return (new Vector3(_position.X - 1, _position.Y), new Vector3(_position.X + 2, _position.Y));
-            }
-        }
-
-        public List<Vector3> BodyPoints
-        {
-            get
-            {
-                List<Vector3> bodyPoints = new List<Vector3>();
-                bodyPoints.Add(new Vector3(_position.X - 2, _position.Y));
-                bodyPoints.Add(new Vector3(_position.X - 2, _position.Y + 1));
-                bodyPoints.Add(new Vector3(_position.X - 1, _position.Y + 1));
-                bodyPoints.Add(new Vector3(_position.X, _position.Y + 2));
-                bodyPoints.Add(new Vector3(_position.X + 1, _position.Y + 2));
-                bodyPoints.Add(new Vector3(_position.X + 2, _position.Y + 1));
-                bodyPoints.Add(new Vector3(_position.X + 3, _position.Y + 1));
-                bodyPoints.Add(new Vector3(_position.X + 3, _position.Y + 0));
-                bodyPoints.Add(new Vector3(_position.X - 2, _position.Y));
-
-                return bodyPoints;
-            }
-        }
-
-
-        public string Report
-        {
-            get
-            {
-                _report = GenerateReport();
-                return _report;
-            }
-
-        }
-
         public string GenerateReport()
         {
             //#
@@ -111,7 +73,7 @@ namespace TrafficApp
             return false;
         }
 
-
+        /*
         public string Move()
         {
             string report = $"\r\nSamochód {Registration}";
@@ -204,6 +166,7 @@ namespace TrafficApp
 
         }
 
+        */
 
 
     }

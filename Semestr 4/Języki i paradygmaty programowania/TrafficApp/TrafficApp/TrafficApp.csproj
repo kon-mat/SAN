@@ -55,7 +55,6 @@
     <Compile Include="District.cs" />
     <Compile Include="Entities\Line.cs" />
     <Compile Include="Entities\Point.cs" />
-    <Compile Include="GraphicsExtension.cs" />
     <Compile Include="IMover.cs" />
     <Compile Include="Street.cs" />
     <Compile Include="TrafficService.cs" />

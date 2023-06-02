@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,46 +12,61 @@ namespace TrafficApp
         private readonly int _id;
         private readonly string _name;
         private readonly District _district;
-        private readonly List<(int, int)> _mainCoords;
-        private List<(int, int)> _coordinates;
+        private List<Crossroad> _crossroads;
+        private readonly List<Vector3> _mainCoords;
+        private List<Vector3> _coordinates;  // Excluding First Coord and End Coord
 
-        public Street(int id, string name, District district, List<(int, int)> mainCoords)
+        public Street(int id, string name, District district, List<Vector3> mainCoords)
         {
             _id = id;
             _name = name;
             _district = district;
             _district.Streets.Add(this);
             _mainCoords = mainCoords;
-            _coordinates = CreateStreetCoordinates();
+            _coordinates = CreateStreetCoordinates(_mainCoords);
+            _crossroads = new List<Crossroad>();
     }
 
         public int Id { get { return _id; } }
         public string Name { get { return _name; } }
         public string District { get { return _district.Name; } }
-        public List<(int, int)> Coordinates { get { return _coordinates; } }
-        public List<(int, int)> MainCords { get { return _mainCoords; } }
+        public List<Crossroad> Crossroads { get { return _crossroads; } }
+        public List<Vector3> Coordinates { get { return _coordinates; } }
+        public List<Vector3> MainCords { get { return _mainCoords; } }
 
-        public (int, int) StartCoord { get { return _coordinates.First(); } }
-        public (int, int) EndCoord { get { return _coordinates.Last(); } }
+        public Vector3 StartCoord { get { return _mainCoords.First(); } }
+        public Vector3 EndCoord { get { return _mainCoords.Last(); } }
 
-        public List<(int, int)> CreateStreetCoordinates()
+        public void AddCrossroad(Crossroad crossroad)
         {
-            List<(int, int)> coordinates = new List<(int, int)>();
+            if (_crossroads.Contains(crossroad))
+                if (StartCoord == crossroad.Position)
+                    _crossroads.Insert(0, crossroad);
+                else if (EndCoord == crossroad.Position)
+                    _crossroads.Add(crossroad);
+        }
 
+        public List<Vector3> CreateStreetCoordinates(List<Vector3> mainCoords)
+        {
+            List<Vector3> coordinates = new List<Vector3>();
             if (_mainCoords.Count() >= 2)
             {
                 for (int i = 0; i < _mainCoords.Count() - 1; i++)
-                    coordinates = coordinates.Concat(BresenhamLine(_mainCoords[i].Item1, _mainCoords[i].Item2, _mainCoords[i + 1].Item1, _mainCoords[i + 1].Item2)).ToList();
-
-                coordinates.Add(_mainCoords.Last());
+                    coordinates = coordinates.Concat(BresenhamLine(_mainCoords[i].X, _mainCoords[i].Y, _mainCoords[i + 1].X, _mainCoords[i + 1].Y)).ToList();
+                coordinates.RemoveAt(0);
             }
 
             return coordinates;
         }
 
-        public List<(int, int)> BresenhamLine(int x0, int y0, int x1, int y1)
+        public Vector3 NewCoord(double x, double y)
         {
-            List<(int, int)> linePoints = new List<(int, int)>();
+            return new Vector3(x, y);
+        }
+
+        public List<Vector3> BresenhamLine(double x0, double y0, double x1, double y1)
+        {
+            List<Vector3> linePoints = new List<Vector3>();
 
             bool steep = Math.Abs(y1 - y0) > Math.Abs(x1 - x0);
             if (steep)
@@ -69,16 +85,16 @@ namespace TrafficApp
                 swapped = true;
             }
 
-            int dx = x1 - x0;
-            int dy = Math.Abs(y1 - y0);
-            int error = dx / 2;
-            int ystep = (y0 < y1) ? 1 : -1;
-            int y = y0;
+            double dx = x1 - x0;
+            double dy = Math.Abs(y1 - y0);
+            double error = dx / 2;
+            double ystep = (y0 < y1) ? 1 : -1;
+            double y = y0;
 
-            for (int x = x0; x <= x1; x++)
+            for (double x = x0; x <= x1; x++)
             {
                 // We add a point to the line depending on whether the line is steep or not
-                linePoints.Add(steep ? (y, x) : (x, y));
+                linePoints.Add(steep ? NewCoord(y, x) : NewCoord(x, y));
 
                 error -= dy;
                 if (error < 0)

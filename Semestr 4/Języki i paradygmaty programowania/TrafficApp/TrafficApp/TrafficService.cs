@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace TrafficApp
             CreateDistricts();
             CreateStreets();
             CreateCorssroads();
-            CreateVehicles();
+            CreateVehicles(10);
         }
 
         public List<District> Districts { get; set; } = new List<District>();
@@ -32,145 +33,198 @@ namespace TrafficApp
         public List<Street> Streets { get; set; } = new List<Street>();
         public void CreateStreets()
         {
-            Streets.Add(new Street(1, "Pabianicka", GetDistrictByName("Śródmieście"), new List<(int, int)>() {
+            Streets.Add(new Street(1, "Pabianicka", GetDistrictByName("Śródmieście"),
+                CreateMainCoords(new List<(double, double)>() {
                     ( 88, 196 ),
-                    ( 94, 165 ), }));
-            Streets.Add(new Street(2, "Kościuszki", GetDistrictByName("Śródmieście"), new List<(int, int)>() {
-                    ( 94, 165 ),
-                    ( 97, 139 ), }));
-            Streets.Add(new Street(3, "Okrzei", GetDistrictByName("Osiedle Okrzei"), new List<(int, int)>() {
+                    ( 94, 165 ) })));
+
+            Streets.Add(new Street(2, "Kościuszki", GetDistrictByName("Śródmieście"),
+                CreateMainCoords(new List<(double, double)>() {
+                   ( 94, 165 ),
+                   ( 97, 139 ) })));
+
+            Streets.Add(new Street(3, "Okrzei", GetDistrictByName("Osiedle Okrzei"),
+                CreateMainCoords(new List<(double, double)>() {
                     ( 97, 139 ),
                     ( 106, 139 ),
                     ( 107, 134 ),
                     ( 176, 72 ),
-                    ( 180, 72 ), }));
-            Streets.Add(new Street(4, "Stanisława Staszica", GetDistrictByName("Osiedle Słoneczne"), new List<(int, int)>() {
+                    ( 180, 72 ) })));
+
+            Streets.Add(new Street(4, "Stanisława Staszica", GetDistrictByName("Osiedle Słoneczne"),
+                 CreateMainCoords(new List<(double, double)>() {
                     ( 180, 72 ),
-                    ( 179, 38 ), }));
-            Streets.Add(new Street(5, "Armii Krajowej", GetDistrictByName("Edwardów"), new List<(int, int)>() {
+                    ( 179, 38 ) })));
+
+            Streets.Add(new Street(5, "Armii Krajowej", GetDistrictByName("Edwardów"),
+                 CreateMainCoords(new List<(double, double)>() {
                     ( 179, 38 ),
-                    ( 111, 6 ), }));
-            Streets.Add(new Street(6, "Aleja Kardynała Wyszyńskiego", GetDistrictByName("Osiedle Dolnośląskie"), new List<(int, int)>() {
+                    ( 111, 6 ) })));
+
+            Streets.Add(new Street(6, "Aleja Kardynała Wyszyńskiego", GetDistrictByName("Osiedle Dolnośląskie"), 
+                CreateMainCoords(new List<(double, double)>() {
                     ( 111, 6 ),
                     ( 22, 5 ),
                     ( 13, 36 ),
-                    ( 13, 95 ), }));
-            Streets.Add(new Street(7, "Aleja Włókniarzy", GetDistrictByName("Czapliniec"), new List<(int, int)>() {
+                    ( 13, 95 ) })));
+
+            Streets.Add(new Street(7, "Aleja Włókniarzy", GetDistrictByName("Czapliniec"),
+                 CreateMainCoords(new List<(double, double)>() {
                     ( 13, 95 ),
                     ( 12, 132 ),
                     ( 10, 140 ),
-                    ( 17, 177 ), }));
-            Streets.Add(new Street(8, "Sienkiewicza", GetDistrictByName("Śródmieście"), new List<(int, int)>() {
+                    ( 17, 177 ) })));
+
+            Streets.Add(new Street(8, "Sienkiewicza", GetDistrictByName("Śródmieście"),
+                 CreateMainCoords(new List<(double, double)>() {
                     ( 17, 177 ),
                     ( 37, 193 ),
-                    ( 88, 196 ), }));
-            Streets.Add(new Street(9, "Czapliniecka", GetDistrictByName("Czapliniec"), new List<(int, int)>() {
+                    ( 88, 196 ) })));
+
+            Streets.Add(new Street(9, "Czapliniecka", GetDistrictByName("Czapliniec"),
+                 CreateMainCoords(new List<(double, double)>() {
                     ( 17, 177 ),
-                    ( 68, 119 ), }));
-            Streets.Add(new Street(10, "Rotmistrza Witolda Pileckiego", GetDistrictByName("Osiedle Kopernika"), new List<(int, int)>() {
+                    ( 68, 119 ) })));
+
+            Streets.Add(new Street(10, "Rotmistrza Witolda Pileckiego", GetDistrictByName("Osiedle Kopernika"),
+                 CreateMainCoords(new List<(double, double)>() {
                     ( 68, 119 ),
                     ( 97, 134 ),
-                    ( 97, 139 ), }));
-            Streets.Add(new Street(11, "Lipowa", GetDistrictByName("Osiedle Dolnośląskie"), new List<(int, int)>() {
+                    ( 97, 139 ) })));
+
+            Streets.Add(new Street(11, "Lipowa", GetDistrictByName("Osiedle Dolnośląskie"),
+                 CreateMainCoords(new List<(double, double)>() {
                     ( 68, 119 ),
-                    ( 13, 95 ), }));
-            Streets.Add(new Street(12, "Wojska Polskiego", GetDistrictByName("Osiedle Dolnośląskie"), new List<(int, int)>() {
+                    ( 13, 95 ) })));
+
+            Streets.Add(new Street(12, "Wojska Polskiego", GetDistrictByName("Osiedle Dolnośląskie"),
+                 CreateMainCoords(new List<(double, double)>() {
                     ( 68, 119 ),
                     ( 91, 89 ),
-                    ( 111, 6 ), }));
+                    ( 111, 6 ) })));
+        }
+
+        public List<Vector3> CreateMainCoords(List<(double, double)> coordValues)
+        {
+            List<Vector3> mainCoords = new List<Vector3>();
+            foreach (var coordValue in coordValues)
+                mainCoords.Add(new Vector3(coordValue.Item1, coordValue.Item2));
+            return mainCoords;
         }
 
         public List<Crossroad> Crossroads { get; set; } = new List<Crossroad>();
         public void CreateCorssroads()
         {
-            int crossroadId = 1;
-            foreach (Street street in Streets)  // pętla przez wszystkie ulice
-            {
-                bool crossroadCreated = false;  // skrzyżowanie jeszcze nieutworzone
-                foreach (Crossroad crossroad in Crossroads) //
-                {
-                    if (crossroad.Position == new Vector3(street.StartCoord.Item1, street.StartCoord.Item2))
-                        crossroadCreated = true;
-                }
+            foreach (Street street in Streets)
+                Crossroads.Add(new Crossroad(Crossroads.Count() + 1, street.StartCoord, GetStreetsByPosition(street.StartCoord)));
 
-                if (!crossroadCreated)  // jeżeli skrzyżowanie jeszcze nie istnieje, to dodajemy je do listy skrzyżowań
-                {
-                    Crossroads.Add(new Crossroad(crossroadId, new Vector3(street.StartCoord.Item1, street.StartCoord.Item2), new List<Street>() { street }));
-
-                    foreach (Street street1 in Streets)    // dla każdego skrzyżowania doddajemy pozostałe ulice
-                    {
-                        // jeżeli punkt startowy lub końcowy street1 należy do skrzyżwania o Id = crossroadId, a ulica street1, jeszcze nie jest dodana do listy ulic tego skrzyżowania, to dodajemy ją
-                        Crossroad currentCrossroad = GetCrossroadById(crossroadId);
-                        if (((currentCrossroad.Position.X == street1.StartCoord.Item1 && currentCrossroad.Position.Y == street1.StartCoord.Item2) 
-                            || (currentCrossroad.Position.X == street1.EndCoord.Item1 && currentCrossroad.Position.Y == street1.EndCoord.Item2)) 
-                            && !currentCrossroad.Streets.Contains(street1))
-                                GetCrossroadById(crossroadId).AddStreet(street1); // dodajemy wszystkie ulice, których StartCoord należą do tego skrzyżowania
-                    }
-                    crossroadId++;
-                }
-            }
+            foreach (Crossroad crossroad in Crossroads)
+                foreach (Street street in GetStreetsByPosition(crossroad.Position))
+                    if (street.Crossroads == null || !street.Crossroads.Contains(crossroad))
+                        street.AddCrossroad(crossroad);
         }
 
+
+
+
         public List<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
-        public void CreateVehicles()
+        public void CreateVehicles(int numberOfVehicles)
         {
-            Random random = new Random();
-            for ( int i = 1; i < 6; i++ )
+            for (int i = 1; i < numberOfVehicles + 1; i++)
             {
-                Vector3 randomPosition;
-                bool uniqueLocation = true;
+                Street randomStreet;
+                Vector3 randomLocation;
+                Random random = new Random();
+                bool uniqueLocation;
+
                 do
                 {
-                    Street randomStreet = GetStreetById(random.Next(1, Streets.Count + 1));
-                    (int, int) randomStreetLocation = randomStreet.Coordinates[random.Next(randomStreet.Coordinates.Count())];
-                    randomPosition = new Vector3(randomStreetLocation.Item1, randomStreetLocation.Item2);
+                    randomStreet = GetStreetById(random.Next(1, Streets.Count + 1));
+                    randomLocation = randomStreet.Coordinates[random.Next(randomStreet.Coordinates.Count() - 1)];
+                    uniqueLocation = true;
+
                     foreach (Vehicle vehicle in Vehicles)
-                        if (uniqueLocation)
-                            uniqueLocation = vehicle.Position == randomPosition ? false : true;
+                        if (vehicle.Position == randomLocation)
+                        {
+                            uniqueLocation = false;
+                            break;
+                        }
                 } while (!uniqueLocation);
 
                 int randomDirection = random.Next(2) == 0 ? -1 : 1;
-                Vector3 randomDestination = randomDirection == 1 ? 
-                        new Vector3(GetStreetByCoordinate(randomPosition).EndCoord.Item1, GetStreetByCoordinate(randomPosition).EndCoord.Item2)
-                    :   new Vector3(GetStreetByCoordinate(randomPosition).StartCoord.Item1, GetStreetByCoordinate(randomPosition).StartCoord.Item2);
-
-                Vehicles.Add(new Vehicle(i, $"EBE{random.Next(1000, 9999)}", 1, randomDirection, randomPosition, randomDestination, this));
+                Vehicles.Add(new Vehicle(i, $"EBE{random.Next(1000, 9999)}", 1, randomDirection, randomLocation,
+                    randomDirection == 1 ? randomStreet.EndCoord : randomStreet.StartCoord, this));
             }
         }
 
-        public District GetDistrictById(int id)
-        {
-            return Districts.FirstOrDefault(d => d.Id == id);
-        }
+        // \/\/\/
+
         public District GetDistrictByName(string name)
         {
             return Districts.FirstOrDefault(d => d.Name == name);
         }
-        public IEnumerable<District> GetTheMostCrowdedDistricts()
+
+        public District GetDistrictByPosition(Vector3 position)
         {
-            return Districts;   // #
+            return GetDistrictByName(GetStreetByPosition(position).District);
         }
-        public IEnumerable<District> GetTheLeastCrowdedDistricts()
+
+        public District GetDistrictByStreet(Street street)
         {
-            return Districts;   // #
+            return Districts.FirstOrDefault(d => d.Name == street.District);
         }
+
+        //public Dictionary<District, int> GetTheMostCrowdedDistricts()
+        //{
+        //    Dictionary<District, int> districtCrowd = new Dictionary<District, int>();
+
+        //    foreach (District district in Districts)
+        //        districtCrowd.Add(district, 0);
+
+        //    foreach (Vehicle vehicle in Vehicles)
+        //        districtCrowd[GetDistrictByPosition(vehicle.Position)]++;
+
+        //    return districtCrowd;
+        //}
+
+        //public Dictionary<District, int> GetTheLeastCrowdedDistricts()
+        //{
+        //    Dictionary<District, int> districtCrowd = new Dictionary<District, int>();
+
+        //    foreach (District district in Districts)
+        //        districtCrowd.Add(district, 0);
+
+        //    foreach (Vehicle vehicle in Vehicles)
+        //        districtCrowd[GetDistrictByPosition(vehicle.Position)]++;
+
+        //    return districtCrowd;
+        //}
 
         public Street GetStreetById(int id)
         {
             return Streets.FirstOrDefault(s => s.Id == id);
         }
-        public Street GetStreetByName(string name)
+
+        //public Street GetStreetByName(string name)
+        //{
+        //    return Streets.FirstOrDefault(s => s.Name == name);
+        //}
+
+        public Street GetStreetByPosition(Vector3 position)
         {
-            return Streets.FirstOrDefault(s => s.Name == name);
+            return Streets.FirstOrDefault(s => s.Coordinates.Contains(position));
         }
-        public Street GetStreetByCoordinate(Vector3 position)
+
+        public List<Street> GetStreetsByPosition(Vector3 position)
         {
-            return Streets.FirstOrDefault(s => s.Coordinates.Contains(((int)position.X, (int)position.Y)));
+            return Streets.Where(s => s.StartCoord == position || s.EndCoord == position).ToList();
         }
-        public int GetCoordIndexByCoordinate(Vector3 position)
-        {
-            return Streets.IndexOf(Streets.FirstOrDefault(s => s.Coordinates.Contains(((int)position.X, (int)position.Y))));
-        }
+
+        //public int GetCoordIndexByPosition(Vector3 position)
+        //{
+        //    return Streets.IndexOf(Streets.FirstOrDefault(s => s.Coordinates.Contains(((int)position.X, (int)position.Y))));
+        //}
+
         public IEnumerable<Street> GetTheMostCrowdedStreets()
         {
             return Streets; // #
@@ -198,10 +252,10 @@ namespace TrafficApp
         public string MoveVehicles()
         {
             string report = "";
-            foreach (Vehicle vehicle in Vehicles)
-            {
-                report += $"{vehicle.Move()}\n";
-            }
+            //foreach (Vehicle vehicle in Vehicles)
+            //{
+            //    report += $"{vehicle.Move()}\n";
+            //}
 
             return report;
         }
