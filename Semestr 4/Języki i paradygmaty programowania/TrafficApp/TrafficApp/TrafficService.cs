@@ -124,9 +124,6 @@ namespace TrafficApp
                         street.AddCrossroad(crossroad);
         }
 
-
-
-
         public List<Vehicle> Vehicles { get; set; } = new List<Vehicle>();
         public void CreateVehicles(int numberOfVehicles)
         {
@@ -205,25 +202,18 @@ namespace TrafficApp
             return Streets.FirstOrDefault(s => s.Id == id);
         }
 
-        //public Street GetStreetByName(string name)
-        //{
-        //    return Streets.FirstOrDefault(s => s.Name == name);
-        //}
-
-        public Street GetStreetByPosition(Vector3 position)
+        public Street GetStreetByPosition(Vector3 position) // !!!!!! tutaj
         {
-            return Streets.FirstOrDefault(s => s.Coordinates.Contains(position));
+            foreach (Street street in Streets)
+                if (street.Coordinates.Where(c => CoordsEqual(c, position)).ToList().Contains(position))
+                    return street;
+            return null;
         }
 
         public List<Street> GetStreetsByPosition(Vector3 position)
         {
-            return Streets.Where(s => s.StartCoord == position || s.EndCoord == position).ToList();
+            return Streets.Where(s => CoordsEqual(s.StartCoord, position) || CoordsEqual(s.EndCoord, position)).ToList();
         }
-
-        //public int GetCoordIndexByPosition(Vector3 position)
-        //{
-        //    return Streets.IndexOf(Streets.FirstOrDefault(s => s.Coordinates.Contains(((int)position.X, (int)position.Y))));
-        //}
 
         public IEnumerable<Street> GetTheMostCrowdedStreets()
         {
@@ -244,7 +234,11 @@ namespace TrafficApp
             return Crossroads.FirstOrDefault(c => c.Position.X == position.X && c.Position.Y == position.Y);
         }
 
+        public bool CoordsEqual(Vector3 firstCoord, Vector3 secondCord)
+        {
+            return firstCoord.X == secondCord.X && firstCoord.Y == secondCord.Y ? true : false;
 
+        }
 
 
 

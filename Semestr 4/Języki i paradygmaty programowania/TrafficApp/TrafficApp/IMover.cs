@@ -9,19 +9,21 @@ namespace TrafficApp
 {
     internal interface IMover
     {
-        //int Id { get; }
-        //string Registration { get; }
-        //int Speed { get; }
-        //int Direction { get; set; }
-        //Vector3 Position { get; }
-        //Vector3 LastPosition { get; }
-        //(Vector3, Vector3) Wheels { get; }
-        //List<Vector3> BodyPoints { get; }
-        //string Report { get; }
+        int Id { get; }
+        string Registration { get; }
+        int Speed { get; }
+        int Direction { get; set; }
+        Vector3 Position { get; }
+        Vector3 Destination { get; }
+        List<Vector3> CurrentRoad { get; }
+        int PositionIndexOfRoad { get; }
+        bool DestinationReached { get; }
 
-        //string GenerateReport();
-        //Vector3 NewPosition(int X, int Y);
-        //string Move();
-        //Street DrawNextStreet();
+        string GenerateReport();
+        string CurrentLocationName();
+        int MovesLeftToDestination();
+        string Move();
+        Crossroad SetNewDestination();
+    
     }
 }

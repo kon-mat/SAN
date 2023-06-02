@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace TrafficApp
 {
-    public class Vehicle //: IMover
+    public class Vehicle : IMover
     {
         private readonly int _id;
         private readonly string _registration;
@@ -15,10 +15,7 @@ namespace TrafficApp
         private int _direction;
         private Vector3 _position;
         private Vector3 _destination;
-        private Vector3 _lastPosition;
-        private string _report;
         private TrafficService _trafficService;
-
 
         public Vehicle(int id, string registration, int speed, int direction, Vector3 position, Vector3 destination, TrafficService trafficService)
         {
@@ -50,20 +47,29 @@ namespace TrafficApp
 
         public Vector3 Position { get { return _position; } }
         public Vector3 Destination { get { return _destination; } }
-        public Vector3 LastPosition { get { return _lastPosition; } }
+        public List<Vector3> CurrentRoad { get { return _trafficService.GetStreetByPosition(_position).Coordinates; } }
+        public int PositionIndexOfRoad { get { return CurrentRoad.FindIndex(c => c == _position); } }
+        public bool DestinationReached 
+        { 
+            get 
+            {
+                return PositionIndexOfRoad + _direction >= 0
+                    && PositionIndexOfRoad + _direction < CurrentRoad.Count() ? false : true;
+            } 
+        }
 
         public string GenerateReport()
         {
             string report = $"\r\nSzczegóły pojazdu o rejestracji: {Registration}\r\n";
-            report += $"   • Aktualnie znajduje się na: {CurrentLocationName()}\r\n";
-            report += $"   • Zmierza do: {_trafficService.GetCrossroadByPosition(_destination).Name}\r\n";
+            report += $"   • Aktualnie znajduje się na: {CurrentLocationName()}   ({_position.X}, {_position.Y})\r\n";
+            report += $"   • Zmierza do:\r\n" +
+                      $"       {_trafficService.GetCrossroadByPosition(_destination).Name}   ({_destination.X}, {_destination.Y})\r\n";
             report += $"   • Pozostała ilość ruchów do celu: {MovesLeftToDestination()}";
-            //report +=;
 
             return report;
         }
 
-        private string CurrentLocationName()
+        public string CurrentLocationName()
         {
             List<Vector3> crossroadsLocationsList = new List<Vector3>(_trafficService.Crossroads.Select(c => c.Position).ToList());
             if (crossroadsLocationsList.Contains(_position))
@@ -71,9 +77,11 @@ namespace TrafficApp
             return _trafficService.GetStreetByPosition(_position).Name;
         }
 
-        private int MovesLeftToDestination()
+        public int MovesLeftToDestination()
         {
             Street currentStreet = _trafficService.GetStreetByPosition(_position);
+            if (currentStreet == null)
+                return 0;
             int destinationIndex =
                 _destination == currentStreet.StartCoord ? -1 
                 : _destination == currentStreet.EndCoord ? currentStreet.Coordinates.Count() + 1 
@@ -82,127 +90,58 @@ namespace TrafficApp
 
             return Math.Abs(destinationIndex - currentPositionIndex);
         }
-
-
-
-
-
-
-
-
-        public bool SetPosition(int X, int Y)
-        {
-            if ((int)Position.X != X && (int)Position.Y != Y)
-            {
-                _lastPosition = _position;
-                _position = new Vector3(X, Y);
-                return true;
-            }
-            return false;
-        }
-
-
-
-
-
-        /*
+        
         public string Move()
         {
-
-
-
-            string report = $"\r\nSamochód {Registration}";
-            (int, int) nextCoord = _trafficService.GetStreetByCoordinate(_position).Coordinates[_trafficService.GetCoordIndexByCoordinate(_position) + Direction * Speed];
-
-            // Dojechano do celu
-            if (nextCoord.Item1 == (int)_destination.X && nextCoord.Item2 == (int)_destination.Y)
+            string report = GenerateReport() + "\r\n";
+            if (DestinationReached)
             {
-                report += $"\r\n   Osiągnięto cel: {Destination.X}, {Destination.Y}";
-                if (SetNewDestination())
-                    report += $"\r\n   Uworzono nowy cel: {Destination.X}, {Destination.Y}";
-                return report;
+                report += $"Cel został osiągnięty!\r\n";
+                report += $"Nowy cel: {SetNewDestination().Name}\r\n";
+            }
+            else // Fakt, że DestinationReached = false, oznacza, że następny ruch mieści się w zakresie drogi
+            {
+                Vector3 nextPosition = CurrentRoad[PositionIndexOfRoad + _direction];
+                bool movePossible = !_trafficService.Vehicles
+                    .Where(v => _trafficService.CoordsEqual(v.Position, nextPosition))
+                    .Any(vh => vh.Direction == _direction);
+
+                if (movePossible)
+                {   
+                    _position = CurrentRoad[PositionIndexOfRoad + _direction];
+                    report += "Wykonano ruch w kierunku celu\r\n";
+                }
+                else
+                    report += "Ruch niemożliwy, ponieważ przed samochodem stoi inny pojazd\r\n";
             }
 
-            // W drodze do celu
-            if (SetPosition(nextCoord.Item1, nextCoord.Item2))
-            {
-                // ## popracować nad poprawnym przemieszczeniem
-                // Udało się wykonać ruch
-                report += $"\r\n   Przemieszczono z: {_lastPosition.X}, {_lastPosition.Y}";
-                report += $"\r\n   Przemieszczono na: {_position.X}, {_position.Y}";
-                report += $"\r\n   Aktualny index: {_trafficService.GetCoordIndexByCoordinate(_position)}";
-                report += $"\r\n   Index docelowy: {_trafficService.GetCoordIndexByCoordinate(_destination)}";
-                report += $"\r\n   Pozostało metrów: {_trafficService.GetCoordIndexByCoordinate(_destination) - _trafficService.GetCoordIndexByCoordinate(_position)}";
-            }
-
-            // # sprawdzic czy samochod nie jest przed
             return report;
         }
 
-
-        /*
-
-        public Street DrawNextStreet()
+        public Crossroad SetNewDestination()
         {
-            Crossroad currentCrossroad = _trafficService.GetCrossroadByPosition(_position);
-            List<Street> streetsToDraw = currentCrossroad.Streets;
             Random random = new Random();
+            List<Street> nextStreets = _trafficService.GetCrossroadByPosition(_destination).Streets
+                .Where(s => s != _trafficService.GetStreetByPosition(_position)).ToList();
 
-            // Remove last street on which the vehicle traveled from streets to draw
-            for (int i = 0; i < streetsToDraw.Count(); i++)
-                if (streetsToDraw[i].Coordinates.Contains(((int)_lastPosition.X, (int)_lastPosition.Y)))
-                {
-                    streetsToDraw.RemoveAt(i);
-                    break;
-                }
+            Street nextStreet = nextStreets.Count() == 1 ? nextStreets[0] 
+                : nextStreets[random.Next(nextStreets.Count())];
 
-            return streetsToDraw.Count() == 1 ? streetsToDraw[0] : streetsToDraw[random.Next(streetsToDraw.Count())];
-        }
-
-        public bool SetNewDestination()
-        {
-
-            Street nextStreet = DrawNextStreet();
-            if (nextStreet.StartCoord == ((int)_position.X, (int)_position.Y))
+            if (_trafficService.CoordsEqual(nextStreet.StartCoord, _destination))
             {
-                _destination = new Vector3(nextStreet.EndCoord.Item1, nextStreet.EndCoord.Item2);
                 Direction = 1;
-                return true;
+                _destination = nextStreet.EndCoord;
+                _position = nextStreet.Coordinates.First();
             }
-            else if (nextStreet.EndCoord == ((int)_position.X, (int)_position.Y))
+            else if (_trafficService.CoordsEqual(nextStreet.EndCoord, _destination))
             {
-                _destination = new Vector3(nextStreet.StartCoord.Item1, nextStreet.StartCoord.Item2);
                 Direction = -1;
-                return true;
+                _destination = nextStreet.StartCoord;
+                _position = nextStreet.Coordinates.Last();
             }
-            else
-            {
-                MessageBox.Show("Pojazd nie znajduje się na skrzyżowaniu.");
-                return false;
-            }
+
+            return _trafficService.GetCrossroadByPosition(_destination);
         }
-
-        public bool SetFirstDestination()
-        {
-            Street currentStreet = _trafficService.GetStreetByCoordinate(_position);
-            if (currentStreet == null)
-                return false;
-            else
-            {
-                if (Direction == 1)
-                    _destination = new Vector3(currentStreet.EndCoord.Item1, currentStreet.EndCoord.Item2);
-                else if (Direction == -1)
-                    _destination = new Vector3(currentStreet.StartCoord.Item1, currentStreet.StartCoord.Item2);
-                else
-                    MessageBox.Show($"Direction nie powinna byc rowna 0 dla {this.Registration}");
-            }
-            return true;
-
-
-        }
-
-        */
-
 
     }
 }
