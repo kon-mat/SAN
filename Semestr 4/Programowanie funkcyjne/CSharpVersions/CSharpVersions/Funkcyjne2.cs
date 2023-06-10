@@ -299,7 +299,15 @@ namespace CSharpVersions
 
 
 
-        // ==================[ Zadanie 4.. ]==================
+
+
+
+
+
+
+
+
+        // ==================[ Zadanie 5.. ]==================
 
         /*
             a. Zrealizuj pierwiastek sześcienny z wykorzystaniem average-damp oraz FIXED-POINT
@@ -309,48 +317,33 @@ namespace CSharpVersions
          */
 
 
+        // funkcja CubicRoot, która przyjmuje pojedynczy argument x
+        public double CubicRoot_5(double x)   
+        {
+            // Funkcja ma na celu obliczenie średniej tłumionej
+            // Jest to funkcja wyższego rzędu, która zwraca inną funkcję. Ta zwracana funkcja przyjmuje argument y i oblicza wartość wyrażenia (2 * y + x / (y * y)) / 3
+            // Funkcja jest wykorzystana jako argument do funkcji FixePoint i odpowiada za wykonanie kroku iteracyjnego w algorytmie obliczającym pierwiastek sześcienny
+            // <Type of par. , Type of return> 
+            Func<double, Func<double, double>> averageDamp = alpha => y => (2 * y + x / (y  * y)) / 3;
 
-
-
-
-
-
-
-        /*
-        In this implementation, we define a function CubicRoot that takes a single argument x, which is the number we want to find the cubic root of. The function then defines two helper functions: averageDamp and fixedPoint.
-
-The averageDamp function takes a damping factor alpha and returns another function that takes a value y and applies the average-damp formula to it using x and alpha.
-
-The fixedPoint function takes a function f and an initial guess firstGuess and applies the fixed-point algorithm to f using the initial guess to find the value that f converges to.
-
-Finally, we call fixedPoint with averageDamp(0.5) (which gives us a function that applies the average-damp formula with a damping factor of 0.5) and an initial guess of 1 to find the cubic root of x.
-
-Note that this implementation uses lambdas and recursion to achieve a functional programming style without variables.The tryGuess function is a recursive lambda function that uses tail recursion to avoid creating new stack frames.
-        */
-
-        //public double CubicRoot(double x)
-        //{
-        //    Func<double, double> averageDamp = alpha => y => (2 * y + x / (y * y)) / 3;
-        //    Func<Func<double, double>, double, double> fixedPoint = (f, firstGuess) =>
-        //    {
-        //        Func<double, double> tryGuess = null;
-        //        tryGuess = lastGuess =>
-        //        {
-        //            var nextGuess = f(lastGuess);
-        //            return Math.Abs(nextGuess - lastGuess) < 0.0001 ? nextGuess : tryGuess(nextGuess);
-        //        };
-        //        return tryGuess(firstGuess);
-        //    };
-
-        //    return fixedPoint(averageDamp(0.5), 1);
-        //}
-
-
-
-
-
-
-
+            // Funkcja FixedPoint odpowiada za wykonanie iteracji przybliżonego punktu
+            // Przyjmuje dwa argumenty: funkcję f, która reprezentuje funkcję iteracyjną, oraz firstGuess, który jest pierwszym przybliżeniem wartości punktu
+            double FixedPoint(Func<double, double> f, double firstGuess)
+            {
+                // Lokalna funkcja TryGuess, która przyjmuje poprzednie przybliżenie watości punktu
+                double TryGuess(double lastGuess)
+                {
+                    double nextGuess = f(lastGuess);    // f, czyli averageDamp
+                    // jeśli różnica mniejsza niż 0.0001, to dostateczna dokładność
+                    return Math.Abs(nextGuess - lastGuess) < 0.0001 ? nextGuess :TryGuess   (nextGuess);
+                }
+        
+                return TryGuess(firstGuess);
+            }
+        
+            return FixedPoint(averageDamp(0.5), 1);
+        }
+        
 
 
     }

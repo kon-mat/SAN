@@ -4,9 +4,6 @@ Funkcyjne2 f2 = new Funkcyjne2();
 
 
 
-
-
-
 //// Zadanie 1 - różnica kwadratu sumy i sumy kwadratów
 //int naturalNumbers = 100;
 //f2.SquareDiff_1(naturalNumbers);
@@ -19,9 +16,9 @@ Funkcyjne2 f2 = new Funkcyjne2();
 
 
 //// Zadanie 3 - Fibbonaci
-Console.WriteLine("kroki dla 10 = " + f2.FibSteps_3A(10));
-Console.WriteLine("n = 10   xn = " + f2.FibIterative_3B(10));
-Console.WriteLine("n = 10000   xn = " + f2.FibRecur_3C(10000));
+//Console.WriteLine("kroki dla 10 = " + f2.FibSteps_3A(10));
+//Console.WriteLine("n = 10   xn = " + f2.FibIterative_3B(10));
+//Console.WriteLine("n = 10000   xn = " + f2.FibRecur_3C(10000));
 
 
 //// Zadanie 4 - Powerset
@@ -31,27 +28,13 @@ Console.WriteLine("n = 10000   xn = " + f2.FibRecur_3C(10000));
 //f2.DisplayPowerset(powerSet);
 
 
+// Zadanie 5 - AverageDamp, FixedPoint
+double x = f2.CubicRoot_5(27);
+Console.WriteLine(x);
 
 
 
 
-
-
-//static List<double> AverageDamp(List<double> values, double alpha)
-//{
-//    List<double> smoothedValues = new List<double>();
-//    double previousValue = values[0];
-
-//    for (int i = 0; i < values.Count; i++)
-//    {
-//        double currentValue = values[i];
-//        double smoothedValue = (1 - alpha) * currentValue + alpha * previousValue;
-//        smoothedValues.Add(smoothedValue);
-//        previousValue = smoothedValue;
-//    }
-
-//    return smoothedValues;
-//}
 
 
 
