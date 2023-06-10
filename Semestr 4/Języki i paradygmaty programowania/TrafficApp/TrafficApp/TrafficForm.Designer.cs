@@ -88,7 +88,7 @@
             // 
             // TrafficApp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1168, 598);
             this.Controls.Add(this.trafficJamsText);
@@ -99,7 +99,7 @@
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TrafficApp";
-            this.Text = "Form1";
+            this.Text = "`";
             this.ResumeLayout(false);
             this.PerformLayout();
 
