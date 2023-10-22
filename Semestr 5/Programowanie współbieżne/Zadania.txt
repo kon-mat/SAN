@@ -1,0 +1,1 @@
+1. Przećwiczyć tworzenie wątków i puszczanie ich w ruch
