@@ -19,7 +19,7 @@ public class OrderLifecycle {
 	}
 	
 	public static void main(String[] args) {
-		PizzeriaOrderLifecycle pizzeriaOrderLifecycle = new PizzeriaOrderLifecycle();
+		OrderLifecycle pizzeriaOrderLifecycle = new PizzeriaOrderLifecycle();
 		OrderLifecycle turkishRestaurantOrderLifecycle = new OrderLifecycle();
 		
 		turkishRestaurantOrderLifecycle.ProcessOrder("Kebab");
