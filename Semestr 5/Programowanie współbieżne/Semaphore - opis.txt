@@ -1,0 +1,111 @@
+--------------------------------------------------------------------------------------
+1. Semaphore
+
+Zaczniemy od java.util.concurrent.Semaphore. Semaforów możemy używać do ograniczania liczby współbieżnych wątków uzyskujących dostęp do określonego zasobu.
+
+W poniższym przykładzie zaimplementujemy prostą kolejkę logowania, aby ograniczyć liczbę użytkowników w systemie:
+
+class LoginQueueUsingSemaphore {
+
+    private Semaphore semaphore;
+
+    public LoginQueueUsingSemaphore(int slotLimit) {
+        semaphore = new Semaphore(slotLimit);
+    }
+
+    boolean tryLogin() {
+        return semaphore.tryAcquire();
+    }
+
+    void logout() {
+        semaphore.release();
+    }
+
+    int availableSlots() {
+        return semaphore.availablePermits();
+    }
+
+}
+
+
+Zauważ, że użyliśmy następujących metod:
+
+-tryAcquire() - zwraca true jeśli pozwolenie jest dostępne natychmiast i nabywa je, w przeciwnym razie zwraca false, ale acquire() nabywa pozwolenie i blokuje, dopóki nie jest dostępne
+-release() - zwalnia pozwolenie
+-availablePermits() - zwraca liczbę aktualnie dostępnych pozwoleń
+
+
+
+
+--------------------------------------------------------------------------------------
+2. Timed Semaphore
+
+Następnie omówimy Apache Commons TimedSemaphore. TimedSemaphore zezwala na pewną liczbę zezwoleń jak zwykły semafor, ale w określonym czasie, po tym okresie czas jest resetowany i wszystkie zezwolenia są zwalniane.
+
+Możemy użyć TimedSemaphore do zbudowania prostej kolejki opóźnień w następujący sposób:
+
+class DelayQueueUsingTimedSemaphore {
+
+    private TimedSemaphore semaphore;
+
+    DelayQueueUsingTimedSemaphore(long period, int slotLimit) {
+        semaphore = new TimedSemaphore(period, TimeUnit.SECONDS, slotLimit);
+    }
+
+    boolean tryAdd() {
+        return semaphore.tryAcquire();
+    }
+
+    int availableSlots() {
+        return semaphore.getAvailablePermits();
+    }
+
+}
+
+
+
+
+
+
+--------------------------------------------------------------------------------------
+2. Semaphore vs Mutex
+
+Mutex działa podobnie do semafora binarnego, możemy go użyć do implementacji wzajemnego wykluczania.
+
+W poniższym przykładzie użyjemy prostego semafora binarnego do zbudowania licznika:
+
+class CounterUsingMutex {
+
+    private Semaphore mutex;
+    private int count;
+
+    CounterUsingMutex() {
+        mutex = new Semaphore(1);
+        count = 0;
+    }
+
+    void increase() throws InterruptedException {
+        mutex.acquire();
+        this.count = this.count + 1;
+        Thread.sleep(1000);
+        mutex.release();
+
+    }
+
+    int getCount() {
+        return this.count;
+    }
+
+    boolean hasQueuedThreads() {
+        return mutex.hasQueuedThreads();
+    }
+}
+
+
+
+
+
+
+
+
+

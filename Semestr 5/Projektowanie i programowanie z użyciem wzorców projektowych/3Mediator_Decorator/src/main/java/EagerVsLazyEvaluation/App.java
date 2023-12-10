@@ -1,7 +1,5 @@
 package EagerVsLazyEvaluation;
 
-import AbstractFactory.Main;
-
 // Lazy evaluation
 // Znana również jako call-by-need, to technika, w której wyrażenie jest obliczane tylko wtedy, 
 // gdy jego wartość jest potrzebna. Oznacza to, że obliczenia są odraczane do ostatniego możliwego momentu, 
