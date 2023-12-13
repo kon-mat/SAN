@@ -1,5 +1,6 @@
 package EagerVsLazyEvaluation;
 
+import java.util.Objects;
 import java.util.function.Supplier;
 
 public class LazyEvaluator {
@@ -14,11 +15,12 @@ public class LazyEvaluator {
 
     // W wywołaniu konstruktora zostanie podana w parametrze nasza funkcja lambda
     public LazyEvaluator(Supplier<Integer> expressionSupplier) {
+    	Objects.requireNonNull(expressionSupplier);		// wymaganie w konstruktorze, aby expressionSupplier nie byl nullem 
         this.expressionSupplier = expressionSupplier;
     }
 
     public int eval() {
-        if (value == null) {
+        if (expressionSupplier != null) {
         	System.out.println("Funkcja eval() wykorzystuje expressionSupplier do wygenerowania i przypisania wartosci");
             // Jeśli wartość jeszcze nie została wygenerowana, to generujemy ją i przypisujemy do zmiennej
             value = expressionSupplier.get();
