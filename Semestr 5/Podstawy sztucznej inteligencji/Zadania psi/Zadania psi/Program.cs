@@ -1,4 +1,71 @@
 ﻿
+// Zadanie 2 - dychtomizator
+
+
+// Lista punktów do podziału
+List<Point> points = new List<Point>
+{
+    new Point(1.5, 2.0),
+    new Point(3.0, 4.0),
+    new Point(2.0, 1.0),
+    new Point(5.0, 6.0),
+    new Point(4.0, 3.0),
+    new Point(6.0, 5.0)
+};
+
+// Inicjowanie losowymi wagami
+Random rand = new Random();
+double w1 = rand.NextDouble(); // Losowa waga 1
+double w2 = rand.NextDouble(); // Losowa waga 2
+double threshold = rand.NextDouble(); // Losowy próg aktywacji
+
+double learningRate = 0.1; // Współczynnik uczenia
+
+// Przykładowe oczekiwane odpowiedzi dla każdego punktu (1 dla grupy 1, -1 dla grupy 2)
+int[] expectedOutputs = { 1, 1, 1, -1, -1, -1 };
+
+// Obliczanie odpowiedzi perceptronu i modyfikacja wag
+for (int i = 0; i < points.Count; i++)
+{
+    double sum = points[i].X * w1 + points[i].Y * w2 - threshold;
+    int output = sum > 0 ? 1 : -1;
+
+    // Modyfikacja wag, jeśli odpowiedź jest błędna
+    if (output != expectedOutputs[i])
+    {
+        w1 += learningRate * (expectedOutputs[i] - output) * points[i].X;
+        w2 += learningRate * (expectedOutputs[i] - output) * points[i].Y;
+        threshold -= learningRate * (expectedOutputs[i] - output);
+    }
+}
+
+Console.WriteLine($"Waga 1: {w1}");
+Console.WriteLine($"Waga 2: {w2}");
+Console.WriteLine($"Próg aktywacji: {threshold}");
+
+Console.ReadLine();
+
+
+
+class Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+
+    public Point(double x, double y)
+    {
+        X = x;
+        Y = y;
+    }
+}
+
+
+
+
+
+/* Zadanie 1 - wieża Hanoi
+
+
 int iloscKrazkow;
 const int iloscSlupkow = 3;
 
@@ -89,3 +156,5 @@ static int[,] PrzesunKrazek(int[,] wieza, int zeSlupka, int naSlupek)
     wieza[PierwszeWolneMiejsce(wieza, naSlupek), naSlupek] = przesuwanyKrazek;
     return wieza;
 }
+
+*/

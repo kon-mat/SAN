@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Include="D:\Edukacja\SAN Studia\Semestr V\Podstawy sztucznej inteligencji\Labolatorium\Zadanie 3\Program.cs" Link="Program.cs" />
+  </ItemGroup>
+
 </Project>
