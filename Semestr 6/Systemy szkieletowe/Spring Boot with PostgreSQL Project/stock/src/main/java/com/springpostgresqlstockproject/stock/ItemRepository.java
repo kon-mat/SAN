@@ -20,7 +20,6 @@ public class ItemRepository {
      }
 
      public Item getItemById(int id) {
-
          return jdbcTemplate.queryForObject(
                  "SELECT id, ean, brand, size, color, locationId FROM item WHERE id = ?",
                  BeanPropertyRowMapper.newInstance(Item.class), id);
@@ -30,14 +29,22 @@ public class ItemRepository {
     public int addItemToStock(Item item) {
         try {
             return jdbcTemplate.update(
-                    "INSERT INTO item (EAN, brand, size, color, locationId) VALUES (?, ?, ?, ?, ?)",
-                    item.getEan(), item.getBrand(), item.getSize(), item.getColor(), item.getLocationId()
-            );
+                    "INSERT INTO item (ean, brand, size, color, locationId) VALUES (?, ?, ?, ?, ?)",
+                    item.getEan(), item.getBrand(), item.getSize(), item.getColor(), item.getLocationId());
         } catch (Exception e) {
             // Obsługa błędu lub wyjątku, jeśli wystąpi
             e.printStackTrace();
             throw new RuntimeException("Failed to add item to stock", e);
         }
+    }
 
+    public int updateItem(Item item) {
+        return jdbcTemplate.update(
+                "UPDATE item SET ean = ?, brand = ?, size = ?, color = ?, locationId = ? WHERE id = ?",
+                item.getEan(), item.getBrand(), item.getSize(), item.getColor(), item.getLocationId(), item.getId());
+    }
+
+    public int deleteItem(int id) {
+         return jdbcTemplate.update("DELETE FROM item WHERE id = ?", id);
     }
 }

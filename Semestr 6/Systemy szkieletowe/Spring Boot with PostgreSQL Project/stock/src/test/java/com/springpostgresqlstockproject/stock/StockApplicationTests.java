@@ -28,7 +28,7 @@ class StockApplicationTests {
 	@Test
 	@Transactional
 	public void testAddItemToStockFailure() {
-		// Próbujemy dodać element, który spowoduje błąd (np. duplikat klucza głównego)
+		// Próbujemy dodać element, który spowoduje błąd (duplikat klucza głównego)
 		Item item1 = new Item(222, "0000000000", "Jordan", "L", "white", 1);
 		Item item2 = new Item(222, "0000000000", "Error", "ERR", "error", 1);
 		itemRepository.addItemToStock(item1);

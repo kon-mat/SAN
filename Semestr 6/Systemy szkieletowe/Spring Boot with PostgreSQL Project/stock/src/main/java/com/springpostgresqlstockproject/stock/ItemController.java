@@ -27,4 +27,25 @@ public class ItemController {
         return itemRepository.addItemToStock(item);
     }
 
+    @PatchMapping("/{id}")
+    public int updateItem(@PathVariable("id") int id, @RequestBody Item updatedItem) {
+        Item item = itemRepository.getItemById(id);
+
+        if (item != null) {
+            if (updatedItem.getEan() != null) item.setEan(updatedItem.getEan());
+            if (updatedItem.getBrand() != null) item.setBrand(updatedItem.getBrand());
+            if (updatedItem.getSize() != null) item.setSize(updatedItem.getSize());
+            if (updatedItem.getColor() != null) item.setColor(updatedItem.getColor());
+            if (updatedItem.getLocationId() > 0) item.setLocationId(updatedItem.getLocationId());
+
+            return itemRepository.updateItem(item);
+        } else {
+            return -1;
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public int deleteItem(@PathVariable("id") int id) {
+        return itemRepository.deleteItem(id);
+    }
 }
