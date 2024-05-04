@@ -1,9 +1,7 @@
 package com.springpostgresqlstockproject.stock;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,6 +15,16 @@ public class ItemController {
     @GetMapping("")
     public List<Item> getAllItems() {
         return itemRepository.getAllItems();
+    }
+
+    @GetMapping("/{id}")
+    public Item getItemById(@PathVariable("id") int id) {   // adnotacja @PathVariable odnosi się do zmiennej podanej w adresie, czyli {id}
+        return itemRepository.getItemById(id);
+    }
+
+    @PostMapping("")
+    public int addItemToStock(@RequestBody Item item) {     // adnotacja @PathBody odnosi się do JSON uwzględnionego w request
+        return itemRepository.addItemToStock(item);
     }
 
 }
