@@ -9,7 +9,7 @@ string encryptedTextFilePath;
 string keyFilePath;
 string decryptedTextFilePath;
 string alphabet = "abcdefghijklmnopqrstuvwxyz";
-int maxLengthKeyTest = 15;
+int maxLengthKeyTest = 6;
 
 
 while(true)
@@ -93,7 +93,7 @@ while(true)
             string mainTextFilesPath = "D:\\Programowanie\\SAN\\Semestr 6\\Ochrona danych i bezpieczeństwo systemów informatycznych\\Kryptografia\\Pliki tekstowe\\";
 
             // Podawanie nazw plików
-            Console.WriteLine("Podaj nazwę pliku do oszyfrowania:");
+            Console.WriteLine("Podaj nazwę pliku do odszyfrowania:");
             string toDecryptTextFileName = Console.ReadLine();
             Console.WriteLine("\nPodaj nazwę pliku do zapisania odszyfrowanego tekstu:");
             string toSaveTextFileName = Console.ReadLine();
